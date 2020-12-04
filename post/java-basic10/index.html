@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607096289586">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+        
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                Java基础（10）
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/bSXVQHU1H/'">Java</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            11.2分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-04</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h1 id="15-数组">15. 数组</h1>
+<p>数组存储相同类型值的序列。</p>
+<h2 id="1-声明数组">1. 声明数组</h2>
+<p>数组是一种数据结构，用来存储同一类型值的集合。通过一个整型下表（index，或称之为索引。从 0 位置开始计算，是数组长度-1 的位置）可以访问数组中的每一个值。<br>
+例如，a 是一个整型数组，a[i]就是数组中下表为 i 的整数。<br>
+在声明数组变量时，需要指出数组类型（数据元素类型紧跟[]）和数组变量的名字。<br>
+这里只是声明了整型数组 a， 并没有给其初始化。</p>
+<pre><code class="language-java">int []a;
+//a 在 []前后都可，但是基本都用这种
+</code></pre>
+<p>应该使用 <code>new</code> 操作符创建数组。这里声明并初始化了一个能存储 100 个整数的数组。</p>
+<pre><code class="language-java">int [] a = new int[100];
+var a = new int[100];
+</code></pre>
+<p>一旦创建了数组，就不能再改变其存储数量的长度。可以改变单个的数组元素。<br>
+如果需要扩展数组大小，可以用 ArrayList 数组列表 来进行扩展。<br>
+这里声明数组，并提供初始值。</p>
+<pre><code class="language-java">int[] s = {2, 3, 5, 7, 9};
+</code></pre>
+<p>语法中不需要使用<code>new</code>甚至不用指定长度。最后一个值允许有逗号，如果你不断为数组增加值，这会非常方便。</p>
+<pre><code class="language-java">String[] authors = {
+    &quot;Zhang San&quot;,
+    &quot;Li Si&quot;,
+    &quot;Wang Wu&quot;,
+    &quot;Ma Liu&quot;,
+    &quot;Hou Qi&quot;,
+    // add more names here...
+};
+</code></pre>
+<p>可以声明一个匿名数组</p>
+<pre><code class="language-java">new int[] {2, 3, 5, 7, 9, };
+</code></pre>
+<p>这会分配一个新数组，并填入大括号中提供的值。他会统计初始值的个数，并相应地设置数组大小。<br>
+可以使用下面这种语法重新初始化一个数组而无需创建新变量。</p>
+<pre><code class="language-java">s = new int[] {2, 3, 5, 7, 9};
+
+// 简写形式
+int[] a = {2, 3, 5, 7, 9};
+s = a;
+</code></pre>
+<p>在 Java 中允许长度为 0 的数组。</p>
+<pre><code class="language-java">new int[0];
+new int{};
+</code></pre>
+<h2 id="2-访问数组元素">2. 访问数组元素</h2>
+<p>一旦声明数组，就可以为数组增加元素。</p>
+<pre><code class="language-java">int[] a = new int[100];
+for(int i = 0; i &lt; 100; i++){
+    a[i] = i; 
+    //0, 1, ..., 99
+}
+</code></pre>
+<p>创建一个数字数组时，所有元素都初始化为 <code>0</code>。<br>
+boolean 数组元素会初始化为 <code>false</code>。<br>
+对象数组元素会初始化为一个 <code>null</code> 的特殊值，表示这些元素未存放任何对象。</p>
+<pre><code class="language-java">String[] s = new String[10];
+for(int i = 0; i &lt; 10; i++){
+    s[i] = &quot;&quot;;
+}
+</code></pre>
+<p>创建了 10 个元素的数组，如果你想访问 <code>a[10]</code>也就是第十一个数组，会产生<code>array index out of bounds</code>的异常。<br>
+想要获得数组中元素的个数，可以使用<code>array.length</code></p>
+<pre><code class="language-java">for(int i = 0; i &lt; a.length; i++){
+    System.out.println(a[i]);
+}
+</code></pre>
+<h2 id="3-for-each-循环">3. for-each 循环</h2>
+<blockquote>
+<p>Java 中有一种功能很强的循环结构，可以用来依次处理数组（或者其他元素集合）中的每个元素，而不必考虑指定下标值。<br>
+格式：<code>for(variable : collection) {statement}</code><br>
+它定义一个变量用于暂存集合中的每一个元素，并执行相应的语句（语句块）。collection这一集合表达式必须是一个数组或者是一个实现了 Iterable 接口的类对象（例如 ArrayList）。</p>
+</blockquote>
+<pre><code class="language-java">for(int element: a){
+    System.out.println(element);
+}
+</code></pre>
+<p>打印数组 a 的每一个元素，一个元素占据一行。这个循环应该读作“循环 a 中的每一个元素”。</p>
+<pre><code class="language-java">for(int i = 0; i &lt; a.length; i++){
+    System.out.println(a[i]);
+}
+</code></pre>
+<p>for each 循环语句显得更加简洁，不易出错。因为不需要为下标的起始和终止值而担心。<br>
+for each 循环语句的循环变量将会遍历数组中的每个元素，而不是下标值。<br>
+如果不希望遍历啊整个集合，或在循环内部需要使用下标值时，请使用传统的 for 循环。</p>
+<p>有一个更简单的方式打印数组中的所有值，利用 Arrays 类中的 toString() 方法。调用 Arrays.toString(a)，返回一个包含数组元素的字符串。这些元素包围在中括号内，并用逗号分离。</p>
+<pre><code class="language-java">System.out.println(Arrays.toString(a));
+</code></pre>
+<h2 id="4-数组拷贝">4. 数组拷贝</h2>
+<p>在 Java 中，允许将一个数组变量拷贝到另一个数组变量。这时，两个变量将引用同一个数组。</p>
+<pre><code class="language-java">int [] array2 = array1;
+array2[5] = 12; // array1[5] 的值同样变成了 12
+</code></pre>
+<p>如果想要将一个数组中的所有值都拷贝到一个新的数组中去，就要使用 Arrays 类中的 copyOf() 方法。</p>
+<pre><code class="language-java">int copiedArray1 =Arrays.copyOf(array1, array1.length);
+</code></pre>
+<p>第二个参数是新数组的长度，通常可以用这方法来增加数组的大小。如果后面的值小于原数组的长度，将会打印你需要的数组长度的元素，并不会打印所有原数组的元素。</p>
+<pre><code class="language-java">int copiedArray1 =Arrays.copyOf(array1, 2 * array1.length);
+</code></pre>
+<p>如果数组元素的值是数值型，那么额外我们新增的元素将会被赋值为 0；如果是 boolean 型，那么会被赋值为 false。</p>
+<h2 id="5-命令行参数">5. 命令行参数</h2>
+<pre><code class="language-java">public static void main(String args[]){/*code*/}
+</code></pre>
+<p>main 方法将接收一个字符串数组，也就是命令行上指定的参数。</p>
+<pre><code class="language-java">public class Message{
+    public static void main(String args[]){
+        if(args.length == 0 || args[0].equals(&quot;-h&quot;)){
+            System.out.println(&quot;Hello, &quot;);
+        }
+        else if(args[0].equals(&quot;-g&quot;)){
+            System.out.println(&quot;Goodbye, &quot;);
+        }
+        // print the other line command-line arguments
+        for(int i = 0; i &lt; args.length; i++{
+            System.out.println(&quot; &quot; + agrs[i]);
+        }
+        System.out.println(&quot;!&quot;);
+    }
+}
+</code></pre>
+<p>如果命令行写入<code>java message -g cruel world</code>, 那么 <code>args</code> 数组将包含以下内容：</p>
+<pre><code class="language-java">args[0]: &quot;-g&quot;
+args[1]: &quot;cruel&quot;
+args[2]: &quot;world&quot;
+</code></pre>
+<p>程序会显示: <code>Goodbye, cruel world!</code></p>
+<p>在 Java 应用程序中的 main 方法中， 程序名并没有存储在 <code>args</code> 数组中。<br>
+例如，当命令行使用：<code>java Message -h world</code>, <code>args[0]</code> 是 <code>-h</code>, 而不是<code>Message</code> 或者 <code>java</code>。</p>
+<h2 id="6-数组排序">6. 数组排序</h2>
+<p>想要对数值型数组进行排序，Java 给出了 <code>Arrays</code> 类的 <code>sort()</code> 方法.</p>
+<pre><code class="language-java">int []a = new int[10000];
+// ...
+Arrays.sort(a);
+</code></pre>
+<p>这个方法使用了优化的快速排序（QuickSort）算法。快速排序算法对大多数数据集合来说效率都是比较高的。</p>
+<h3 id="举例从-49-个数字中抽取-k-个数字">举例：从 49 个数字中，抽取 k 个数字。</h3>
+<ol>
+<li>想要选择这样的一个随机数字集合，首先我们需要新建一个数组用来存储49个数字。<pre><code class="language-java">int[] number = new int[n];
+for(int i = 0; i &lt; number.length;i++){
+    number[i] = i + 1;
+}
+</code></pre>
+</li>
+<li>新建第二个数组用来存储我们随机抽取出来的数值。<pre><code class="language-java"> int[] result = new int[k];
+</code></pre>
+</li>
+<li>然后我们就可以随机抽取k个随机数了。<code>Math.random()</code> 方法返回一个 0 到 1 之间（包含0，不包含1）的随机浮点数。用 n 乘以这个浮点数就可以得到从0 到 n - 1 之间的一个随机数。<pre><code class="language-java"> int r = (int) (Math.random() * n);
+</code></pre>
+</li>
+<li>将result的第 i 个元素设置为 number[r] 存放的数值，最初是 r + 1。但正如我们看到的，number 数组的内容在每一次抽取之后会发生变化。<pre><code class="language-java">result[i] = number[r];
+</code></pre>
+</li>
+<li>我们还要确保不会再抽取到我们原来已经抽取过的数字。这里用数组中的最后一个数覆盖 number[r],并将 n - 1。<pre><code class="language-java">number[r] = number[n - 1];
+n--;
+</code></pre>
+</li>
+<li>关键在于每次抽取的都是下标，而不是实际的值。下标指向数组中包含尚未抽取过的值。</li>
+<li>在抽取了 k 个数之后，可以对 result 数组进行排序，这样可以让输出效果更好。<pre><code class="language-java">Arrays.sort(result);
+for(int r : result){
+    System.out.println(r);
+}
+</code></pre>
+</li>
+</ol>
+<p>全部代码如下：</p>
+<pre><code class="language-java">import java.util.*;
+public class Test{
+    public static void main(String []args){
+        Scanner in = new Scanner(System.in);
+    }
+    System.out.println(&quot;总数：&quot;);
+    int n = in.nextInt();
+
+    System.out.println(&quot;抽取数：&quot;);
+    int k = in.nextInt();
+
+    // 用1，2...来填充我们的数字池（数组）
+    int number = new int[n];
+    for(int i = 0; i &lt; number.length; i++){
+        number[i] = i + 1;
+    }
+
+    // 利用Math.random()方法得到 k 个不重复的数字，创建最终结果数组并将它们塞入其中。
+    int[] result = new int[k];
+    for(inr i = 0; i &lt; result.length; i ++){
+        // 创建一个 0 ~ n -1的随机指标
+        int r =(int)(Math.random() * n);
+        // 得到随机指标指向的值
+        result[i] = number[i];
+        // 移动最后一个元素到随即地方
+        number[r] = number[n -1]
+        n--；
+    }
+
+    // 排序并打印我们的结果数组
+    Arrays.sort();
+    System.out.println(&quot;总共数字: &quot;+ n + &quot;个&quot;);
+    System.out.println(&quot;总共抽取: &quot;+ k + &quot;个&quot;);
+    System.out.println(&quot;最终结果: &quot;);
+    for(int r : result){
+        System.out.println(r);
+    }
+}
+</code></pre>
+<h2 id="7-数组知识点扩展">7. 数组知识点扩展</h2>
+<ol>
+<li><code>static String toString(xxx[] a)</code>: 返回包含 a 元素的一个字符串，这些元素用中括号包围，并用逗号分隔。
+<ul>
+<li>在这个方法及后面的方法中，数组元素类型 xxx 可以是 <code>int</code>，<code>long</code>，<code>short</code>，<code>char</code>，<code>byte</code>，<code>boolean</code>，<code>float</code>，<code>double</code> 类型。</li>
+</ul>
+</li>
+<li><code>static xxx[] copyOf(xxx[] a, int end)</code></li>
+<li><code>static xxx[] copyRange(xxx[] a, int start, int end)</code>: 返回类型与 a 相同的一个数组，其长度为 <code>length</code> 或者 <code>end-start</code>，数组元素为 a 的值。如果 end 大于 <code>a.length</code>，结果会填充 0 或者 false 值。</li>
+<li><code>static void sort(xxx[] a)</code>: 使用优化的快速排序算法对数组进行排序。</li>
+<li><code>static int binarySearch(xxx[] a, xxx v)</code></li>
+<li><code>static int binarySearch(xxx[] a, int start, int end, xxx v)</code>: 使用二分查找算法在有序数组 a 中查找值 v。如果找到 v， 则返回相应下表；否则返回一个负数值 r。-r - 1是 v 应当插入的位置（为了保持 a 的有序）。</li>
+<li><code>static void fill(xxx[], xxx v)</code>: 将数组的所有元素设置为 v。</li>
+<li><code>static boolean equals(xxx[] a, xxx[] b)</code>: 如果两个数组大小相同，并且同下标下的元素都对应相等，返回true；反之false。</li>
+</ol>
+<h2 id="8-多维数组可跳过需要的话可以学习">8. 多维数组（可跳过，需要的话可以学习）</h2>
+<p><strong>未完善，待补充 挖坑~</strong><br>
+多维数组将使用多个下标访问数组元素，适用于表格或更加复杂的排列形式。<br>
+创建一个二维数组并初始化：</p>
+<pre><code class="language-java">double[][] dim2Array;
+dim2Array = new double[x][y];
+
+double [][] position = new double [x][y];
+</code></pre>
+<p>如果知道数组元素，就可以不用调用<code>new</code>，而直接使用简写形式进行初始化。</p>
+<pre><code class="language-java">int[][] magicSquare ={
+    {16, 3, 2, 13},
+    {5, 10, 11, 8},
+    {9, 6, 7, 2}
+};
+</code></pre>
+<p>一旦数组进行初始化之后，就可以利用两个中括号访问各个元素，例如balance[i][j]。<br>
+<code>for each</code>循环语句不能自动处理二位数组中的每个元素。它会循环处理行，而这些行本身就是一维数组。想要访问二维数组中的所有元素，可以使用双嵌套循环。</p>
+<pre><code class="language-java">for(double[] row: a){
+    for(doublke vlue: row){
+        //code
+    }
+}
+</code></pre>
+<p>想要快速打印一个二维数组的数据元素列表，可以调用<code>Arrays.deepToString()</code>方法。</p>
+<pre><code class="language-java">System.out.println(Arrays.deepToString(a));
+</code></pre>
+<p>输出格式：<code>[[16, 3, 2, 15], [5, 10, 13, 14]]</code></p>
+<h2 id="9-不规则数组">9. 不规则数组</h2>
+<p>Java实际上没有多维数组，只有一维数组。多为数组可以被解释为'数组的数组'。<br>
+<code>array[i][j]</code>可以被解释为第 i 个元素中的第 j 个元素。</p>
+<h3 id="举例乘法口诀表">举例：乘法口诀表</h3>
+<pre><code class="language-java">
+</code></pre>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/java-basic10/" title="Java基础（10）">
+                                        https://lemonsoldout.github.io/post/java-basic10/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/java-basic10/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/java-basic10/&sharesource=qzone&title=Java基础（10）&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607096289586&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/java-basic10/&sharesource=weibo&title=Java基础（10） + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                                
+                                        
+                                            
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                <div style="width:300px;margin:0 auto; padding:0px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
+                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                            
+                        </p>
+                    </a>
+                </div>
+                
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = ''
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="" target="_blank">
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

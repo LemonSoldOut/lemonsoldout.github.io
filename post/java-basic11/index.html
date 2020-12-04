@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607096289586">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+        
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                Java基础（11）
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/bSXVQHU1H/'">Java</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            16.1分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-04</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h1 id="15-枚举-enum">15. 枚举 Enum</h1>
+<p>Link：https://sharember.blog.csdn.net/article/details/55049192</p>
+<h2 id="举例">举例</h2>
+<p>你写了一个小程序，不过好久不用了，突然有一天，你想使用一下它。程序要想正确运行，需要将今天星期几存到数据库里。这个时候，你开始犯难了。<br>
+当初的你还很年轻，不懂程序界的险恶，设计这个程序的时候，傻不拉几把这个字段设计为int类型的，用0代表周日，1代表周一。。。6代表周六，添加的时候就setWeekday(0)。但是这么长时间没用了，你忘记自己是从周一开始计算还是周日开始计算了，换句话说，你想不起来0代表的是周一还是周日了！<br>
+于是你各种翻代码，看数据库的字段，数据库保存的信息，终于搞懂了，你很开心，用了一次之后，觉得这个程序没意思，又不用了。<br>
+很久之后，你心血来潮，又想用一次它，很不幸，你又忘记到底0代表周一还是周日了，一番查找之后。你决定重构代码，因为你受不了了！！</p>
+<h3 id="静态变量">静态变量</h3>
+<p>经过一番思考，你决定使用七个静态变量来代表星期几，以后只要引用和静态变量就可以了，而不用自己输入012…</p>
+<pre><code class="language-java">public class Weekday {
+    public final static int SUN = 0;
+    public final static int MON = 1;
+    public final static int TUE = 2;
+    public final static int WED = 3;
+    public final static int THU = 4;
+    public final static int FRI = 5;
+    public final static int SAT = 6;
+
+}
+</code></pre>
+<p>机智如你，这个时候，只要<code>Weekday.SUN</code>就可以了，不用操心到底应该填写0还是填写1。</p>
+<p>但是这个时候的你，也不是当初初出茅庐的小伙子了，很明显，这样写已经不能满足你了。你还想让这个类做更多的事，比如，你想知道下一天是星期几，还想把今天是星期几打印出来。</p>
+<pre><code class="language-java">public class Weekday {
+
+    private Weekday(){}
+
+    public final static Weekday SUN = new Weekday();
+    public final static Weekday MON = new Weekday();
+    public final static Weekday TUE = new Weekday();
+    public final static Weekday WED = new Weekday();
+    public final static Weekday THU = new Weekday();
+    public final static Weekday FRI = new Weekday();
+    public final static Weekday SAT = new Weekday();
+
+    public static Weekday  getNextDay(Weekday nowDay){
+        if(nowDay == SUN) {
+            return MON;
+        }else if(nowDay == MON) {
+            return TUE;
+        }else if(nowDay == TUE) {
+            return WED;
+        }else if(nowDay == WED) {
+            return THU;
+        }else if(nowDay == THU) {
+            return FRI;
+        }else if(nowDay == FRI) {
+            return SAT;
+        }else {
+            return SUN;
+        }
+    }
+
+    public static void printNowDay(Weekday nowDay){
+        if(nowDay == SUN)
+            System.out.println(&quot;sunday&quot;);
+        else if(nowDay == MON)
+            System.out.println(&quot;monday&quot;);
+        else if(nowDay == TUE)
+            System.out.println(&quot;tuesday&quot;);
+        else if(nowDay == WED)
+            System.out.println(&quot;wednesday&quot;);
+        else if(nowDay == THU)
+            System.out.println(&quot;thursday&quot;);
+        else if(nowDay == FRI)
+            System.out.println(&quot;friday&quot;);
+        else
+            System.out.println(&quot;saturday&quot;);
+    }
+
+}
+
+class Test1{
+    public static void main(String[] args) {
+        Weekday nowday = Weekday.SUN;
+        Weekday.printNowDay(nowday);
+        Weekday nextDay = Weekday.getNextDay(nowday);
+        System.out.print(&quot;nextday ====&gt; &quot;);
+        Weekday.printNowDay(nextDay);
+    }
+}
+//测试结果：
+//sunday
+//nextday ====&gt; monday
+</code></pre>
+<p>哟，不错。考虑的很详细。并且私有构造方法后，外界就不能创建该类的对象了，这样就避免了星期八星期九的出现，所有Weekday的对象都在该类内部创建。</p>
+<p>不对，好像缺了点什么，我要的是int！我的int呢？！</p>
+<pre><code class="language-java"> public static int toInt(Weekday nowDay){
+        if(nowDay == SUN)
+            return 0;
+        else if(nowDay == MON)
+            return 1;
+        else if(nowDay == TUE)
+            return 2;
+        else if(nowDay == WED)
+            return 3;
+        else if(nowDay == THU)
+            return 4;
+        else if(nowDay == FRI)
+            return 5;
+        else
+           return 6;
+    }
+</code></pre>
+<p>当你需要一个整形数据的时候，只需要<code>Weekday.toInt(Weekday.SUN);</code>，看起来你好像完成了你的任务。<br>
+但是，你有没有发现，这样写，好麻烦啊。如果想要扩展一下功能，大量的ifelse会让人眼花缭乱。<br>
+有没有更好的方式呢？你大概已经知道了，没错，我们需要枚举类！<br>
+我们先来看看枚举类是什么。</p>
+<h2 id="枚举类的用法">枚举类的用法</h2>
+<h3 id="一个简单的枚举类">一个简单的枚举类</h3>
+<pre><code class="language-java">public enum Weekday {
+    SUN,MON,TUS,WED,THU,FRI,SAT
+}
+</code></pre>
+<pre><code class="language-java">class Test2{
+    public static void main(String[] args) {
+        Weekday sun = Weekday.SUN;
+        System.out.println(sun); // 输出 SUN
+    }
+}
+</code></pre>
+<p>看起来和上面的静态变量使用方式差不多，而且默认的toString方法返回的就是对应的名字。</p>
+<blockquote>
+<p>我们上面的那段代码重写toString也是不可以打印出当前是星期几的，因为toString方法没有参数。所以我们自己写了一个printNowDay方法。</p>
+</blockquote>
+<pre><code class="language-java">public enum Weekday {
+    SUN(0),MON(1),TUS(2),WED(3),THU(4),FRI(5),SAT(6);
+
+    private int value;
+
+    private Weekday(int value){
+        this.value = value;
+    }
+
+    public static Weekday getNextDay(Weekday nowDay){
+        int nextDayValue = nowDay.value;
+
+        if (++nextDayValue == 7){
+            nextDayValue =0;
+        }
+
+        return getWeekdayByValue(nextDayValue);
+    }
+
+    public static Weekday getWeekdayByValue(int value) {
+        for (Weekday c : Weekday.values()) {
+            if (c.value == value) {
+                return c;
+            }
+        }
+        return null;
+    }
+}
+
+class Test2{
+    public static void main(String[] args) {
+        System.out.println(&quot;nowday ====&gt; &quot; + Weekday.SAT);
+        System.out.println(&quot;nowday int ====&gt; &quot; + Weekday.SAT.ordinal());
+        System.out.println(&quot;nextday ====&gt; &quot; + Weekday.getNextDay(Weekday.SAT)); // 输出 SUN
+
+        //输出：
+        //nowday ====&gt; SAT
+        //nowday int ====&gt; 6
+        //nextday ====&gt; SUN
+    }
+}
+</code></pre>
+<p>这样就完成了我们的目标，和之前的代码比起来，有没有觉得突然高大上了许多？没有那么多烦人的ifelse，世界都清净了。<br>
+好了，现在你大概知道为什么要引入枚举类了吧？就是因为在没有枚举类的时候，我们要定义一个有限的序列，比如星期几，男人女人，春夏秋冬，一般会通过上面那种静态变量的形式，但是使用那样的形式如果需要一些其他的功能，需要些很多奇奇怪怪的代码。所以，枚举类的出现，就是为了简化这种操作。</p>
+<blockquote>
+<p>可以将枚举类理解为是java的一种语法糖。</p>
+</blockquote>
+<h3 id="枚举有哪些方法">枚举有哪些方法</h3>
+<p><img src="https://lemonsoldout.github.io/post-images/1605949564167.png" alt="" loading="lazy"><br>
+这是Weekday可以调用的方法和参数。发现它有两个方法：value()和valueOf()。还有我们刚刚定义的七个变量。<br>
+<img src="https://lemonsoldout.github.io/post-images/1605949575397.png" alt="" loading="lazy"><br>
+这些事枚举变量的方法。我们接下来会演示几个比较重要的：</p>
+<pre><code class="language-java">public enum Weekday {
+    SUN,MON,TUS,WED,THU,FRI,SAT
+}
+
+class Test3{
+    public static void main(String[] args) {
+        System.out.println(Weekday.valueOf(&quot;mon&quot;.toUpperCase()));
+        //MON
+
+        for (Weekday w : Weekday.values()){
+            System.out.println(w + &quot;.ordinal()  ====&gt;&quot; +w.ordinal());
+        }
+        //SUN.ordinal()  ====&gt;0
+        //MON.ordinal()  ====&gt;1
+        //TUS.ordinal()  ====&gt;2
+        //WED.ordinal()  ====&gt;3
+        //THU.ordinal()  ====&gt;4
+        //FRI.ordinal()  ====&gt;5
+        //SAT.ordinal()  ====&gt;6
+
+        System.out.println(&quot;Weekday.MON.compareTo(Weekday.FRI) ===&gt; &quot; + Weekday.MON.compareTo(Weekday.FRI));
+        System.out.println(&quot;Weekday.MON.compareTo(Weekday.MON) ===&gt; &quot; + Weekday.MON.compareTo(Weekday.MON));
+        System.out.println(&quot;Weekday.MON.compareTo(Weekday.SUM) ===&gt; &quot; + Weekday.MON.compareTo(Weekday.SUN));
+        //Weekday.MON.compareTo(Weekday.FRI) ===&gt; -4
+        //Weekday.MON.compareTo(Weekday.MON) ===&gt; 0
+        //Weekday.MON.compareTo(Weekday.SUM) ===&gt; 1
+
+        System.out.println(&quot;Weekday.MON.name() ====&gt; &quot; + Weekday.MON.name());
+        //Weekday.MON.name() ====&gt; MON
+
+    }
+}
+</code></pre>
+<ol>
+<li><code>Weekday.valueOf()</code>方法
+<ul>
+<li>它的作用是传来一个字符串，然后将它转变为对应的枚举变量。</li>
+<li>前提是你传的字符串和定义枚举变量的字符串一抹一样，区分大小写。</li>
+<li>如果你传了一个不存在的字符串，那么会抛出异常。</li>
+</ul>
+</li>
+<li><code>Weekday.values()</code>方法
+<ul>
+<li>这个方法会返回包括所有枚举变量的数组。</li>
+<li>在该例中，返回的就是包含了七个星期的Weekday[]。</li>
+<li>可以方便的用来做循环。</li>
+</ul>
+</li>
+<li>枚举变量的<code>toString()</code>方法
+<ul>
+<li>该方法直接返回枚举定义枚举变量的字符串，比如MON就返回 [&quot;MON&quot;]。</li>
+</ul>
+</li>
+<li>枚举变量的<code>.ordinal()</code>方法
+<ul>
+<li>默认请款下，枚举类会给所有的枚举变量一个默认的次序，该次序从0开始，类似于数组的下标。</li>
+<li>而.ordinal()方法就是获取这个次序（或者说下标）</li>
+</ul>
+</li>
+<li>枚举变量的<code>compareTo()</code>方法
+<ul>
+<li>该方法用来比较两个枚举变量的”大小”</li>
+<li>实际上比较的是两个枚举变量的次序，返回两个次序相减后的结果</li>
+<li>如果为负数，就证明变量1”小于”变量2</li>
+<li>变量1.compareTo(变量2)，返回[变量1.ordinal() - 变量2.ordinal()]</li>
+</ul>
+</li>
+<li>枚举类的<code>name()</code>方法
+<ul>
+<li>它和toString()方法的返回值一样，事实上，这两个方法本来就是一样的。</li>
+<li>这两个方法的默认实现是一样的，唯一的区别是，你可以重写toString方法。</li>
+<li>name变量就是枚举变量的字符串形式。<br>
+<img src="https://lemonsoldout.github.io/post-images/1605949884190.png" alt="" loading="lazy"><br>
+<img src="https://lemonsoldout.github.io/post-images/1605949888363.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>还有一些方法可以自行去查找尝试。</li>
+</ol>
+<h3 id="要点">要点</h3>
+<ul>
+<li>使用的是enum关键字而不是class。</li>
+<li>多个枚举变量直接用逗号隔开。</li>
+<li>枚举变量最好大写，多个单词之间使用”_”隔开（比如：INT_SUM）。</li>
+<li>定义完所有的变量后，以分号结束，如果只有枚举变量，而没有自定义变量，分号可以省略（例如上面的代码就忽略了分号）。</li>
+<li>在其他类中使用enum变量的时候，只需要[类名.变量名]就可以了，和使用静态变量一样。</li>
+</ul>
+<h2 id="枚举的高级使用方法">枚举的高级使用方法</h2>
+<p>就像我们前面的案例一样，你需要让每一个星期几对应到一个整数，比如星期天对应0。上面讲到了，枚举类在定义的时候会自动为每个变量添加一个顺序，从0开始。<br>
+假如你希望0代表星期天，1代表周一。。。并且你在定义枚举类的时候，顺序也是这个顺序，那你可以不用定义新的变量，就像这样：</p>
+<pre><code class="language-java">public enum Weekday {
+    SUN,MON,TUS,WED,THU,FRI,SAT
+}
+</code></pre>
+<p>这个时候，星期天对应的ordinal值就是0，周一对应的就是1，满足你的要求。但是，如果你这么写，那就有问题了：</p>
+<pre><code class="language-java">public enum Weekday {
+    MON,TUS,WED,THU,FRI,SAT,SUN
+}
+</code></pre>
+<p>我吧SUN放到了最后，但是我还是希0代表SUN，1代表MON怎么办呢？默认的ordinal是指望不上了，因为它只会傻傻的给第一个变量0，给第二个1。。。<br>
+所以，我们需要自己定义变量！</p>
+<pre><code class="language-java">public enum Weekday {
+    MON(1),TUS(2),WED(3),THU(4),FRI(5),SAT(6),SUN(0);
+
+    private int value;
+
+    private Weekday(int value){
+        this.value = value;
+    }
+}
+</code></pre>
+<p>我们对上面的代码做了一些改变：<br>
+首先，我们在每个枚举变量的后面加上了一个括号，里面是我们希望它代表的数字。<br>
+然后，我们定义了一个int变量，然后通过构造函数初始化这个变量。<br>
+你应该也清楚了，括号里的数字，其实就是我们定义的那个int变量。这句叫做自定义变量。</p>
+<p>注意：</p>
+<ol>
+<li>一定要把枚举变量的定义放在第一行，并且以分号结尾。</li>
+<li>构造函数必须私有化。事实上，private是多余的，你完全没有必要写，因为它默认并强制是private，如果你要写，也只能写private，写public是不能通过编译的。</li>
+<li>自定义变量与默认的ordinal属性并不冲突，ordinal还是按照它的规则给每个枚举变量按顺序赋值。</li>
+</ol>
+<p>好了，你很聪明，你已经掌握了上面的知识，你想，既然能自定义一个变量，能不能自定义两个呢？</p>
+<pre><code class="language-java">public enum Weekday {
+    MON(1,&quot;mon&quot;),TUS(2,&quot;tus&quot;),WED(3,&quot;wed&quot;),THU(4,&quot;thu&quot;),FRI(5,&quot;fri&quot;),SAT(6,&quot;sat&quot;),SUN(0,&quot;sun&quot;);
+
+    private int value;
+    private String label;
+
+    private Weekday(int value,String label){
+        this.value = value;
+        this.label = label;
+    }
+}
+</code></pre>
+<p>你可以定义任何你想要的变量。</p>
+<h2 id="枚举类中的抽象类">枚举类中的抽象类</h2>
+<ul>
+<li>你要知道，枚举类不能继承其他类，也不能被其他类继承。至于为什么，我们后面会说到。</li>
+<li>你应该知道，有抽象方法的类必然是抽象类，抽象类就需要子类继承它然后实现它的抽象方法，但是呢，枚举类不能被继承。。你是不是有点乱？</li>
+</ul>
+<pre><code class="language-java">public enum TrafficLamp {
+    RED(30) {
+        @Override
+        public TrafficLamp getNextLamp() {
+            return GREEN;
+        }
+    }, GREEN(45) {
+        @Override
+        public TrafficLamp getNextLamp() {
+            return YELLOW;
+        }
+    }, YELLOW(5) {
+        @Override
+        public TrafficLamp getNextLamp() {
+            return RED;
+        }
+    };
+
+    private int time;
+
+    private TrafficLamp(int time) {
+        this.time = time;
+    }
+
+    //一个抽象方法
+    public abstract TrafficLamp getNextLamp();
+
+}
+</code></pre>
+<p>你好像懂了点什么。但是你好像又不太懂。为什么一个变量的后边可以带一个代码块并且实现抽象方法呢？<br>
+别着急，带着这个疑问，我们来看一下枚举类的实现原理。</p>
+<pre><code class="language-java">public enum Weekday {
+    SUN,MON,TUS,WED,THU,FRI,SAT
+}
+</code></pre>
+<p>还是这段熟悉的代码，我们编译一下它，再反编译一下看看它到底是什么样子的：<br>
+<img src="https://lemonsoldout.github.io/post-images/1605950215723.png" alt="" loading="lazy"><br>
+你是不是觉得很熟悉？反编译出来的代码和我们一开始用静态变量自己写的那个类出奇的相似！<br>
+而且，你看到了熟悉的values()方法和valueOf()方法。<br>
+仔细看，这个类继承了java.lang.Enum类！所以说，枚举类不能再继承其他类了，因为默认已经继承了Enum类。<br>
+并且，这个类是final的！所以它不能被继承！</p>
+<pre><code class="language-java">RED(30) {
+    @Override
+    public TrafficLamp getNextLamp() {
+        return GREEN;
+    }
+}
+</code></pre>
+<p>为什么会有这么神奇的代码？现在你差不多懂了。因为<code>RED</code>本身就是一个<code>TrafficLamp</code>对象的引用。实际上，在初始化这个枚举类的时候，你可以理解为执行的是<code>TrafficLamp RED = new TrafficLamp（30）</code> ，但是因为<code>TrafficLamp</code>里面有抽象方法，还记得匿名内部类么？<br>
+我们可以这样来创建一个TrafficLamp引用：</p>
+<pre><code class="language-java">TrafficLamp RED = new TrafficLamp（30）{
+    @Override
+    public TrafficLamp getNextLamp() {
+        return GREEN;
+    }
+};
+</code></pre>
+<p>而在枚举类中，我们只需要像上面那样写[RED(30){}]就可以了，因为java会自动的去帮我们完成这一系列操作。<br>
+如果你还是不太理解，那么你可以自己去反编译一下TrafficLamp这个类，看看jvm是怎么处理它的就明白了。</p>
+<h2 id="switch-语句中的使用">switch 语句中的使用</h2>
+<pre><code class="language-java">enum Signal {
+    GREEN, YELLOW, RED
+}
+
+public class TrafficLight {
+    Signal color = Signal.RED;
+
+    public void change() {
+        switch (color) {
+        case RED:
+            color = Signal.GREEN;
+            break;
+        case YELLOW:
+            color = Signal.RED;
+            break;
+        case GREEN:
+            color = Signal.YELLOW;
+            break;
+        }
+    }
+}
+</code></pre>
+<h2 id="实现接口">实现接口</h2>
+<p>所有的枚举都继承自java.lang.Enum类。由于Java 不支持多继承，所以枚举对象不能再继承其他类。</p>
+<pre><code class="language-java">public interface Behaviour {
+    void print();
+
+    String getInfo();
+}
+
+public enum Color implements Behaviour {
+    RED(&quot;红色&quot;, 1), GREEN(&quot;绿色&quot;, 2), BLANK(&quot;白色&quot;, 3), YELLO(&quot;黄色&quot;, 4);
+    // 成员变量
+    private String name;
+    private int index;
+
+    // 构造方法
+    private Color(String name, int index) {
+        this.name = name;
+        this.index = index;
+    }
+
+    // 接口方法
+    @Override
+    public String getInfo() {
+        return this.name;
+    }
+
+    // 接口方法
+    @Override
+    public void print() {
+        System.out.println(this.index + &quot;:&quot; + this.name);
+    }
+}
+</code></pre>
+<h2 id="使用接口组织枚举">使用接口组织枚举</h2>
+<pre><code class="language-java">public interface Food {
+    enum Coffee implements Food {
+        BLACK_COFFEE, DECAF_COFFEE, LATTE, CAPPUCCINO
+    }
+
+    enum Dessert implements Food {
+        FRUIT, CAKE, GELATO
+    }
+}
+</code></pre>
+<h2 id="向枚举中添加新方法">向枚举中添加新方法</h2>
+<p>如果打算自定义自己的方法，那么必须在enum实例序列的最后添加一个分号。而且 Java 要求必须先定义 enum 实例。</p>
+<pre><code class="language-java">public enum Color {  
+    RED(&quot;红色&quot;, 1), GREEN(&quot;绿色&quot;, 2), BLANK(&quot;白色&quot;, 3), YELLO(&quot;黄色&quot;, 4);  
+    // 成员变量  
+    private String name;  
+    private int index;  
+    // 构造方法  
+    private Color(String name, int index) {  
+        this.name = name;  
+        this.index = index;  
+    }  
+    // 普通方法  
+    public static String getName(int index) {  
+        for (Color c : Color.values()) {  
+            if (c.getIndex() == index) {  
+                return c.name;  
+            }  
+        }  
+        return null;  
+    }  
+    // get set 方法  
+    public String getName() {  
+        return name;  
+    }  
+    public void setName(String name) {  
+        this.name = name;  
+    }  
+    public int getIndex() {  
+        return index;  
+    }  
+    public void setIndex(int index) {  
+        this.index = index;  
+    }  
+}  
+</code></pre>
+<h2 id="覆盖枚举的方法">覆盖枚举的方法</h2>
+<pre><code class="language-java">public enum Color {  
+    RED(&quot;红色&quot;, 1), GREEN(&quot;绿色&quot;, 2), BLANK(&quot;白色&quot;, 3), YELLO(&quot;黄色&quot;, 4);  
+    // 成员变量  
+    private String name;  
+    private int index;  
+    // 构造方法  
+    private Color(String name, int index) {  
+        this.name = name;  
+        this.index = index;  
+    }  
+    //覆盖方法  
+    @Override  
+    public String toString() {  
+        return this.index+&quot;_&quot;+this.name;  
+    }  
+}  
+</code></pre>
+<h2 id="关于枚举集合的使用">关于枚举集合的使用</h2>
+<p>java.util.EnumSet和java.util.EnumMap是两个枚举集合。EnumSet保证集合中的元素不重复；EnumMap中的 key是enum类型，而value则可以是任意类型。关于这个两个集合的使用就不在这里赘述，可以参考JDK文档。</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/java-basic11/" title="Java基础（11）">
+                                        https://lemonsoldout.github.io/post/java-basic11/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/java-basic11/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/java-basic11/&sharesource=qzone&title=Java基础（11）&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607096289586&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/java-basic11/&sharesource=weibo&title=Java基础（11） + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                                
+                                        
+                                            
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                <div style="width:300px;margin:0 auto; padding:0px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
+                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                            
+                        </p>
+                    </a>
+                </div>
+                
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = ''
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="" target="_blank">
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

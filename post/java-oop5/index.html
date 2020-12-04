@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607096289586">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+        
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                Java面向对象（5）
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/bSXVQHU1H/'">Java</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            7.1分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-04</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="1-封装">1. 封装</h2>
+<p>作用：提高代码的安全性</p>
+<ul>
+<li>将属性（变量）私有化，并提供对外界的接口（get/set方法）。<br>
+用private修饰的属性和方法，只能在本类中使用。</li>
+</ul>
+<hr>
+<p>封装，简单的来讲就是将变量的属性私有化，在Java里就是用<code>private</code>修饰符修饰，这样在外部产生的对象就不能直接访问到这个变量。想要对变量进行操作或者访问，就需要在类里提供外部访问的接口，也就是我们熟知的get和set方法。</p>
+<p>这就是大部分人对封装的理解。知道有封装这回事，知道怎么用，却不知道为什么要用，甚至觉得这是多此一举。因为明明<code>person.name</code>就可以访问到变量，为什么非要<code>person.getName()</code>呢？</p>
+<h3 id="任性使用public的影响">任性使用public的影响</h3>
+<pre><code class="language-java">//Man
+public class Man {
+    public String name; //名字
+    public Woman wife;  //男人嘛，都有妻子
+    public double money;//男人嘛，多赚点钱
+
+    //还可以结个婚
+    public void marry(Woman woman){
+        this.wife = woman;
+        woman.marry(this);
+    }
+}
+//Women
+public class Woman {
+    public String name; //名字
+    public Man husband; //得有一个丈夫
+    //也可以结个婚
+    public void marry(Man man){
+        this.husband = man;
+    }
+}
+// 请测试
+</code></pre>
+<p>来了一个小偷，这小偷不干别的，就偷别人的钱和老婆</p>
+<pre><code class="language-java">//小偷
+public class Thief {
+    private double stealMoney = 0;
+    private List&lt;Woman&gt; womens = new ArrayList&lt;&gt;();
+
+    //偷钱
+    public void stealMoney(Man man){
+        stealMoney += man.money;
+        man.money = 0;
+        System.out.println(&quot;哈哈，偷到钱了&quot;);
+    }
+    //偷老婆，最可气的是，偷了你的老婆还把凤姐丢给了你
+    public void stealWife(Man man){
+        womens.add(man.wife);
+        Woman woman = new Woman();
+        woman.name = &quot;凤姐&quot;;
+        man.wife = woman;
+        System.out.println(&quot;哈哈哈，又偷了一个妹纸&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">// 请测试
+</code></pre>
+<h3 id="使用封装">使用封装</h3>
+<pre><code class="language-java">//PackageMan
+public class PackageMan {
+    private String name; //私有化名字
+    private PackageWoman wife;//必须私有！！必须！
+    private double money; //私有，统统私有！
+    //我们先写个构造函数，为了方便
+    public PackageMan(String name, double money) {
+        this.name = name;
+        this.money = money;
+    }
+    //结婚
+    public void marry(PackageWoman woman){
+        this.wife = woman;
+        woman.marry(this);
+    }
+
+    //各种getter和setter
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public PackageWoman getWife() {
+        return wife;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+}
+
+//PackageWoman
+public class PackageWoman {
+    private String name;
+    private PackageMan husband;
+
+    public void marry(PackageMan man){
+        this.husband = man;
+    }
+
+    public PackageWoman(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public PackageMan getHusband() {
+        return husband;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+</code></pre>
+<p>什么？你想测试一下，不好意思，测试不了，因为小偷已经死在测试的路上了。因为我们根本没有对外提供设置money和wife的方法，所以小偷可以知道你有多少钱，知道你有一个漂亮的老婆，但是他却无能为力，因为他只能看着。</p>
+<p>细心的人也许发现了，这里面有一个很严重的问题：</p>
+<p>没错，小偷不能把我们的money清空了，也不能将我们的wife换成别人了。但是，如果我们要自己换呢？我的钱这辈子就这么点？还不能花？我还不能离婚了？</p>
+<p>如何解决上面的问题呢？私有化外部访问不到，自己也没法改变数据，提供set方法又会让所有人都能改，和不私有没什么区别，好纠结啊。</p>
+<p>等等，你刚刚说 “所有人“？真的是所有人么？</p>
+<p>现在这样呢？只有你自己可以修改，别人都不可以。</p>
+<pre><code class="language-java">public void setMoney(PackageMan man,double money) {
+    if (man == this) {
+        this.money = money;
+    } else {
+        System.out.println(&quot;喂，110吗？&quot;+man.getName()+&quot;抢钱！&quot;);
+    }
+}
+</code></pre>
+<p>但是你老婆不满意了，凭什么只有你自己能改？我也想改！</p>
+<p>这种要求，还是应该满足一下的，怎么做呢？</p>
+<pre><code class="language-java">public void setMoney(Object o,double money) {
+    if (o == this || o == this.wife) {
+        this.money = money;
+    } else {
+        System.out.println(&quot;喂，110吗？有人抢钱！&quot;);
+    }
+}
+</code></pre>
+<p>这样就可以了。</p>
+<p>当然，爱思考的人肯定发现了，我把抢钱的那句话修改了，没有获取修改人的名字，因为传入的是Objects对象。当然，你也可以再写点代码，判断一下传进来的是什么，然后抢转为相应的类型，再调用相应的方法。</p>
+<p>除此之外，就没有别的办法了么？当然有，具体怎么做，我们下一篇文章再做分解。</p>
+<p>仔细思考一下你会发现，我特么竟然是在骗你！因为当你提供了set函数以后，小偷又可以偷你的东西了。仔细看一下之前小偷是怎么偷你东西的你就知道了。</p>
+<p>没错，就是通过你自己。小偷通过你自己改变了你自己。听起来有点扯，但是事实上就是这样的。</p>
+<p>那么，有没有一种办法让小偷在只得到”你自己“的情况下怎么样都不能改变“你的属性值”，而只有你自己能改变呢？</p>
+<p>大家可以自己想想，具体的解决办法，我们在之后的文章里揭晓。敬请期待。</p>
+<pre><code class="language-java">//父类
+public class Person {
+    protected String name;
+
+    public void marry(Person p){
+        System.out.println(&quot;marry&quot;);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+//man类
+public class Man extends Person {
+    private Woman wife;
+    private double money;
+
+    @Override
+    public void marry(Person p) {
+        this.wife = (Woman)p;
+        p.marry(this);
+    }
+    //只有自己和妻子可以用钱
+    public void setMoney(Person p,double money) {
+        if (p == this || p == this.wife)
+            this.money = money;
+        else
+            System.out.println(p.getName()+&quot;抢钱！&quot;);
+    }
+
+    public double getMoney() {
+        return money;
+    }
+}
+//woman类
+public class Woman extends Person{
+    private boolean hasLongHair;
+    private Man husband;
+
+    @Override
+    public void marry(Person p) {
+        this.husband = (Man)p;
+    }
+}
+</code></pre>
+<pre><code class="language-java">public void setMoney(Person p,double money) {
+      if (p == this || p == this.wife)
+          this.money = money;
+      else if(money &gt; this.money)
+          this.money = money;
+      else  
+          System.out.println(p.getName()+&quot;抢钱！&quot;);
+}//这样写更好
+</code></pre>
+<p>以上就是面向对象的封装，封装不仅仅只是private + getter and setter。使用封装可以对setter进行更深层次的定制。你可以对可以执行setter方法的对象做规定，也可以对数据作要求，还可以做类型转换等等一系列你可以想到的。</p>
+<p>使用封装不仅仅是安全，更可以简化操作。不要觉得用了封装多了好多代码，看起来乱糟糟的。这只是因为我举得例子太小了。如果你写你个大的系统，一开始你的这样定义类的</p>
+<pre><code class="language-java">public int age;
+</code></pre>
+<p>你的程序里大概有100处这样的语句：</p>
+<pre><code class="language-java">p.age = 10;
+</code></pre>
+<p>这个时候，突然要求你把数据类型变了，改成：</p>
+<pre><code class="language-java">public String age;
+</code></pre>
+<p>你是不是要把那100处数据都加个双引号呢？这是不是很麻烦？</p>
+<p>如果你用了封装，你只需要这样：</p>
+<pre><code class="language-java">public void setAge(int age){ this.age = String.valueOf(age); }
+</code></pre>
+<p>然后就搞定了，是不是简化了操作？<br>
+我只是举个例子，实际开发中也不会出现改变数据类型这么操蛋的事。。<br>
+封装还有一个好处是模块化。当你参与一个很多人实现的大型系统中，你不可能知道所有的类是怎样实现的。你只需要知道这个类给我提供了哪些方法，我需要传入什么数据，我能得到什么结果。至于怎么得到的，关我x事？</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/java-oop5/" title="Java面向对象（5）">
+                                        https://lemonsoldout.github.io/post/java-oop5/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/java-oop5/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/java-oop5/&sharesource=qzone&title=Java面向对象（5）&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607096289586&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/java-oop5/&sharesource=weibo&title=Java面向对象（5） + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                                
+                                        
+                                            
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                <div style="width:300px;margin:0 auto; padding:0px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
+                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                            
+                        </p>
+                    </a>
+                </div>
+                
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = ''
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="" target="_blank">
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

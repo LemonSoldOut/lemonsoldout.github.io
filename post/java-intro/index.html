@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607096289586">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+        
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                Java简介
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/bSXVQHU1H/'">Java</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            5.4分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-04</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="1-简介">1. 简介</h2>
+<ul>
+<li>Java是一个完整的平台，有一个庞大的库，其中包含了很多可重用的代码，以及一个提供诸如安全性，跨系统操作的可移植性以及自动垃圾收集等服务的执行环境。</li>
+</ul>
+<h2 id="2-java历史">2. Java历史</h2>
+<ul>
+<li>
+<p>Java 之父：詹姆斯·高斯林 James · Gosling<br>
+<img src="https://lemonsoldout.github.io/post-images/1605591998364.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p><strong>作业：自行搜索Java的历史知识，了解它的前世今生。</strong></p>
+</li>
+</ul>
+<h2 id="3-javaseeeme">3. JavaSE/EE/ME</h2>
+<p>JavaSE		Java标准版（Java Standard Edition)</p>
+<ul>
+<li>各应用平台的基础，桌面开发和低端商务应用的解决方案</li>
+</ul>
+<p>JavaEE		Java企业版（Java Enterprise Edition)</p>
+<ul>
+<li>以企业为环境而开发应用程序的解决方案</li>
+</ul>
+<p>JavaME		Java微型版（Java Micro Edition）</p>
+<ul>
+<li>致力于消费产品和嵌入式设备的最佳方案</li>
+</ul>
+<h2 id="4-java可以做什么">4. Java可以做什么</h2>
+<ul>
+<li>开发桌面应用程序</li>
+<li>开发面向Internet的web应用程序</li>
+<li>提供各行业的解决方案</li>
+<li>开发android手机应用程序</li>
+</ul>
+<h2 id="5-applet-与-internet">5. applet 与 Internet</h2>
+<h3 id="applet">applet</h3>
+<p>用户从 Internet 上下载字节码，并在自己的机器上运行。在网页中运行的 Java 程序成为 applet。 要使用 applet， 只需要一个启用 Java 的 Web 浏览器，他会为你执行字节码。不需要安装任何软件。任何时候访问包含 applet 的网页都会得到程序的最新版本。他是动态的，对用户命令做出响应，改变外观，在运行他的计算机与提供他的计算机之间交换数据。后来因为 Flash 动态效果的发布，applet 已经逐渐落伍。</p>
+<h2 id="6-特性">6. 特性</h2>
+<h3 id="简单性">简单性</h3>
+<ul>
+<li>当年尽可能地按照 C++来设计的 Java，以便系统能够简单理解。比 C++简单，祛除了很多例如指针，头文件，操作符重载等，也叫 C++的纯净版本。</li>
+</ul>
+<h3 id="面向对象">面向对象</h3>
+<ul>
+<li>将重点放在数据（对象）和对象的接口上</li>
+<li>没有对象就新建一个，再也不用怕没对象了。（面向对象 vs 面向过程 以后再讲）<br>
+挖坑</li>
+</ul>
+<h3 id="分布式">分布式</h3>
+<ul>
+<li>Java 有一个丰富的例程库，用于处理像 HTTP 和 FTP 之类的 TCP/IP 协议。</li>
+<li>Java 应用程序能够通过 URL 打开和访问网络上的对象，和访问本地文件一样快捷。</li>
+</ul>
+<h3 id="健壮性">健壮性</h3>
+<ul>
+<li>Java 的设计目标之一在于是的 Java 编写的程序有多方面的可靠性。</li>
+<li>Java 非常强调进行早期的问题检测，后期动态的（运行时）检测，以及消除容易出错的情况。</li>
+<li>Java 采用的指针模型可以消除重写内存和损坏数据得可能性。</li>
+</ul>
+<h3 id="安全性">安全性</h3>
+<ul>
+<li>Java 适用于网络/分布式环境。</li>
+<li>使用 Java 可以构建防病毒，防篡改的系统<br>
+普遍攻击模式：</li>
+</ul>
+<ol>
+<li>运行时，堆栈溢出，这是蠕虫和病毒常用的手段。</li>
+<li>破坏自己的进程空间之外的内存。</li>
+<li>未经授权读写文件。</li>
+</ol>
+<h3 id="结构体系中立">结构体系中立</h3>
+<ul>
+<li>编译器生成一个体系结构中立的目标文件格式，文件已经经过编译。</li>
+<li>只要有 Java 运行时系统，这些编译后的代码可以在其他处理器上运行。</li>
+<li>Java 编译器通过生成与特定计算机结构体系无关的字节码指令来实现这一特性。</li>
+<li>这些字节码不仅可以在各种机器上解释执行，也可以动态地转换成本地机器代码。</li>
+<li>解释性虚拟机指令比全速运行机器指令要慢很多。</li>
+<li>Java 虚拟机有一个选项，将执行最频繁的字节码序列转换成机器码，这一过程就是即时编译。</li>
+</ul>
+<h3 id="可移植性">可移植性</h3>
+<ul>
+<li>Java int 只有 32 位。数值类型有固定的字节数，消除了代码移植时可能会出现的头疼事。</li>
+<li>二进制数据以固定的格式进行存储和传输，消除了字节顺序的困扰。</li>
+<li>字符串采用标准的 Unicode 格式存储。</li>
+</ul>
+<h3 id="解释型">解释型</h3>
+<ul>
+<li>Java 解释器可以在任何移植了解释机器上直接执行 Java 字节码。</li>
+</ul>
+<h3 id="高性能">高性能</h3>
+<ul>
+<li>字节码可以（在运行时）动态地转换成对应运行这个应用特定的 CPU 的机器码。</li>
+<li>例如，即时编译器监控并发现一些代码被频繁地执行，随即转换成当前系统的机器码，优化代码可以提高速度。</li>
+</ul>
+<h3 id="多线程">多线程</h3>
+<ul>
+<li>多线程可以带来更快的交互响应和实时行为。着手于更多的处理器，并让他们一直保持工作。而并非追求摩尔定律，即需求一个性能极致的处理器。</li>
+<li>第一个支持并发程序设计的主流语言。</li>
+</ul>
+<h3 id="动态性">动态性</h3>
+<ul>
+<li>能够适应不断发展的环境。</li>
+<li>库中可以自由地添加新方法和实例变量，而对客户端没有任何影响。</li>
+</ul>
+<h3 id="jshell">Jshell</h3>
+<ul>
+<li>不用为写 main 方法而困扰，会让学习 Java 基础语言和类库变得轻松有趣。</li>
+<li>命令行 jshell 即可进入。版本需求Java JDK9</li>
+</ul>
+<h2 id="7-运行机制">7. 运行机制</h2>
+<ul>
+<li>javac.exe先编译生成.class文件, 后java.exe解释运行.class文件</li>
+</ul>
+<h2 id="8-程序开发步骤">8. 程序开发步骤</h2>
+<ul>
+<li>编写java源代码文件，编译源程序，编译器编译成java字节码文件，运行java虚拟机（JVM）</li>
+</ul>
+<h2 id="9-垃圾回收器gc">9. 垃圾回收器（GC）</h2>
+<ul>
+<li>在Java运行过程中自动启动，程序员无法干预。</li>
+<li>以后会专门讲到Java GC（垃圾回收）机制。</li>
+</ul>
+<h2 id="10-jdkjrejvm">10. JDK，JRE，JVM</h2>
+<ul>
+<li>JDK: Java开发工具包（Java Development Kit）
+<ul>
+<li>Java 开发人员所使用的工具包</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p>JRE: Java运行环境（Java Runtime Environment)</p>
+<ul>
+<li>Java使用人员运行 java 程序需要的运行环境</li>
+</ul>
+</li>
+<li>
+<p>JVM: Java虚拟机（Java Virtual Machine）</p>
+<ul>
+<li>java虚拟机实际上只是一层接口，一层Java程序和操作系统通讯的接口。</li>
+<li>java文件编译生成class文件，而java虚拟机就是这些class文件能够在上面运行的一个平台，你把class文件看成一个软件，java虚拟机就是这个软件可以运行的操作系统。</li>
+</ul>
+</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://lemonsoldout.github.io/post-images/1605595862453.jpg" alt="" loading="lazy"></figure>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/java-intro/" title="Java简介">
+                                        https://lemonsoldout.github.io/post/java-intro/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/java-intro/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/java-intro/&sharesource=qzone&title=Java简介&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607096289586&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/java-intro/&sharesource=weibo&title=Java简介 + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                                
+                                        
+                                            
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                <div style="width:300px;margin:0 auto; padding:0px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
+                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                            
+                        </p>
+                    </a>
+                </div>
+                
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = ''
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="" target="_blank">
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

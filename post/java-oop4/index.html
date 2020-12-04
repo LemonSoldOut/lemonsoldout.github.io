@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607096289586">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+        
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                Java面向对象（4）
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/bSXVQHU1H/'">Java</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            7.0分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-04</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="4-构造方法">4. 构造方法</h2>
+<ul>
+<li>定义：就是类构造对象时调用的方法，主要用来实例化对象。构造方法分为无参构造方法、有参构造方法。</li>
+<li>概念：构方法是一种特殊的“成员方法”
+<ol>
+<li>构造方法作用：
+<ul>
+<li>构造出来一个类的实例</li>
+<li>对构造出来个一个类的实例（对象）初始化</li>
+</ul>
+</li>
+<li>构造方法的名字必须与定义他的类名完全相同，没有返回类型，甚至连void也没有</li>
+<li>主要完成对象的初始化工作，构造方法的调用是在创建一个对象时使用new操作进行的</li>
+<li>类中必定有构造方法，若不写，系统自动添加无参构造方法。 接口不允许被实例化，所以接口中没有构造方法。</li>
+<li>不能被static、final、synchronized、abstract和native修饰</li>
+<li>构造方法在初始化对象时自动执行,一般不能显式地直接调用。当同一个类存在多个构造方法时，java编译系统会自动按照初始化时最后面括号的参数个数以及参数类型来自动一一对应完成构造函数的调用。</li>
+<li>构造方法可以被重载。 没有参数的构造方法称为默认构造方法，与一般的方法一样，构造方法可以进行任何活动。 但是经常将他设计为进行各种初始化活动，比如初始化对象的属性</li>
+<li>构造代码块：</li>
+</ol>
+<ul>
+<li>作用：
+<ul>
+<li>给对象进行初始化，对象一建立就执行，而且优先于构造函数执行</li>
+</ul>
+</li>
+<li>构造代码块和构造函数的区别：
+<ul>
+<li>构造代码块是给所有不同对象的共性进行统一初始化，构造函数是给对应的对象进行初始化</li>
+</ul>
+</li>
+</ul>
+<ol start="9">
+<li>自定义类中，如果不写构造方法，Java 系统会默认添加一个无参的构造方法。如果写了一个有参的构造方法，就一定要写无参构造方法。 一般情况下，我们自定义的类都要手动给出无参构造方法。</li>
+</ol>
+</li>
+</ul>
+<pre><code class="language-java">// constructor 构造函数
+//在创建对象的时候，对象成员可以由构造函数方法进行初始化。
+//new对象时，都是用构造方法进行实例化的；
+//例如：
+Test test = new Test（&quot;a&quot;）；
+ //Test（&quot;a&quot;）；其中这个就是构造函数，“a”为构造方法的形参；
+</code></pre>
+<ul>
+<li>构造方法的方法名必须与类名一样。</li>
+<li>构造方法没有返回类型，也不能定义为void，在方法名前面不声明方法类型。</li>
+<li>构造方法不能作用是完成对象的初始化工作，他能够把定义对象时的参数传递给对象的域。</li>
+<li>构造方法不能由编程人员调用，而要系统调用。</li>
+<li>构造方法可以重载，不同的构造方法以参数的个数，类型，或排序顺序区分。</li>
+</ul>
+<h3 id="单个构造函数方法">单个构造函数方法</h3>
+<pre><code class="language-java">package haha;
+/*
+ * 汽车类
+ */
+public class Car_1{
+  private String color;
+  private String brand;
+
+  public Car_1(){//构成函数
+    this.brand = &quot;奥迪&quot;；
+    this.color = &quot;黑色&quot;；
+  }
+
+  public String getColor(){//对私有成员的get方法
+    return this.color;
+  }
+  public String getBrand(){
+    return this.brand;
+  }
+}
+  /*
+   * 构造函数，构造函数名与类名相同。
+   * 在创建对象时，对象成员可以由构造函数方法进行初始化。
+   * 构造函数的任务就是初始化一个对象内部的状态。
+   */
+</code></pre>
+<pre><code class="language-java">package haha;
+
+/*
+ * 创建轿车对象，访问轿车的颜色品牌的属性（注意是私有成员）
+ */
+public class main_Constructor{
+  public static void public static void main(String[] args) {
+    Car_1 car = new Car_1();
+    System.out.println(&quot;汽车颜色为： &quot;, + car.getColor());//私有成员的get方法
+    System.out.println(&quot;汽车牌子为： &quot; + car.getBrand())
+  }
+}
+// 汽车颜色为： 黑色
+// 汽车牌子为：奥迪
+</code></pre>
+<h3 id="多个构造函数方法">多个构造函数方法</h3>
+<pre><code class="language-java">public class Car{
+    private String color;
+    private String brand;
+
+    public Car(){
+        this.color = &quot;黑色“；
+        this.brand = &quot;奥迪：；
+    }
+    public Car(String co, String br){
+        this.color = co;
+        this.brand = br;
+    }
+    public String getColor(){
+        return this.color;
+    }
+    public String getBrand(){
+        return this.brand;
+    }
+}
+//-------------------
+public class Test{
+    public static void main(String []args){
+        Car c1 = new Car();
+        Car c2 = new  Car(&quot;红色&quot;,&quot;福克斯&quot;)；
+
+        System.out.println(&quot;-------无参数构造方法-------&quot;);
+        System.out.println(&quot;汽车颜色：&quot; + c1.getColor());
+        System.out.println(&quot;汽车品牌：&quot; + c1.getBrand());
+
+        System.out.println(&quot;-------有参数构造方法-------&quot;);
+        System.out.println(&quot;汽车颜色：&quot; + c2.getColor());
+        System.out.println(&quot;汽车品牌：&quot; + c2.getBrand());
+    }
+}
+</code></pre>
+<pre><code class="language-unknown">有时一个类中可能存在多个构造方法，每个方法的参数类型不同。
+多个构造方法可按照方法需要来重载。
+只能根据参数类型匹配合适的构造方法。
+</code></pre>
+<h3 id="关于继承类的构造方法调用">关于继承类的构造方法调用</h3>
+<pre><code class="language-java">public class Parent{
+    Parent(){
+        System.out.println(&quot;---调用父类 Parent() 构造方法---&quot;);
+    }
+}
+//---------
+public class Subparent extends Parent{
+    Subparent(){
+        System.out.println(&quot;---调用子类 Subparent() 构造方法---&quot;);
+    }
+}
+//---------
+public class Subtine extends Subparent{
+    Subtine(){
+        System.out.println(&quot;---调用子子类 Subtine() 构造方法---&quot;);
+    }
+}
+//---------
+public class Test{
+    pubic static void main(String []args){
+        Subtine st = new Subtine();
+    }
+}
+</code></pre>
+<pre><code class="language-unknown">我第一次看到结果的时候好惊讶的，怎么都调用了哈。看了知识点才知道。 
+在Subtine的主方法中只调用子类构造方法，实例化子类对象并且在子类构造方法中，没有调用父类的构造方法的任何语句。但是在实例化对象时，它相应的调用了父类构造方法，在结果中还可以看到调用构造方法的顺序，首先是顶级，再继续往下直达本身类。也就是说实例化子类的时候，要首先实例化父类对象，然后在实例化子类对象，所以在子类构造方法调用父类构造方法前，父类已经实例化了。
+</code></pre>
+<pre><code class="language-java">package text_4_1;
+ 
+public class Parent {
+    Parent(int a){//就是将无参数构造方法改成有参数的。
+        System.out.println(&quot;调用父类Parent构造方法&quot; + a);
+    }
+}
+ 
+package text_4_1;
+ 
+public class Subparent extends Parent{
+    Subparent(){
+        System.out.println(&quot;调用子类Subparent的构造方法&quot;);
+    }
+}
+ 
+package text_4_1;
+ 
+public class Subtine extends Subparent{
+    Subtine(){
+        System.out.println(&quot;调用子类Subtine构造方法&quot;);
+    }
+}
+ 
+ 
+package text_4_1;
+ 
+public class Main {
+    public static void main(String[] args){
+        Subtine subtine = new Subtine();
+    }
+}
+</code></pre>
+<pre><code class="language-java">这样的代码将会报错；就是将父类Parent类无参数构造方法改成有参数的。
+Implicit super constructor Parent() is undefined. Must explicitly invoke another constructor
+隐式的超级构造函数()是未定义的。必须显式地调用另一个构造函数 
+</code></pre>
+<p>意思就是在子类调用构造函数时，必须先调用父类构造函数，因为无参数的构造函数，编译器会自动调用，也就是第一种情况不会报错。但是有参数的，就必须要利用Super的方法来调用。如果不进行调用那么将会报错。</p>
+<p>将Subparent类改成。</p>
+<pre><code class="language-java">package text_4_1;
+ 
+public class Subparent extends Parent{
+    Subparent(){
+        super(5);//调用了其父类就不会报错了。
+        System.out.println(&quot;调用子类Subparent的构造方法&quot;);
+    }
+}
+//备注一下，调用父类构造方法就是；super()；//就ok了。
+</code></pre>
+<p>还补充一点，关于构造方法的可扩展性；<br>
+查看过源码的应该都发现过jdk的编码人员会在一个类中建立多个构造方法；然而他的作用就是提高可扩展性；<br>
+<img src="https://lemonsoldout.github.io/post-images/1605768719912.png" alt="" loading="lazy"><br>
+<img src="https://lemonsoldout.github.io/post-images/1605768738973.png" alt="" loading="lazy"></p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/java-oop4/" title="Java面向对象（4）">
+                                        https://lemonsoldout.github.io/post/java-oop4/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/java-oop4/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/java-oop4/&sharesource=qzone&title=Java面向对象（4）&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607096289586&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/java-oop4/&sharesource=weibo&title=Java面向对象（4） + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                                
+                                        
+                                            
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                <div style="width:300px;margin:0 auto; padding:0px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
+                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                            
+                        </p>
+                    </a>
+                </div>
+                
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = ''
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="" target="_blank">
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

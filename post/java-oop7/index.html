@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607096289586">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+        
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607096289586" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            英语学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/about">
+                            编程学习
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/archives">
+                            归档
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/tags">
+                            标签
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                Java面向对象（7）
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/bSXVQHU1H/'">Java</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            14.2分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-04</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="3-多态">3. 多态</h2>
+<ul>
+<li>分类<br>
+编译时多态：在编译过程中察觉的多态，重载，向上转型。<br>
+运行时多态：在运行过程中察觉的多态，向下转型。
+<ul>
+<li>向上转型、向下转型是在继承关系中，向下转型必须在向上转型的基之上。</li>
+<li>在继承关系中，父类的对象可以指向子类的实例，父类引用实体方法的时候，是调用子类重写以后的方法。</li>
+<li>向上转型<br>
+父类的引用指向子类的实体<br>
+父类类名 对象名=new 子类类();<br>
+优点：减少重复代码，提高代码的复用性<br>
+缺点:父类的引用无法调用子类特有的属性和方法<br>
+解决方案：向下转型</li>
+<li>向下转型：<br>
+子类对象的父类引用赋给子类<br>
+子类类名 对象名=（子类类名）父类对象;</li>
+<li>instanceof 判断左边的对象是否属于右边的类  对象名 instanceof 类名（子类类名）</li>
+<li>匿名对象<br>
+new 类名（）  只有堆空间，没有栈空间，只能属于一次，为了节省代码。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="简介">简介</h3>
+<p>简而言之就是同一个行为具有多个不同表现形式或形态的能力。比如说，有一杯水，我不知道它是温的、冰的还是烫的，但是我一摸我就知道了。我摸水杯这个动作，对于不同温度的水，就会得到不同的结果。这就是多态。</p>
+<h3 id="实现">实现</h3>
+<pre><code class="language-java">public class Water {
+    public void showTem(){
+        System.out.println(&quot;我的温度是: 0度&quot;);
+    }
+}
+
+public class IceWater extends Water {
+    public void showTem(){
+        System.out.println(&quot;我的温度是: 0度&quot;);
+    }
+}
+
+public class WarmWater extends Water {
+    public void showTem(){
+        System.out.println(&quot;我的温度是: 40度&quot;);
+    }
+}
+
+public class HotWater extends Water {
+    public void showTem(){
+        System.out.println(&quot;我的温度是: 100度&quot;);
+    }
+}
+
+public class TestWater{
+    public static void main(String[] args) {
+        Water w = new WarmWater();
+        w.showTem();
+
+        w = new IceWater();
+        w.showTem();
+
+        w = new HotWater();
+        w.showTem();
+
+    }
+}
+</code></pre>
+<pre><code class="language-java">结果:
+我的温度是: 40度
+我的温度是: 0度
+我的温度是: 100度
+</code></pre>
+<p>这里的方法showTem（）就相当于你去摸水杯。我们定义的water类型的引用变量w就相当于水杯，你在水杯里放了什么温度的水，那么我摸出来的感觉就是什么。就像代码中的那样，放置不同温度的水，得到的温度也就不同，但水杯是同一个。</p>
+<p>想必你也看出来了，这段代码中最关键的就是这一句: Water w = new WarmWater(); (向上转型)</p>
+<h4 id="多态的分类">多态的分类</h4>
+<p>多态一般分为两种：<strong>重写式多态和重载式多态</strong>。重写和重载这两个知识点前面的文章已经详细将结果了，这里就不多说了。</p>
+<ul>
+<li>
+<p>重载式多态，也叫编译时多态。也就是说这种多态再编译时已经确定好了。重载大家都知道，方法名相同而参数列表不同的一组方法就是重载。在调用这种重载的方法时，通过传入不同的参数最后得到不同的结果。</p>
+<blockquote>
+<p>但是这里是有歧义的，有的人觉得不应该把重载也算作多态。因为很多人对多态的理解是：<strong>程序中定义的引用变量所指向的具体类型和通过该引用变量发出的方法调用在编程时并不确定，而是在程序运行期间才确定，这种情况叫做多态。</strong> 这个定义中描述的就是我们的第二种多态—重写式多态。并且，重载式多态并不是面向对象编程特有的，而多态却是面向对象三大特性之一（如果我说的不对，记得告诉我。。）。</p>
+<p>我觉得大家也没有必要在定义上去深究这些，我的理解是：<strong>同一个行为具有多个不同表现形式或形态的能力</strong>就是多态，所以我认为重载也是一种多态，如果你不同意这种观点，我也接受。</p>
+</blockquote>
+</li>
+<li>
+<p>重写式多态，也叫运行时多态。这种多态通过动态绑定（dynamic binding）技术来实现，是指在执行期间判断所引用对象的实际类型，根据其实际的类型调用其相应的方法。也就是说，只有程序运行起来，你才知道调用的是哪个子类的方法。<br>
+这种多态通过函数的重写以及向上转型来实现，我们上面代码中的例子就是一个完整的重写式多态。我们接下来讲的所有多态都是重写式多态，因为它才是面向对象编程中真正的多态。</p>
+<blockquote>
+<p>动态绑定技术涉及到jvm，暂时不讲（因为我也不懂，哈哈哈哈），感兴趣的可以自己去研究一下，我暂时还没有时间去研究jvm。。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="多态的条件">多态的条件</h3>
+<ul>
+<li><strong>继承</strong>。在多态中必须存在有继承关系的子类和父类。继承也可以替换为实现接口。</li>
+<li><strong>重写</strong>。子类对父类中某些方法进行重新定义，在调用这些方法时就会调用子类的方法。</li>
+<li><strong>向上转型</strong>。在多态中需要将子类的引用赋给父类对象，只有这样该引用才能够具备技能调用父类的方法和子类的方法。</li>
+</ul>
+<h3 id="向上转型与向下转型">向上转型与向下转型</h3>
+<h4 id="向上转型">向上转型</h4>
+<p>子类引用的对象转换为父类类型称为向上转型。通俗地说就是是将子类对象转为父类对象。此处父类对象可以是接口。</p>
+<pre><code class="language-java">public class Animal {
+    public void eat(){
+        System.out.println(&quot;animal eatting...&quot;);
+    }
+}
+
+public class Cat extends Animal{
+
+    public void eat(){
+
+        System.out.println(&quot;我吃鱼&quot;);
+    }
+}
+
+public class Dog extends Animal{
+
+    public void eat(){
+
+        System.out.println(&quot;我吃骨头&quot;);
+    }
+
+    public void run(){
+        System.out.println(&quot;我会跑&quot;);
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal animal = new Cat(); //向上转型
+        animal.eat();
+
+        animal = new Dog();
+        animal.eat();
+    }
+
+}
+</code></pre>
+<pre><code class="language-java">结果:
+我吃鱼
+我吃骨头
+</code></pre>
+<p>这就是向上转型，Animal animal = new Cat();将子类对象Cat转化为父类对象Animal。这个时候animal这个引用调用的方法是子类方法。</p>
+<h4 id="转型过程中需要注意的问题">转型过程中需要注意的问题</h4>
+<ul>
+<li>向上转型时，子类单独定义的方法会丢失。比如上面Dog类中定义的run方法，当animal引用指向Dog类实例时是访问不到run方法的，<code>animal.run()</code>会报错。</li>
+<li>子类引用不能指向父类对象。<code>Cat c = (Cat)new Animal()</code>这样是不行的。</li>
+</ul>
+<h4 id="向上转型的好处">向上转型的好处</h4>
+<ul>
+<li>减少重复代码，使代码变得简洁。</li>
+<li>提高系统扩展性。</li>
+</ul>
+<p>比如我现在有很多种类的动物，要喂它们吃东西。如果不用向上转型，那我需要这样写</p>
+<pre><code class="language-java">public void eat(Cat c){
+    c.eat();
+}
+
+public void eat(Dog d){
+    d.eat();
+}
+//......
+
+eat(new Cat());
+eat(new Cat());
+eat(new Dog());
+//......
+</code></pre>
+<p>一种动物写一个方法，如果我有一万种动物，我就要写一万个方法，写完大概猴年马月都过了好几个了吧。好吧，你很厉害，你耐着性子写完了，以为可以放松一会了，突然又来了一种新的动物，你是不是又要单独为它写一个eat方法？开心了么？</p>
+<p>那如果我使用向上转型呢？我只需要这样写：</p>
+<pre><code class="language-java">public void eat(Animal a){
+    a.eat();
+}
+
+eat(new Cat());
+eat(new Cat());
+eat(new Dog());
+//.....
+</code></pre>
+<p>恩，搞定了。代码是不是简洁了许多？而且这个时候，如果我又有一种新的动物加进来，我只需要实现它自己的类，让他继承Animal就可以了，而不需要为它单独写一个eat方法。是不是提高了扩展性？</p>
+<h4 id="向下转型">向下转型</h4>
+<p>与向上转型相对应的就是向下转型了。向下转型是把父类对象转为子类对象。(请注意！这里是有坑的。)</p>
+<pre><code class="language-java">//还是上面的animal和cat dog
+Animal a = new Cat();
+Cat c = ((Cat) a);
+c.eat();
+//输出  我吃鱼
+Dog d = ((Dog) a);
+d.eat();
+// 报错 ： java.lang.ClassCastException：com.chengfan.animal.Cat cannot be cast to com.chengfan.animal.Dog
+Animal a1 = new Animal();
+Cat c1 = ((Cat) a1);
+c1.eat();
+// 报错 ： java.lang.ClassCastException：com.chengfan.animal.Animal cannot be cast to com.chengfan.animal.Cat
+</code></pre>
+<p>为什么第一段代码不报错呢？相比你也知道了，因为a本身就是Cat对象，所以它理所当然的可以向下转型为Cat，也理所当然的不能转为Dog，你见过一条狗突然就变成一只猫这种操蛋现象？</p>
+<p>而a1为Animal对象，它也不能被向下转型为任何子类对象。比如你去考古，发现了一个新生物，知道它是一种动物，但是你不能直接说，啊，它是猫，或者说它是狗。</p>
+<h4 id="向下转型注意事项">向下转型注意事项</h4>
+<ul>
+<li>
+<p>向下转型的前提是父类对象指向的是子类对象（也就是说，在向下转型之前，它得先向上转型）</p>
+</li>
+<li>
+<p>向下转型只能转型为本类对象（猫是不能变成狗的）。</p>
+<p>大概你会说，我特么有病啊，我先向上转型再向下转型？？</p>
+<p>我们回到上面的问题：喂动物吃饭，吃了饭做点什么呢？不同的动物肯定做不同的事，怎么做呢？</p>
+</li>
+</ul>
+<pre><code class="language-java">public void eat(Animal a){
+    if(a instanceof Dog){  
+        Dog d = (Dog)a;
+        d.eat();
+        d.run();//狗有一个跑的方法      
+    } 
+    if(a instanceof Cat){  
+        Cat c = (Cat)a;
+        c.eat();
+        System.out.println(&quot;我也想跑，但是不会&quot;); //猫会抱怨    
+    } 
+    a.eat();//其他动物只会吃
+}
+
+eat(new Cat());
+eat(new Cat());
+eat(new Dog());
+//.....
+</code></pre>
+<p>现在，你懂了么？这就是向下转型的简单应用，可能举得例子不恰当，但是也可以说明一些问题。</p>
+<p>敲黑板，划重点！看到那个<strong>instanceof</strong>了么？</p>
+<h4 id="经典案例分析多态">经典案例分析多态</h4>
+<pre><code class="language-java">class A {
+    public String show(D obj) {
+        return (&quot;A and D&quot;);
+    }
+
+    public String show(A obj) {
+        return (&quot;A and A&quot;);
+    }
+
+}
+
+class B extends A{
+    public String show(B obj){
+        return (&quot;B and B&quot;);
+    }
+
+    public String show(A obj){
+        return (&quot;B and A&quot;);
+    }
+}
+
+class C extends B{
+
+}
+
+class D extends B{
+
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        A a1 = new A();
+        A a2 = new B();
+        B b = new B();
+        C c = new C();
+        D d = new D();
+
+        System.out.println(&quot;1--&quot; + a1.show(b));
+        System.out.println(&quot;2--&quot; + a1.show(c));
+        System.out.println(&quot;3--&quot; + a1.show(d));
+        System.out.println(&quot;4--&quot; + a2.show(b));
+        System.out.println(&quot;5--&quot; + a2.show(c));
+        System.out.println(&quot;6--&quot; + a2.show(d));
+        System.out.println(&quot;7--&quot; + b.show(b));
+        System.out.println(&quot;8--&quot; + b.show(c));
+        System.out.println(&quot;9--&quot; + b.show(d));
+    }
+}
+</code></pre>
+<pre><code class="language-java">结果：
+1--A and A
+2--A and A
+3--A and D
+4--B and A
+5--B and A
+6--A and D
+7--B and B
+8--B and B
+9--A and D
+
+能看懂这个结果么？先自分析一下。
+</code></pre>
+<p>前三个，强行分析，还能看得懂。但是第四个，大概你就傻了吧。为什么不是b and b呢？</p>
+<p>这里就要学点新东西了。</p>
+<p>当父类对象引用变量引用子类对象时，被引用对象的类型决定了调用谁的成员方法，引用变量类型决定可调用的方法。如果子类中没有覆盖该方法，那么会去父类中寻找。</p>
+<p>先来看一个简单的例子</p>
+<pre><code class="language-java">class X {
+    public void show(Y y){
+        System.out.println(&quot;x and y&quot;);
+    }
+
+    public void show(){
+        System.out.println(&quot;only x&quot;);
+    }
+}
+
+class Y extends X {
+    public void show(Y y){
+        System.out.println(&quot;y and y&quot;);
+    }
+    public void show(int i){
+
+    }
+}
+
+class main{
+    public static void main(String[] args) {
+        X x = new Y();
+        x.show(new Y());
+        x.show();
+    }
+}
+</code></pre>
+<pre><code class="language-java">结果
+y and y
+only x
+</code></pre>
+<p>继承了X，覆盖了X中的show（Y y)方法，但是没有覆盖show（）方法。</p>
+<p>这个时候，引用类型为X的x指向的对象为Y，这个时候，调用的方法由Y决定，会先从Y中寻找。执行<code>x.show(new Y());</code>，该方法在Y中定义了，所以执行的是Y里面的方法；</p>
+<p>但是执行<code>x.show();</code>的时候，有的人会说，Y中没有这个方法啊？它好像是去父类中找该方法了，因为调用了X中的方法。</p>
+<p>事实上，Y类中是有show（）方法的，这个方法继承自X，只不过没有覆盖该方法，所以没有在Y中明确写出来而已，看起来像是调用了X中的方法，实际上调用的还是Y中的。</p>
+<p>这个时候再看上面那句难理解的话就不难理解了吧。X是引用变量类型，它决定哪些方法可以调用；show（）和show(Y y)可以调用，而show(int i)不可以调用。Y是被引用对象的类型，它决定了调用谁的方法：调用y的方法。</p>
+<p>上面的是一个简单的知识，它还不足以让我们理解那个复杂的例子。我们再来看这样一个知识</p>
+<p>继承链中对象方法的调用的优先级：this.show(O)、super.show(O)、this.show((super)O)、super.show((super)O)。</p>
+<p>如果你能理解这个调用关系，那么多态你就掌握了。我们回到那个复杂的例子：</p>
+<p>abcd的关系是这样的：C/D —&gt; B —&gt; A</p>
+<p>我们先来分析4 ： <code>a2.show(b)</code></p>
+<ul>
+<li>首先，a2是类型为A的引用类型，它指向类型为B的对象。A确定可调用的方法：show(D obj)和show(A obj)。</li>
+<li><code>a2.show(b)</code> ==&gt; <code>this.show(b)</code>，这里this指的是B。</li>
+<li>然后.在B类中找show（B obj），找到了，可惜没用，因为show（B obj）方法不在可调用范围内，<code>this.show(O)</code>失败，进入下一级别：<code>super.show(O)</code>，super指的是A。</li>
+<li>在A 中寻找show（B obj)，失败，因为没用定义这个方法。进入第三级别：<code>this.show((super)O)</code>，this指的是B。</li>
+<li>在B中找show（（A）O）,找到了：show(A obj)，选择调用该方法。</li>
+<li>输出：B and A</li>
+</ul>
+<p>如果你能看懂这个过程，并且能分析出其他的情况，那你就真的掌握了。</p>
+<p>我们再来看一下9：<code>b.show(d)</code></p>
+<ul>
+<li>首先，b为类型为B的引用对象，指向类型为B的对象。没有涉及向上转型，只会调用本类中的方法。</li>
+<li>在B中寻找show(D obj)，方法。现在你不会说没找到了吧？找到了，直接调用该方法。</li>
+<li>输出 A and D。</li>
+</ul>
+<hr>
+<h3 id="总结">总结</h3>
+<ol>
+<li>多态，简而言之就是同一个行为具有多个不同表现形式或形态的能力。</li>
+<li>多态的分类：运行时多态和编译时多态。</li>
+<li>运行时多态的前提：继承（实现），重写，向上转型</li>
+<li>向上转型与向下转型。</li>
+<li>继承链中对象方法的调用的优先级：this.show(O)、super.show(O)、this.show((super)O)、super.show((super)O)。</li>
+</ol>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/java-oop7/" title="Java面向对象（7）">
+                                        https://lemonsoldout.github.io/post/java-oop7/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/java-oop7/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/java-oop7/&sharesource=qzone&title=Java面向对象（7）&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607096289586&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/java-oop7/&sharesource=weibo&title=Java面向对象（7） + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607096289586"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                                
+                                        
+                                            
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                <div style="width:300px;margin:0 auto; padding:0px 0;">
+                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
+                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
+                            
+                        </p>
+                    </a>
+                </div>
+                
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = ''
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="" target="_blank">
+                                
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>
