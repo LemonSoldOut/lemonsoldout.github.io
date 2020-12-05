@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lemonsoldout.github.io</id>
     <title>Gridea</title>
-    <updated>2020-12-05T07:12:44.209Z</updated>
+    <updated>2020-12-05T07:16:28.773Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lemonsoldout.github.io"/>
     <link rel="self" href="https://lemonsoldout.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[学习]]></title>
-        <id>https://lemonsoldout.github.io/post/javase/</id>
-        <link href="https://lemonsoldout.github.io/post/javase/">
+        <id>https://lemonsoldout.github.io/post/notes/</id>
+        <link href="https://lemonsoldout.github.io/post/notes/">
         </link>
         <updated>2020-12-05T05:41:10.000Z</updated>
         <content type="html"><![CDATA[<h1 id="java-入门基础">Java 入门基础</h1>
@@ -69,10 +69,12 @@
 <h1 id="xml">XML</h1>
 <h1 id="jsp">JSP</h1>
 <h1 id="jpa">JPA</h1>
-<h1 id="jdbc">JDBC</h1>
-<h1 id="ajax">Ajax</h1>
-<h1 id="spring">Spring</h1>
+<h1 id="jdbc-jdbc-template">JDBC &amp; JDBC Template</h1>
+<h1 id="sql-mysqloracle">SQL &amp; MySQL/Oracle</h1>
 <h1 id="mybatis">Mybatis</h1>
+<h1 id="ajax">Ajax</h1>
+<h1 id="redis">Redis</h1>
+<h1 id="spring">Spring</h1>
 <h1 id="springmvc">SpringMVC</h1>
 <h1 id="springboot">SpringBoot</h1>
 <h1 id="dubbo">Dubbo</h1>
