@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607156317848">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                树 Tree
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/data-structure5/" class="leancloud_visitors" data-flag-title="树 Tree">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            57.1分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-05</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="5-树-tree">5. 树 Tree</h2>
+<p>树是一种非线性的数据结构，相对于线性的数据结构(链表、数组)而言，树的平均运行时间更短(往往与树相关的排序时间复杂度都不会高)，<br>
+和现实中的树相比，编程的世界中的树一般是“倒”过来看，这样容易我们分析。</p>
+<p>现实中的树是有很多很多个分支的，分支下又有很多很多个分支，如果在程序中实现这个会非常麻烦。因为本来树就是非线性的，而我们计算机的内存是线性存储的，太过复杂的话无法设计出来。</p>
+<h3 id="二叉树-binary-tree">二叉树 Binary Tree</h3>
+<p>简单又经常用的 -&gt; 二叉树，顾名思义，就是每个分支最多只有两个的树。</p>
+<ul>
+<li>一棵树至少会有一个节点(根节点)</li>
+<li>树由节点组成，每个节点的数据结构包括一个数据和两个分叉。</li>
+</ul>
+<hr>
+<p>接下来我们将会介绍另外一种数据结构——树。二叉树是树这种数据结构的一员，后面我们还会介绍红黑树，2-3-4树等数据结构。那么为什么要使用树？它有什么优点？</p>
+<p>前面我们介绍数组的数据结构，我们知道对于有序数组，查找很快，并介绍可以通过二分法查找，但是想要在有序数组中插入一个数据项，就必须先找到插入数据项的位置，然后将所有插入位置后面的数据项全部向后移动一位，来给新数据腾出空间，平均来讲要移动N/2次，这是很费时的。同理，删除数据也是。</p>
+<p>然后我们介绍了另外一种数据结构——链表，链表的插入和删除很快，我们只需要改变一些引用值就行了，但是查找数据却很慢了，因为不管我们查找什么数据，都需要从链表的第一个数据项开始，遍历到找到所需数据项为止，这个查找也是平均需要比较N/2次。</p>
+<p>那么我们就希望一种数据结构能同时具备数组查找快的优点以及链表插入和删除快的优点，于是 树 诞生了。</p>
+<p>5.1 <strong>树</strong>（tree）是一种抽象数据类型（ADT），用来模拟具有树状结构性质的数据集合。它是由n（n&gt;0）个有限<strong>节点</strong>通过连接它们的<strong>边</strong>组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。</p>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%911.png" alt="alt" loading="lazy"></figure>
+<p>①、节点：上图的圆圈，比如A,B,C等都是表示节点。节点一般代表一些实体，在java面向对象编程中，节点一般代表对象。</p>
+<p>②、边：连接节点的线称为边，边表示节点的关联关系。一般从一个节点到另一个节点的<strong>唯一方法</strong>就是沿着一条顺着有边的道路前进。在Java当中通常表示引用。</p>
+<p>树有很多种，向上面的一个节点有多余两个的子节点的树，称为多路树，后面会讲解2-3-4树和外部存储都是多路树的例子。而每个节点最多只能有两个子节点的一种形式称为二叉树，这也是本篇博客讲解的重点。</p>
+<h4 id="树的常用术语">树的常用术语</h4>
+<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%912.png" alt="alt" loading="lazy"></figure>
+<p>①、<strong>路径</strong>：顺着节点的边从一个节点走到另一个节点，所经过的节点的顺序排列就称为“路径”。</p>
+<p>②、<strong>根</strong>：树顶端的节点称为根。一棵树只有一个根，如果要把一个节点和边的集合称为树，那么从根到其他任何一个节点都必须有且只有一条路径。A是根节点。</p>
+<p>③、<strong>父节点</strong>：若一个节点含有子节点，则这个节点称为其子节点的父节点；B是D的父节点。</p>
+<p>④、<strong>子节点</strong>：一个节点含有的子树的根节点称为该节点的子节点；D是B的子节点。</p>
+<p>⑤、<strong>兄弟节点</strong>：具有相同父节点的节点互称为兄弟节点；比如上图的D和E就互称为兄弟节点。</p>
+<p>⑥、<strong>叶节点</strong>：没有子节点的节点称为叶节点，也叫叶子节点，比如上图的H、E、F、G都是叶子节点。</p>
+<p>⑦、<strong>子树</strong>：每个节点都可以作为子树的根，它和它所有的子节点、子节点的子节点等都包含在子树中。</p>
+<p>⑧、<strong>节点的层次</strong>：从根开始定义，根为第一层，根的子节点为第二层，以此类推。</p>
+<p>⑨、<strong>深度</strong>：对于任意节点n,n的深度为从根到n的唯一路径长，根的深度为0；</p>
+<p>⑩、<strong>高度</strong>：对于任意节点n,n的高度为从n到一片树叶的最长路径长，所有树叶的高度为0；</p>
+<p>5.2 二叉树</p>
+<p>二叉树：树的每个节点最多只能有两个子节点</p>
+<p>上图的第一幅图B节点有DEF三个子节点，就不是二叉树，称为多路树；而第二幅图每个节点最多只有两个节点，是二叉树，并且二叉树的子节点称为“左子节点”和“右子节点”。上图的D,E分别是B的左子节点和右子节点。</p>
+<p>如果我们给二叉树加一个额外的条件，就可以得到一种被称作二叉搜索树(binary search tree)的特殊二叉树。</p>
+<p>二叉搜索树要求：若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。</p>
+<figure data-type="image" tabindex="3"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%913.png" alt="alt" loading="lazy"></figure>
+<p>二叉搜索树作为一种数据结构，那么它是如何工作的呢？它查找一个节点，插入一个新节点，以及删除一个节点，遍历树等工作效率如何，下面我们来一一介绍。</p>
+<p><strong>二叉树的节点类：</strong></p>
+<pre><code class="language-java">package com.ys.tree;
+ 
+public class Node {
+    private Object data;    //节点数据
+    private Node leftChild; //左子节点的引用
+    private Node rightChild; //右子节点的引用
+    //打印节点内容
+    public void display(){
+        System.out.println(data);
+    }
+}
+</code></pre>
+<p><strong>二叉树的具体方法：</strong></p>
+<pre><code class="language-java">package com.ys.tree;
+ 
+public interface Tree {
+    //查找节点
+    public Node find(Object key);
+    //插入新节点
+    public boolean insert(Object key);
+    //删除节点
+    public boolean delete(Object key);
+    //Other Method......
+}
+</code></pre>
+<p>5.3 查找节点</p>
+<p>查找某个节点，我们必须从根节点开始遍历。</p>
+<p>①、查找值比当前节点值大，则搜索右子树；</p>
+<p>②、查找值等于当前节点值，停止搜索（终止条件）；</p>
+<p>③、查找值小于当前节点值，则搜索左子树；</p>
+<pre><code class="language-java">//查找节点
+public Node find(int key) {
+    Node current = root;
+    while(current != null){
+        if(current.data &gt; key){//当前值比查找值大，搜索左子树
+            current = current.leftChild;
+        }else if(current.data &lt; key){//当前值比查找值小，搜索右子树
+            current = current.rightChild;
+        }else{
+            return current;
+        }
+    }
+    return null;//遍历完整个树没找到，返回null
+}
+</code></pre>
+<p>用变量current来保存当前查找的节点，参数key是要查找的值，刚开始查找将根节点赋值到current。接在在while循环中，将要查找的值和current保存的节点进行对比。如果key小于当前节点，则搜索当前节点的左子节点，如果大于，则搜索右子节点，如果等于，则直接返回节点信息。当整个树遍历完全，即current == null，那么说明没找到查找值，返回null。</p>
+<p><strong>树的效率</strong>：查找节点的时间取决于这个节点所在的层数，每一层最多有2n-1个节点，总共N层共有2n-1个节点，那么时间复杂度为O(logN),底数为2。</p>
+<p>我看评论有对这里的时间复杂度不理解，这里解释一下，O(logN)，N表示的是二叉树节点的总数，而不是层数。</p>
+<p>5.4 插入节点</p>
+<p>要插入节点，必须先找到插入的位置。与查找操作相似，由于二叉搜索树的特殊性，待插入的节点也需要从根节点开始进行比较，小于根节点则与根节点左子树比较，反之则与右子树比较，直到左子树为空或右子树为空，则插入到相应为空的位置，在比较的过程中要注意保存父节点的信息 及 待插入的位置是父节点的左子树还是右子树，才能插入到正确的位置。</p>
+<pre><code class="language-java">//插入节点
+public boolean insert(int data) {
+    Node newNode = new Node(data);
+    if(root == null){//当前树为空树，没有任何节点
+        root = newNode;
+        return true;
+    }else{
+        Node current = root;
+        Node parentNode = null;
+        while(current != null){
+            parentNode = current;
+            if(current.data &gt; data){//当前值比插入值大，搜索左子节点
+                current = current.leftChild;
+                if(current == null){//左子节点为空，直接将新值插入到该节点
+                    parentNode.leftChild = newNode;
+                    return true;
+                }
+            }else{
+                current = current.rightChild;
+                if(current == null){//右子节点为空，直接将新值插入到该节点
+                    parentNode.rightChild = newNode;
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+</code></pre>
+<p>5.5 遍历树</p>
+<p>遍历树是根据一种特定的顺序访问树的每一个节点。比较常用的有前序遍历，中序遍历和后序遍历。而二叉搜索树最常用的是中序遍历。</p>
+<p><strong>①、中序遍历:左子树——》根节点——》右子树</strong></p>
+<p><strong>②、前序遍历:根节点——》左子树——》右子树</strong></p>
+<p><strong>③、后序遍历:左子树——》右子树——》根节点</strong></p>
+<figure data-type="image" tabindex="4"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%914.png" alt="alt" loading="lazy"></figure>
+<pre><code class="language-java">//中序遍历
+public void infixOrder(Node current){
+    if(current != null){
+        infixOrder(current.leftChild);
+        System.out.print(current.data+&quot; &quot;);
+        infixOrder(current.rightChild);
+    }
+}
+ 
+//前序遍历
+public void preOrder(Node current){
+    if(current != null){
+        System.out.print(current.data+&quot; &quot;);
+        preOrder(current.leftChild);
+        preOrder(current.rightChild);
+    }
+}
+ 
+//后序遍历
+public void postOrder(Node current){
+    if(current != null){
+        postOrder(current.leftChild);
+        postOrder(current.rightChild);
+        System.out.print(current.data+&quot; &quot;);
+    }
+}
+</code></pre>
+<p>5.6 查找最大最小值</p>
+<p>这没什么好说的，要找最小值，先找根的左节点，然后一直找这个左节点的左节点，直到找到没有左节点的节点，那么这个节点就是最小值。同理要找最大值，一直找根节点的右节点，直到没有右节点，则就是最大值。</p>
+<pre><code class="language-java">//找到最大值
+public Node findMax(){
+    Node current = root;
+    Node maxNode = current;
+    while(current != null){
+        maxNode = current;
+        current = current.rightChild;
+    }
+    return maxNode;
+}
+//找到最小值
+public Node findMin(){
+    Node current = root;
+    Node minNode = current;
+    while(current != null){
+        minNode = current;
+        current = current.leftChild;
+    }
+    return minNode;
+}
+</code></pre>
+<p>5.7 删除节点</p>
+<p>删除节点是二叉搜索树中最复杂的操作，删除的节点有三种情况，前两种比较简单，但是第三种却很复杂。</p>
+<p>1、该节点是叶节点（没有子节点）</p>
+<p>2、该节点有一个子节点</p>
+<p>3、该节点有两个子节点</p>
+<p>下面我们分别对这三种情况进行讲解。</p>
+<h4 id="1-删除没有子节点的节点">①、删除没有子节点的节点</h4>
+<p>要删除叶节点，只需要改变该节点的父节点引用该节点的值，即将其引用改为 null 即可。要删除的节点依然存在，但是它已经不是树的一部分了，由于Java语言的垃圾回收机制，我们不需要非得把节点本身删掉，一旦Java意识到程序不在与该节点有关联，就会自动把它清理出存储器。</p>
+<figure data-type="image" tabindex="5"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%915.png" alt="alt" loading="lazy"></figure>
+<pre><code class="language-java">@Override
+public boolean delete(int key) {
+    Node current = root;
+    Node parent = root;
+    boolean isLeftChild = false;
+    //查找删除值，找不到直接返回false
+    while(current.data != key){
+        parent = current;
+        if(current.data &gt; key){
+            isLeftChild = true;
+            current = current.leftChild;
+        }else{
+            isLeftChild = false;
+            current = current.rightChild;
+        }
+        if(current == null){
+            return false;
+        }
+    }
+    //如果当前节点没有子节点
+    if(current.leftChild == null &amp;&amp; current.rightChild == null){
+        if(current == root){
+            root = null;
+        }else if(isLeftChild){
+            parent.leftChild = null;
+        }else{
+            parent.rightChild = null;
+        }
+        return true;
+    }
+    return false;
+}
+</code></pre>
+<p>删除节点，我们要先找到该节点，并记录该节点的父节点。在检查该节点是否有子节点。如果没有子节点，接着检查其是否是根节点，如果是根节点，只需要将其设置为null即可。如果不是根节点，是叶节点，那么断开父节点和其的关系即可。</p>
+<h4 id="2-删除有一个子节点的节点">②、删除有一个子节点的节点</h4>
+<p>删除有一个子节点的节点，我们只需要将其父节点原本指向该节点的引用，改为指向该节点的子节点即可。</p>
+<figure data-type="image" tabindex="6"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%916.png" alt="alt" loading="lazy"></figure>
+<pre><code class="language-java">//当前节点有一个子节点
+if(current.leftChild == null &amp;&amp; current.rightChild != null){
+    if(current == root){
+        root = current.rightChild;
+    }else if(isLeftChild){
+        parent.leftChild = current.rightChild;
+    }else{
+        parent.rightChild = current.rightChild;
+    }
+    return true;
+}else{
+    //current.leftChild != null &amp;&amp; current.rightChild == null
+    if(current == root){
+        root = current.leftChild;
+    }else if(isLeftChild){
+        parent.leftChild = current.leftChild;
+    }else{
+        parent.rightChild = current.leftChild;
+    }
+    return true;
+}
+</code></pre>
+<h4 id="3-删除有两个子节点的节点">③、删除有两个子节点的节点</h4>
+<figure data-type="image" tabindex="7"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%917.png" alt="alt" loading="lazy"></figure>
+<p>当删除的节点存在两个子节点，那么删除之后，两个子节点的位置我们就没办法处理了。既然处理不了，我们就想到一种办法，用另一个节点来代替被删除的节点，那么用哪一个节点来代替呢？</p>
+<p>我们知道二叉搜索树中的节点是按照关键字来进行排列的，某个节点的关键字次高节点是它的中序遍历后继节点。用后继节点来代替删除的节点，显然该二叉搜索树还是有序的。（这里用后继节点代替，如果该后继节点自己也有子节点，我们后面讨论。）</p>
+<figure data-type="image" tabindex="8"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%918.png" alt="alt" loading="lazy"></figure>
+<p>那么如何找到删除节点的中序后继节点呢？其实我们稍微分析，这实际上就是要找比删除节点关键值大的节点集合中最小的一个节点，只有这样代替删除节点后才能满足二叉搜索树的特性。</p>
+<p>后继节点也就是：比删除节点大的最小节点。</p>
+<p>算法：程序找到删除节点的右节点，(注意这里前提是删除节点存在左右两个子节点，如果不存在则是删除情况的前面两种)，然后转到该右节点的左子节点，依次顺着左子节点找下去，最后一个左子节点即是后继节点；如果该右节点没有左子节点，那么该右节点便是后继节点。</p>
+<figure data-type="image" tabindex="9"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%919.png" alt="alt" loading="lazy"></figure>
+<p>需要确定后继节点没有子节点，如果后继节点存在子节点，那么又要分情况讨论了。</p>
+<p>①、后继节点是删除节点的右子节点</p>
+<p>这种情况简单，只需要将后继节点表示的子树移到被删除节点的位置即可！</p>
+<figure data-type="image" tabindex="10"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9110.png" alt="alt" loading="lazy"></figure>
+<p>②、后继节点是删除节点的右子节点的左子节点</p>
+<figure data-type="image" tabindex="11"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9111.png" alt="alt" loading="lazy"></figure>
+<pre><code class="language-java">public Node getSuccessor(Node delNode){
+    Node successorParent = delNode;
+    Node successor = delNode;
+    Node current = delNode.rightChild;
+    while(current != null){
+        successorParent = successor;
+        successor = current;
+        current = current.leftChild;
+    }
+    //将后继节点替换删除节点
+    if(successor != delNode.rightChild){
+        successorParent.leftChild = successor.rightChild;
+        successor.rightChild = delNode.rightChild;
+    }
+     
+    return successor;
+}
+</code></pre>
+<h4 id="4-删除有必要吗">④、删除有必要吗？</h4>
+<p>通过上面的删除分类讨论，我们发现删除其实是挺复杂的，那么其实我们可以不用真正的删除该节点，只需要在Node类中增加一个标识字段isDelete，当该字段为true时，表示该节点已经删除，反正没有删除。那么我们在做比如find()等操作的时候，要先判断isDelete字段是否为true。这样删除的节点并不会改变树的结构。</p>
+<pre><code class="language-java">public class Node {
+    int data;   //节点数据
+    Node leftChild; //左子节点的引用
+    Node rightChild; //右子节点的引用
+    boolean isDelete;//表示节点是否被删除
+}
+</code></pre>
+<p>5.8 二叉树的效率</p>
+<p>从前面的大部分对树的操作来看，都需要从根节点到下一层一层的查找。</p>
+<p>一颗满树，每层节点数大概为2n-1，那么最底层的节点个数比树的其它节点数多1，因此，查找、插入或删除节点的操作大约有一半都需要找到底层的节点，另外四分之一的节点在倒数第二层，依次类推。</p>
+<p>总共N层共有2n-1个节点，那么时间复杂度为O(logn),底数为2。</p>
+<p>在有1000000 个数据项的无序数组和链表中，查找数据项平均会比较500000 次，但是在有1000000个节点的二叉树中，只需要20次或更少的比较即可。</p>
+<p>有序数组可以很快的找到数据项，但是插入数据项的平均需要移动 500000 次数据项，在 1000000 个节点的二叉树中插入数据项需要20次或更少比较，在加上很短的时间来连接数据项。</p>
+<p>同样，从 1000000 个数据项的数组中删除一个数据项平均需要移动 500000 个数据项，而在 1000000 个节点的二叉树中删除节点只需要20次或更少的次数来找到他，然后在花一点时间来找到它的后继节点，一点时间来断开节点以及连接后继节点。</p>
+<p>所以，树对所有常用数据结构的操作都有很高的效率。</p>
+<p>遍历可能不如其他操作快，但是在大型数据库中，遍历是很少使用的操作，它更常用于程序中的辅助算法来解析算术或其它表达式。</p>
+<p>5.9 用数组表示树</p>
+<p>用数组表示树，那么节点是存在数组中的，节点在数组中的位置对应于它在树中的位置。下标为 0 的节点是根，下标为 1 的节点是根的左子节点，以此类推，按照从左到右的顺序存储树的每一层。</p>
+<figure data-type="image" tabindex="12"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9112.png" alt="alt" loading="lazy"></figure>
+<p>树中的每个位置，无论是否存在节点，都对应于数组中的一个位置，树中没有节点的在数组中用0或者null表示。</p>
+<p>假设节点的索引值为index，那么节点的左子节点是 2<em>index+1，节点的右子节点是 2</em>index+2，它的父节点是 （index-1）/2。</p>
+<p>在大多数情况下，使用数组表示树效率是很低的，不满的节点和删除掉的节点都会在数组中留下洞，浪费存储空间。更坏的是，删除节点如果要移动子树的话，子树中的每个节点都要移到数组中新的位置，这是很费时的。</p>
+<p>不过如果不允许删除操作，数组表示可能会很有用，尤其是因为某种原因要动态的为每个字节分配空间非常耗时。</p>
+<p>5.10 完整的BinaryTree</p>
+<p>Node</p>
+<pre><code class="language-java">package com.ys.tree;
+ 
+public class Node {
+    int data;   //节点数据
+    Node leftChild; //左子节点的引用
+    Node rightChild; //右子节点的引用
+    boolean isDelete;//表示节点是否被删除
+     
+    public Node(int data){
+        this.data = data;
+    }
+    //打印节点内容
+    public void display(){
+        System.out.println(data);
+    }
+ 
+}
+</code></pre>
+<p>Tree</p>
+<pre><code class="language-java">package com.ys.tree;
+ 
+public interface Tree {
+    //查找节点
+    public Node find(int key);
+    //插入新节点
+    public boolean insert(int data);
+     
+    //中序遍历
+    public void infixOrder(Node current);
+    //前序遍历
+    public void preOrder(Node current);
+    //后序遍历
+    public void postOrder(Node current);
+     
+    //查找最大值
+    public Node findMax();
+    //查找最小值
+    public Node findMin();
+     
+    //删除节点
+    public boolean delete(int key);
+     
+    //Other Method......
+}
+</code></pre>
+<p>BinaryTree</p>
+<pre><code class="language-java">package com.ys.tree;
+ 
+public class BinaryTree implements Tree {
+    //表示根节点
+    private Node root;
+ 
+    //查找节点
+    public Node find(int key) {
+        Node current = root;
+        while(current != null){
+            if(current.data &gt; key){//当前值比查找值大，搜索左子树
+                current = current.leftChild;
+            }else if(current.data &lt; key){//当前值比查找值小，搜索右子树
+                current = current.rightChild;
+            }else{
+                return current;
+            }
+        }
+        return null;//遍历完整个树没找到，返回null
+    }
+ 
+    //插入节点
+    public boolean insert(int data) {
+        Node newNode = new Node(data);
+        if(root == null){//当前树为空树，没有任何节点
+            root = newNode;
+            return true;
+        }else{
+            Node current = root;
+            Node parentNode = null;
+            while(current != null){
+                parentNode = current;
+                if(current.data &gt; data){//当前值比插入值大，搜索左子节点
+                    current = current.leftChild;
+                    if(current == null){//左子节点为空，直接将新值插入到该节点
+                        parentNode.leftChild = newNode;
+                        return true;
+                    }
+                }else{
+                    current = current.rightChild;
+                    if(current == null){//右子节点为空，直接将新值插入到该节点
+                        parentNode.rightChild = newNode;
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+     
+    //中序遍历
+    public void infixOrder(Node current){
+        if(current != null){
+            infixOrder(current.leftChild);
+            System.out.print(current.data+&quot; &quot;);
+            infixOrder(current.rightChild);
+        }
+    }
+     
+    //前序遍历
+    public void preOrder(Node current){
+        if(current != null){
+            System.out.print(current.data+&quot; &quot;);
+            infixOrder(current.leftChild);
+            infixOrder(current.rightChild);
+        }
+    }
+     
+    //后序遍历
+    public void postOrder(Node current){
+        if(current != null){
+            infixOrder(current.leftChild);
+            infixOrder(current.rightChild);
+            System.out.print(current.data+&quot; &quot;);
+        }
+    }
+    //找到最大值
+    public Node findMax(){
+        Node current = root;
+        Node maxNode = current;
+        while(current != null){
+            maxNode = current;
+            current = current.rightChild;
+        }
+        return maxNode;
+    }
+    //找到最小值
+    public Node findMin(){
+        Node current = root;
+        Node minNode = current;
+        while(current != null){
+            minNode = current;
+            current = current.leftChild;
+        }
+        return minNode;
+    }
+     
+    @Override
+    public boolean delete(int key) {
+        Node current = root;
+        Node parent = root;
+        boolean isLeftChild = false;
+        //查找删除值，找不到直接返回false
+        while(current.data != key){
+            parent = current;
+            if(current.data &gt; key){
+                isLeftChild = true;
+                current = current.leftChild;
+            }else{
+                isLeftChild = false;
+                current = current.rightChild;
+            }
+            if(current == null){
+                return false;
+            }
+        }
+        //如果当前节点没有子节点
+        if(current.leftChild == null &amp;&amp; current.rightChild == null){
+            if(current == root){
+                root = null;
+            }else if(isLeftChild){
+                parent.leftChild = null;
+            }else{
+                parent.rightChild = null;
+            }
+            return true;
+             
+            //当前节点有一个子节点，右子节点
+        }else if(current.leftChild == null &amp;&amp; current.rightChild != null){
+            if(current == root){
+                root = current.rightChild;
+            }else if(isLeftChild){
+                parent.leftChild = current.rightChild;
+            }else{
+                parent.rightChild = current.rightChild;
+            }
+            return true;
+            //当前节点有一个子节点，左子节点
+        }else if(current.leftChild != null &amp;&amp; current.rightChild == null){
+            if(current == root){
+                root = current.leftChild;
+            }else if(isLeftChild){
+                parent.leftChild = current.leftChild;
+            }else{
+                parent.rightChild = current.leftChild;
+            }
+            return true;
+        }else{
+            //当前节点存在两个子节点
+            Node successor = getSuccessor(current);
+            if(current == root){
+                root= successor;
+            }else if(isLeftChild){
+                parent.leftChild = successor;
+            }else{
+                parent.rightChild = successor;
+            }
+            successor.leftChild = current.leftChild;
+        }
+        return false;
+         
+    }
+ 
+    public Node getSuccessor(Node delNode){
+        Node successorParent = delNode;
+        Node successor = delNode;
+        Node current = delNode.rightChild;
+        while(current != null){
+            successorParent = successor;
+            successor = current;
+            current = current.leftChild;
+        }
+        //后继节点不是删除节点的右子节点，将后继节点替换删除节点
+        if(successor != delNode.rightChild){
+            successorParent.leftChild = successor.rightChild;
+            successor.rightChild = delNode.rightChild;
+        }
+         
+        return successor;
+    }
+     
+    public static void main(String[] args) {
+        BinaryTree bt = new BinaryTree();
+        bt.insert(50);
+        bt.insert(20);
+        bt.insert(80);
+        bt.insert(10);
+        bt.insert(30);
+        bt.insert(60);
+        bt.insert(90);
+        bt.insert(25);
+        bt.insert(85);
+        bt.insert(100);
+        bt.delete(10);//删除没有子节点的节点
+        bt.delete(30);//删除有一个子节点的节点
+        bt.delete(80);//删除有两个子节点的节点
+        System.out.println(bt.findMax().data);
+        System.out.println(bt.findMin().data);
+        System.out.println(bt.find(100));
+        System.out.println(bt.find(200));
+         
+    }
+ 
+}
+</code></pre>
+<p>5.11 哈夫曼（Haffman）编码</p>
+<p>我们知道计算机里每个字符在没有压缩的文本文件中由一个字节（比如ASCII码）或两个字节（比如Unicode,这个编码在各种语言中通用）表示，在这些方案中，每个字符需要相同的位数。</p>
+<p>有很多压缩数据的方法，就是减少表示最常用字符的位数量，比如英语中，E是最常用的字母，我们可以只用两位01来表示，2位有四种组合：00、01、10、11，那么我们可以用这四种组合表示四种常用的字符吗？</p>
+<p>答案是不可以的，因为在编码序列中是没有空格或其他特殊字符存在的，全都是有0和1构成的序列，比如E用01来表示，X用01011000表示，那么在解码的时候就弄不清楚01是表示E还是表示X的起始部分，所以在编码的时候就定下了一个规则：<strong>每个代码都不能是其它代码的前缀。</strong></p>
+<h4 id="1-哈夫曼编码">①、哈夫曼编码</h4>
+<p>二叉树中有一种特别的树——哈夫曼树（最优二叉树），其通过某种规则（权值）来构造出一哈夫曼二叉树，在这个二叉树中，只有叶子节点才是有效的数据节点（很重要），其他的非叶子节点是为了构造出哈夫曼而引入的！<br>
+哈夫曼编码是一个通过哈夫曼树进行的一种编码，一般情况下，以字符：‘0’与‘1’表示。编码的实现过程很简单，只要实现哈夫曼树，通过遍历哈夫曼树，规定向左子树遍历一个节点编码为“0”，向右遍历一个节点编码为“1”，结束条件就是遍历到叶子节点！因为上面说过：哈夫曼树叶子节点才是有效数据节点！</p>
+<figure data-type="image" tabindex="13"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%93%88%E5%A4%AB%E6%9B%BC1.png" alt="alt" loading="lazy"></figure>
+<p>我们用01表示S，用00表示空格后，就不能用01和11表示某个字符了，因为它们是其它字符的前缀。在看三位的组合，分别有000,001,010,100,101,110和111，A是010，I是110，为什么没有其它三位的组合了呢？因为已知是不能用01和11开始的组合了，那么就减少了四种选择，同时011用于U和换行符的开始，111用于E和Y的开始，这样就只剩下2个三位的组合了，同理可以理解为什么只有三个四位的代码可用。</p>
+<p>所以对于消息：SUSIE SAYS IT IS EASY</p>
+<p>哈夫曼编码为：100111110110111100100101110100011001100011010001111010101110</p>
+<h4 id="2-哈夫曼解码">②、哈夫曼解码</h4>
+<p>如果收到上面的一串哈夫曼编码，怎么解码呢？消息中出现的字符在哈夫曼树中是叶节点，也就是没有子节点，如下图：它们在消息中出现的频率越高，在树中的位置就越高，每个圆圈外面的数字就是频率，非叶节点外面的数字是它子节点数字的和。</p>
+<p>每个字符都从根开始，如果遇到0，就向左走到下一个节点，如果遇到1，就向右。比如字符A是010，那么先向左，再向右，再向左，就找到了A，其它的依次类推。</p>
+<figure data-type="image" tabindex="14"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%93%88%E5%A4%AB%E6%9B%BC2.png" alt="alt" loading="lazy"></figure>
+<p>5.12 总结</p>
+<p>树是由边和节点构成，根节点是树最顶端的节点，它没有父节点；二叉树中，最多有两个子节点；某个节点的左子树每个节点都比该节点的关键字值小，右子树的每个节点都比该节点的关键字值大，那么这种树称为二叉搜索树，其查找、插入、删除的时间复杂度都为logN；可以通过前序遍历、中序遍历、后序遍历来遍历树，前序是根节点-左子树-右子树，中序是左子树-根节点-右子树，后序是左子树-右子树-根节点；删除一个节点只需要断开指向它的引用即可；哈夫曼树是二叉树，用于数据压缩算法，最经常出现的字符编码位数最少，很少出现的字符编码位数多一些。</p>
+<h3 id="2-3-4树">2-3-4树</h3>
+<p>通过前面的介绍，我们知道在二叉树中，每个节点只有一个数据项，最多有两个子节点。如果允许每个节点可以有更多的数据项和更多的子节点，就是多叉树。本篇博客我们将介绍的——2-3-4树，它是一种多叉树，它的每个节点最多有四个子节点和三个数据项。</p>
+<h4 id="介绍">介绍</h4>
+<p>2-3-4树每个节点最多有四个字节点和三个数据项，名字中 2,3,4 的数字含义是指一个节点可能含有的子节点的个数。对于非叶节点有三种可能的情况：</p>
+<p>①、有一个数据项的节点总是有两个子节点；</p>
+<p>②、有二个数据项的节点总是有三个子节点；</p>
+<p>③、有三个数据项的节点总是有四个子节点；</p>
+<p>简而言之，非叶节点的子节点数总是比它含有的数据项多1。如果子节点个数为L，数据项个数为D，那么：L = D + 1</p>
+<figure data-type="image" tabindex="15"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9113.png" alt="alt" loading="lazy"></figure>
+<p>叶节点（上图最下面的一排）是没有子节点的，然而它可能含有一个、两个或三个数据项。空节点是不会存在的。</p>
+<p>树结构中很重要的一点就是节点之间关键字值大小的关系。在二叉树中，所有关键字值比某个节点值小的节点都在这个节点左子节点为根的子树上；所有关键字值比某个节点值大的节点都在这个节点右子节点为根的子树上。2-3-4 树规则也是一样，并且还加上以下几点：</p>
+<p>为了方便描述，用从0到2的数字给数据项编号，用0到3的数字给子节点编号，如下图：</p>
+<figure data-type="image" tabindex="16"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9114.png" alt="alt" loading="lazy"></figure>
+<p>①、根是child0的子树的所有子节点的关键字值小于key0；</p>
+<p>②、根是child1的子树的所有子节点的关键字值大于key0并且小于key1；</p>
+<p>③、根是child2的子树的所有子节点的关键字值大于key1并且小于key2；</p>
+<p>④、根是child3的子树的所有子节点的关键字值大于key2。</p>
+<p>简化关系如下图，由于2-3-4树中一般不允许出现重复关键值，所以不用考虑比较关键值相同的情况。</p>
+<figure data-type="image" tabindex="17"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9115.png" alt="alt" loading="lazy"></figure>
+<h4 id="搜索2-3-4树">搜索2-3-4树</h4>
+<p>查找特定关键字值的数据项和在二叉树中的搜索类似。从根节点开始搜索，除非查找的关键字值就是根，否则选择关键字值所在的合适范围，转向那个方向，直到找到为止。</p>
+<p>比如对于下面这幅图，我们需要查找关键字值为 64 的数据项。</p>
+<figure data-type="image" tabindex="18"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9116.png" alt="alt" loading="lazy"></figure>
+<h4 id="插入">插入</h4>
+<p>新的数据项一般要插在叶节点里，在树的最底层。如果你插入到有子节点的节点里，那么子节点的编号就要发生变化来维持树的结构，因为在2-3-4树中节点的子节点要比数据项多1。</p>
+<p>插入操作有时比较简单，有时却很复杂。</p>
+<p>①、当插入没有满数据项的节点时是很简单的，找到合适的位置，只需要把新数据项插入就可以了，插入可能会涉及到在一个节点中移动一个或其他两个数据项，这样在新的数据项插入后关键字值仍保持正确的顺序。如下图：</p>
+<figure data-type="image" tabindex="19"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9117.png" alt="alt" loading="lazy"></figure>
+<p>②、如果往下寻找插入位置的途中，节点已经满了，那么插入就变得复杂了。发生这种情况时，节点必须分裂，分裂能保证2-3-4树的平衡。</p>
+<p>ps：这里讨论的是自顶向下的2-3-4树，因为是在向下找到插入点的路途中节点发生了分裂。把要分裂的数据项设为A,B,C，下面是节点分裂的情况（假设分裂的节点不是根节点）：</p>
+<h4 id="1-节点分裂">1、节点分裂</h4>
+<p>一、创建一个新的空节点，它是要分裂节点的兄弟，在要分裂节点的右边；</p>
+<p>二、数据项C移到新节点中；</p>
+<p>三、数据项B移到要分裂节点的父节点中；</p>
+<p>四、数据项A保留在原来的位置；</p>
+<p>五、最右边的两个子节点从要分裂处断开，连到新节点上。</p>
+<figure data-type="image" tabindex="20"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9118.png" alt="alt" loading="lazy"></figure>
+<p>上图描述了节点分裂的例子，另一种描述节点分裂的说法是4-节点变成了两个 2- 节点。节点分裂是把数据向上和向右移动，从而保持了数的平衡。一般插入只需要分裂一个节点，除非插入路径上存在不止一个满节点时，这种情况就需要多重分裂。</p>
+<h4 id="2-根的分裂">2、根的分裂</h4>
+<p>如果一开始查找插入节点时就碰到满的根节点，那么插入过程更复杂：</p>
+<p>①、创建新的根节点，它是要分裂节点的父节点。</p>
+<p>②、创建第二个新的节点，它是要分裂节点的兄弟节点；</p>
+<p>③、数据项C移到新的兄弟节点中；</p>
+<p>④、数据项B移到新的根节点中；</p>
+<p>⑤、数据项A保留在原来的位置；</p>
+<p>⑥、要分裂节点最右边的两个子节点断开连接，连到新的兄弟节点中。</p>
+<figure data-type="image" tabindex="21"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9119.png" alt="alt" loading="lazy"></figure>
+<p>上图便是根分裂的情况，分裂完成之后，整个树的高度加1。另外一种描述根分裂的方法是说4-节点变成三个2-节点。</p>
+<p><strong>注意：插入时，碰到没有满的节点时，要继续向下寻找其子节点进行插入。如果直接插入该节点，那么还要进行子节点的增加，因为在2-3-4树中节点的子节点个数要比数据项多1；如果插入的节点满了，那么就要进行节点分裂。下图是一系列插入过程，有4个节点分裂了，两个是根，两个是叶节点：</strong></p>
+<figure data-type="image" tabindex="22"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9120.png" alt="alt" loading="lazy"></figure>
+<h4 id="2-3-4-树代码实现">2-3-4 树代码实现</h4>
+<p>分为节点类Node,表示每个节点的数据项类DataItem,以及最后的2-3-4树类Tree234.class</p>
+<pre><code class="language-java">package com.ys.tree.twothreefour;
+ 
+public class Tree234 {
+    private Node root = new Node() ;
+    /*public Tree234(){
+        root = new Node();
+    }*/
+    //查找关键字值
+    public int find(long key){
+        Node curNode = root;
+        int childNumber ;
+        while(true){
+            if((childNumber = curNode.findItem(key))!=-1){
+                return childNumber;
+            }else if(curNode.isLeaf()){//节点是叶节点
+                return -1;
+            }else{
+                curNode = getNextChild(curNode,key);
+            }
+        }
+    }
+     
+    public Node getNextChild(Node theNode,long theValue){
+        int j;
+        int numItems = theNode.getNumItems();
+        for(j = 0 ; j &lt; numItems ; j++){
+            if(theValue &lt; theNode.getItem(j).dData){
+                return theNode.getChild(j);
+            }
+        }
+        return theNode.getChild(j);
+    }
+     
+    //插入数据项
+    public void insert(long dValue){
+        Node curNode = root;
+        DataItem tempItem = new DataItem(dValue);
+        while(true){
+            if(curNode.isFull()){//如果节点满数据项了，则分裂节点
+                split(curNode);
+                curNode = curNode.getParent();
+                curNode = getNextChild(curNode, dValue);
+            }else if(curNode.isLeaf()){//当前节点是叶节点
+                break;
+            }else{
+                curNode = getNextChild(curNode, dValue);
+            }
+        }//end while
+        curNode.insertItem(tempItem);
+    }
+     
+    public void split(Node thisNode){
+        DataItem itemB,itemC;
+        Node parent,child2,child3;
+        int itemIndex;
+        itemC = thisNode.removeItem();
+        itemB = thisNode.removeItem();
+        child2 = thisNode.disconnectChild(2);
+        child3 = thisNode.disconnectChild(3);
+        Node newRight = new Node();
+        if(thisNode == root){//如果当前节点是根节点，执行根分裂
+            root = new Node();
+            parent = root;
+            root.connectChild(0, thisNode);
+        }else{
+            parent = thisNode.getParent();
+        }
+        //处理父节点
+        itemIndex = parent.insertItem(itemB);
+        int n = parent.getNumItems();
+        for(int j = n-1; j &gt; itemIndex ; j--){
+            Node temp = parent.disconnectChild(j);
+            parent.connectChild(j+1, temp);
+        }
+        parent.connectChild(itemIndex+1, newRight);
+         
+        //处理新建的右节点
+        newRight.insertItem(itemC);
+        newRight.connectChild(0, child2);
+        newRight.connectChild(1, child3);
+    }
+     
+    //打印树节点
+    public void displayTree(){
+        recDisplayTree(root,0,0);
+    }
+    private void recDisplayTree(Node thisNode,int level,int childNumber){
+        System.out.println(&quot;levle=&quot;+level+&quot; child=&quot;+childNumber+&quot; &quot;);
+        thisNode.displayNode();
+        int numItems = thisNode.getNumItems();
+        for(int j = 0; j &lt; numItems+1 ; j++){
+            Node nextNode = thisNode.getChild(j);
+            if(nextNode != null){
+                recDisplayTree(nextNode, level+1, j);
+            }else{
+                return;
+            }
+        }
+    }
+ 
+    //数据项
+    class DataItem{
+        public long dData;
+        public DataItem(long dData){
+            this.dData = dData;
+        }
+        public void displayItem(){
+            System.out.println(&quot;/&quot;+dData);
+        }
+    }
+     
+    //节点
+    class Node{
+        private static final int ORDER = 4;
+        private int numItems;//表示该节点有多少个数据项
+        private Node parent;//父节点
+        private Node childArray[] = new Node[ORDER];//存储子节点的数组，最多有4个子节点
+        private DataItem itemArray[] = new DataItem[ORDER-1];//存放数据项的数组，一个节点最多有三个数据项
+         
+        //连接子节点
+        public void connectChild(int childNum,Node child){
+            childArray[childNum] = child;
+            if(child != null){
+                child.parent = this;
+            }
+        }
+        //断开与子节点的连接，并返回该子节点
+        public Node disconnectChild(int childNum){
+            Node tempNode = childArray[childNum];
+            childArray[childNum] = null;
+            return tempNode;
+        }
+        //得到节点的某个子节点
+        public Node getChild(int childNum){
+            return childArray[childNum];
+        }
+        //得到父节点
+        public Node getParent(){
+            return parent;
+        }
+        //判断是否是叶节点
+        public boolean isLeaf(){
+            return (childArray[0] == null)?true:false;
+        }
+        //得到节点数据项的个数
+        public int getNumItems(){
+            return numItems;
+        }
+        //得到节点的某个数据项
+        public DataItem getItem(int index){
+            return itemArray[index];
+        }
+        //判断节点的数据项是否满了（最多3个）
+        public boolean isFull(){
+            return (numItems == ORDER-1) ? true:false;
+        }
+         
+        //找到数据项在节点中的位置
+        public int findItem(long key){
+            for(int j = 0 ; j &lt; ORDER-1 ; j++){
+                if(itemArray[j]==null){
+                    break;
+                }else if(itemArray[j].dData == key){
+                    return j;
+                }
+            }
+            return -1;
+        }
+         
+        //将数据项插入到节点
+        public int insertItem(DataItem newItem){
+            numItems++;
+            long newKey = newItem.dData;
+            for(int j = ORDER-2 ; j &gt;= 0 ; j--){
+                if(itemArray[j] == null){//如果为空，继续向前循环
+                    continue;
+                }else{
+                    long itsKey = itemArray[j].dData;//保存节点某个位置的数据项
+                    if(newKey &lt; itsKey){//如果比新插入的数据项大
+                        itemArray[j+1] = itemArray[j];//将大数据项向后移动一位
+                    }else{
+                        itemArray[j+1] = newItem;//如果比新插入的数据项小，则直接插入
+                        return j+1;
+                    }
+                }
+            }
+            //如果都为空，或者都比待插入的数据项大，则将待插入的数据项放在节点第一个位置
+            itemArray[0] = newItem;
+            return 0;
+        }
+        //移除节点的数据项
+        public DataItem removeItem(){
+            DataItem temp = itemArray[numItems-1];
+            itemArray[numItems-1] = null;
+            numItems--;
+            return temp;
+        }
+        //打印节点的所有数据项
+        public void displayNode(){
+            for(int j = 0 ; j &lt; numItems ; j++){
+                itemArray[j].displayItem();
+            }
+            System.out.println(&quot;/&quot;);
+        }
+    }
+ 
+     
+}
+</code></pre>
+<h4 id="2-3-4树和红黑树">2-3-4树和红黑树</h4>
+<p>2-3-4树是多叉树，而红黑树是二叉树，看上去可能完全不同，但是，在某种意义上它们又是完全相同的，一个可以通过应用一些简单的规则变成另一个，而且使他们保持平衡的操作也是一样，数学上称他们为同构。</p>
+<h4 id="1-对应规则">①、对应规则</h4>
+<p>应用如下三条规则可以将2-3-4树转化为红黑树：</p>
+<p>一、把2-3-4树中的每个2-节点转化为红-黑树的黑色节点。</p>
+<p>二、把每个3-节点转化为一个子节点和一个父节点，子节点有两个自己的子节点：W和X或X和Y。父节点有另一个子节点：Y或W。哪个节点变成子节点或父节点都无所谓。子节点涂成红色，父节点涂成黑色。</p>
+<p>三、把每个4-节点转化为一个父节点和两个子节点。第一个子节点有它自己的子节点W和X；第二个子节点拥有子节点Y和Z。和前面一样，子节点涂成红色，父节点涂成黑色。</p>
+<figure data-type="image" tabindex="23"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9121.png" alt="alt" loading="lazy"></figure>
+<p>下图是一颗2-3-4树转化成对应的红-黑树。虚线环绕的子树是由3-节点和4-节点变成的。转化后符合红-黑树的规则，根节点为红色，两个红色节点不会相连，每条从根到叶节点的路径上的黑节点个数是一样的。</p>
+<figure data-type="image" tabindex="24"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9122.png" alt="alt" loading="lazy"></figure>
+<h4 id="2-操作等价">②、操作等价</h4>
+<p>不仅红-黑树的结构与2-3-4树对应，而且两种树操作也一样。2-3-4树用节点分裂保持平衡，红-黑树用颜色变换和旋转保持平衡。</p>
+<figure data-type="image" tabindex="25"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%9123.png" alt="alt" loading="lazy"></figure>
+<p>上图是4-节点分裂。虚线环绕的部分等价于4-节点。颜色变换之后，40,60节点都为黑色的，50节点是红色的。因此，节点 50 和它的父节点70 对于3-节点，如上图虚线所示。</p>
+<h4 id="2-3-4-树的效率">2-3-4 树的效率</h4>
+<p>分析2-3-4树我们可以和红黑树作比较分析。红-黑树的层数（平衡二叉树）大约是log2(N+1)，而2-3-4树每个节点可以最多有4个数据项，如果节点都是满的，那么高度和log4N。因此在所有节点都满的情况下，2-3-4树的高度大致是红-黑树的一半。不过他们不可能都是满的，所以2-3-4树的高度大致在log2(N+1)和log2(N+1)/2。减少2-3-4树的高度可以使它的查找时间比红-黑树的短一些。</p>
+<p>但是另一方面，每个节点要查看的数据项就多了，这会增加查找时间。因为节点中用线性搜索来查看数据项，使得查找时间的倍数和M成正比，即每个节点数据项的平均数量。总的查找时间和M*log4N成正比。</p>
+<h3 id="查找树">查找树</h3>
+<h3 id="平衡树">平衡树</h3>
+<h3 id="线索树">线索树</h3>
+<h3 id="红黑树">红黑树</h3>
+<p>上一篇博客我们介绍了二叉搜索树，二叉搜索树对于某个节点而言，其左子树的节点关键值都小于该节点关键值，右子树的所有节点关键值都大于该节点关键值。二叉搜索树作为一种数据结构，其查找、插入和删除操作的时间复杂度都为O(logn),底数为2。但是我们说这个时间复杂度是在平衡的二叉搜索树上体现的，也就是如果插入的数据是随机的，则效率很高，但是如果插入的数据是有序的，比如从小到大的顺序【10,20,30,40,50】插入到二叉搜索树中：</p>
+<figure data-type="image" tabindex="26"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E7%BA%A2%E9%BB%911.png" alt="alt" loading="lazy"></figure>
+<p>从大到小就是全部在左边，这和链表没有任何区别了，这种情况下查找的时间复杂度为O(N)，而不是O(logN)。当然这是在最不平衡的条件下，实际情况下，二叉搜索树的效率应该在O(N)和O(logN)之间，这取决于树的不平衡程度。</p>
+<p>那么为了能够以较快的时间O(logN)来搜索一棵树，我们需要保证树总是平衡的（或者大部分是平衡的），也就是说每个节点的左子树节点个数和右子树节点个数尽量相等。红-黑树的就是这样的一棵平衡树，对一个要插入的数据项（删除也是），插入例程要检查会不会破坏树的特征，如果破坏了，程序就会进行纠正，根据需要改变树的结构，从而保持树的平衡。</p>
+<h4 id="特征">特征</h4>
+<p>有如下两个特征：</p>
+<p>①、节点都有颜色；</p>
+<p>②、在插入和删除的过程中，要遵循保持这些颜色的不同排列规则。</p>
+<p>第一个很好理解，在红-黑树中，每个节点的颜色或者是黑色或者是红色的。当然也可以是任意别的两种颜色，这里的颜色用于标记，我们可以在节点类Node中增加一个boolean型变量isRed，以此来表示颜色的信息。</p>
+<p>第二点，在插入或者删除一个节点时，必须要遵守的规则称为红-黑规则：</p>
+<p><strong>1.每个节点不是红色就是黑色的；</strong></p>
+<p><strong>2.根节点总是黑色的；</strong></p>
+<p><strong>3.如果节点是红色的，则它的子节点必须是黑色的（反之不一定）,(也就是从每个叶子到根的所有路径上不能有两个连续的红色节点)；</strong></p>
+<p><strong>4.从根节点到叶节点或空子节点的每条路径，必须包含相同数目的黑色节点（即相同的黑色高度）。</strong></p>
+<p>从根节点到叶节点的路径上的黑色节点的数目称为黑色高度，规则 4 另一种表示就是从根到叶节点路径上的黑色高度必须相同。</p>
+<p>注意：<strong>新插入的节点颜色总是红色的</strong>，这是因为插入一个红色节点比插入一个黑色节点违背红-黑规则的可能性更小，原因是插入黑色节点总会改变黑色高度（违背规则4），但是插入红色节点只有一半的机会会违背规则3（因为父节点是黑色的没事，父节点是红色的就违背规则3）。另外违背规则3比违背规则4要更容易修正。当插入一个新的节点时，可能会破坏这种平衡性，那么红-黑树是如何修正的呢？</p>
+<h4 id="自我修正">自我修正</h4>
+<p>红-黑树主要通过三种方式对平衡进行修正，改变节点颜色、左旋和右旋。</p>
+<h4 id="1-改变节点颜色">①、改变节点颜色</h4>
+<figure data-type="image" tabindex="27"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E7%BA%A2%E9%BB%912.png" alt="alt" loading="lazy"></figure>
+<p>新插入的节点为15，一般新插入颜色都为红色，那么我们发现直接插入会违反规则3，改为黑色却发现违反规则4。这时候我们将其父节点颜色改为黑色，父节点的兄弟节点颜色也改为黑色。通常其祖父节点50颜色会由黑色变为红色，但是由于50是根节点，所以我们这里不能改变根节点颜色。</p>
+<h4 id="2-右旋">②、右旋</h4>
+<p>首先要说明的是节点本身是不会旋转的，旋转改变的是节点之间的关系，选择一个节点作为旋转的顶端，如果做一次右旋，这个顶端节点会向下和向右移动到它右子节点的位置，它的左子节点会上移到它原来的位置。右旋的顶端节点必须要有左子节点。</p>
+<img src="./pictures/红黑3.gif" style="zoom: 100%" />
+<h4 id="3-左旋">③、左旋</h4>
+<p>左旋的顶端节点必须要有右子节点。</p>
+<img src="./pictures/红黑4.gif" style="zoom: 100%" />
+<p><strong>注意</strong>：我们改变颜色也是为了帮助我们判断何时执行什么旋转，而旋转是为了保证树的平衡。光改变节点颜色是不能起到任何作用的，旋转才是关键的操作，在新增节点或者删除节点之后，可能会破坏二叉树的平衡，那么何时执行旋转以及执行什么旋转，这是我们需要重点关注的。</p>
+<h4 id="左旋和右旋代码">左旋和右旋代码</h4>
+<p>①、节点类</p>
+<p>节点类和二叉树的节点类差不多，只不过在其基础上增加了一个 boolean 类型的变量来表示节点的颜色。</p>
+<pre><code class="language-java">public class RBNode&lt;T extends Comparable&lt;T&gt;&gt; {
+    boolean color;//颜色
+    T key;//关键值
+    RBNode&lt;T&gt; left;//左子节点
+    RBNode&lt;T&gt; right;//右子节点
+    RBNode&lt;T&gt; parent;//父节点
+     
+    public RBNode(boolean color,T key,RBNode&lt;T&gt; parent,RBNode&lt;T&gt; left,RBNode&lt;T&gt; right){
+        this.color = color;
+        this.key = key;
+        this.parent = parent;
+        this.left = left;
+        this.right = right;
+    }
+     
+    //获得节点的关键值
+    public T getKey(){
+        return key;
+    }
+    //打印节点的关键值和颜色信息
+    public String toString(){
+        return &quot;&quot;+key+(this.color == RED ? &quot;R&quot;:&quot;B&quot;);
+    }
+}
+</code></pre>
+<p>②、左旋的具体实现</p>
+<pre><code class="language-java">/*************对红黑树节点x进行左旋操作 ******************/
+/* 
+ * 左旋示意图：对节点x进行左旋 
+ *     p                       p 
+ *    /                       / 
+ *   x                       y 
+ *  / \                     / \ 
+ * lx  y      -----&gt;       x  ry 
+ *    / \                 / \ 
+ *   ly ry               lx ly 
+ * 左旋做了三件事： 
+ * 1. 将y的左子节点赋给x的右子节点,并将x赋给y左子节点的父节点(y左子节点非空时) 
+ * 2. 将x的父节点p(非空时)赋给y的父节点，同时更新p的子节点为y(左或右) 
+ * 3. 将y的左子节点设为x，将x的父节点设为y 
+ */
+private void leftRotate(RBNode&lt;T&gt; x){
+    //1. 将y的左子节点赋给x的右子节点，并将x赋给y左子节点的父节点(y左子节点非空时)
+    RBNode&lt;T&gt; y = x.right;
+    x.right = y.left;
+    if(y.left != null){
+        y.left.parent = x;
+    }
+     
+    //2. 将x的父节点p(非空时)赋给y的父节点，同时更新p的子节点为y(左或右)
+    y.parent = x.parent;
+    if(x.parent == null){
+        this.root = y;//如果x的父节点为空(即x为根节点)，则将y设为根节点
+    }else{
+        if(x == x.parent.left){//如果x是左子节点
+            x.parent.left = y;//则也将y设为左子节点 
+        }else{
+            x.parent.right = y;//否则将y设为右子节点 
+        }
+    }
+     
+    //3. 将y的左子节点设为x，将x的父节点设为y
+    y.left = x;
+    x.parent = y;
+}
+</code></pre>
+<p>③、右旋的具体实现</p>
+<pre><code class="language-java">/*************对红黑树节点y进行右旋操作 ******************/ 
+/*
+ * 左旋示意图：对节点y进行右旋
+ *        p                   p
+ *       /                   /
+ *      y                   x
+ *     / \                 / \
+ *    x  ry   -----&gt;      lx  y
+ *   / \                     / \
+ * lx  rx                   rx ry
+ * 右旋做了三件事：
+ * 1. 将x的右子节点赋给y的左子节点,并将y赋给x右子节点的父节点(x右子节点非空时)
+ * 2. 将y的父节点p(非空时)赋给x的父节点，同时更新p的子节点为x(左或右)
+ * 3. 将x的右子节点设为y，将y的父节点设为x
+ */
+private void rightRotate(RBNode&lt;T&gt; y){
+    //1. 将y的左子节点赋给x的右子节点，并将x赋给y左子节点的父节点(y左子节点非空时)
+    RBNode&lt;T&gt; x = y.left;
+    y.left = x.right;
+    if(x.right != null){
+        x.right.parent = y;
+    }
+     
+    //2. 将x的父节点p(非空时)赋给y的父节点，同时更新p的子节点为y(左或右)
+    x.parent = y.parent;
+    if(y.parent == null){
+        this.root = x;//如果y的父节点为空(即y为根节点)，则旋转后将x设为根节点
+    }else{
+        if(y == y.parent.left){//如果y是左子节点
+            y.parent.left = x;//则将x也设置为左子节点
+        }else{
+            y.parent.right = x;//否则将x设置为右子节点
+        }
+    }
+     
+    //3. 将x的左子节点设为y，将y的父节点设为y
+    x.right = y;
+    y.parent = x;
+}
+</code></pre>
+<h4 id="插入操作">插入操作</h4>
+<p>和二叉树的插入操作一样，都是得先找到插入的位置，然后再将节点插入。先看看插入的前段代码：</p>
+<pre><code class="language-java">/*********************** 向红黑树中插入节点 **********************/
+public void insert(T key){
+    RBNode&lt;T&gt; node = new RBNode&lt;T&gt;(RED, key, null, null, null);
+    if(node != null){
+        insert(node);
+    }
+}
+public void insert(RBNode&lt;T&gt; node){
+    RBNode&lt;T&gt; current = null;//表示最后node的父节点
+    RBNode&lt;T&gt; x = this.root;//用来向下搜索
+     
+    //1.找到插入位置
+    while(x != null){
+        current = x;
+        int cmp = node.key.compareTo(x.key);
+        if(cmp &lt; 0){
+            x = x.left;
+        }else{
+            x = x.right;
+        }
+    }
+    node.parent = current;//找到了插入的位置，将当前current作为node的父节点
+     
+    //2.接下来判断node是左子节点还是右子节点
+    if(current != null){
+        int cmp = node.key.compareTo(current.key);
+        if(cmp &lt; 0){
+            current.left = node;
+        }else{
+            current.right = node;
+        }
+    }else{
+        this.root = node;
+    }
+     
+    //3.利用旋转操作将其修正为一颗红黑树
+    insertFixUp(node);
+}
+</code></pre>
+<p>这与二叉搜索树中实现的思路一样，这里不再赘述，主要看看方法里面最后一步insertFixUp(node)操作。因为插入后可能会导致树的不平衡，insertFixUp(node) 方法里主要是分情况讨论，分析何时变色，何时左旋，何时右旋。我们先从理论上分析具体的情况，然后再看insertFixUp(node) 的具体实现。</p>
+<p>如果是第一次插入，由于原树为空，所以只会违反红-黑树的规则2，所以只要把根节点涂黑即可；如果插入节点的父节点是黑色的，那不会违背红-黑树的规则，什么也不需要做；但是遇到如下三种情况，我们就要开始变色和旋转了：</p>
+<p>①、插入节点的父节点和其叔叔节点（祖父节点的另一个子节点）均为红色。</p>
+<p>②、插入节点的父节点是红色的，叔叔节点是黑色的，且插入节点是其父节点的右子节点。</p>
+<p>③、插入节点的父节点是红色的，叔叔节点是黑色的，且插入节点是其父节点的左子节点。</p>
+<p>下面我们挨个分析这三种情况都需要如何操作，然后给出实现代码。</p>
+<p>在下面的讨论中，使用N,P,G,U表示关联的节点。N(now)表示当前节点，P(parent)表示N的父节点，U(uncle)表示N的叔叔节点，G(grandfather)表示N的祖父节点，也就是P和U的父节点。</p>
+<p>对于情况1：**插入节点的父节点和其叔叔节点（祖父节点的另一个子节点）均为红色。**此时，肯定存在祖父节点，但是不知道父节点是其左子节点还是右子节点，但是由于对称性，我们只要讨论出一边的情况，另一种情况自然也与之对应。这里考虑父节点是其祖父节点的左子节点的情况，如下左图所示：</p>
+<figure data-type="image" tabindex="28"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E7%BA%A2%E9%BB%915.png" alt="alt" loading="lazy"></figure>
+<figure data-type="image" tabindex="29"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E7%BA%A2%E9%BB%916.png" alt="alt" loading="lazy"></figure>
+<p>对于这种情况，我们要做的操作有：将当前节点(4) 的父节点(5) 和叔叔节点(8) 涂黑，将祖父节点(7)涂红,变成了上有图所示的情况。再将当前节点指向其祖父节点，再次从新的当前节点开始算法（具体看下面的步骤）。这样上右图就变成情况2了。</p>
+<p>对于情况2：<strong>插入节点的父节点是红色的，叔叔节点是黑色的，且插入节点是其父节点的右子节点</strong>。我们要做的操作有：将当前节点(7)的父节点(2)作为新的节点，以新的当前节点为支点做左旋操作。完成后如左下图所示，这样左下图就变成情况3了。</p>
+<figure data-type="image" tabindex="30"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E7%BA%A2%E9%BB%917.png" alt="alt" loading="lazy"></figure>
+<figure data-type="image" tabindex="31"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E7%BA%A2%E9%BB%918.png" alt="alt" loading="lazy"></figure>
+<p>对于情况3：<strong>插入节点的父节点是红色，叔叔节点是黑色，且插入节点是其父节点的左子节点</strong>。我们要做的操作有：将当前节点的父节点(7)涂黑，将祖父节点(11)涂红，在祖父节点为支点做右旋操作。最后把根节点涂黑，整个红-黑树重新恢复了平衡，如右上图所示。至此，插入操作完成！</p>
+<p>我们可以看出，如果是从情况1开始发生的，必然会走完情况2和3，也就是说这是一整个流程，当然咯，实际中可能不一定会从情况1发生，如果从情况2开始发生，那再走个情况3即可完成调整，如果直接只要调整情况3，那么前两种情况均不需要调整了。故变色和旋转之间的先后关系可以表示为：变色-&gt;左旋-&gt;右旋。</p>
+<p>至此，我们完成了全部的插入操作。下面我们看看insertFixUp方法中的具体实现（可以结合上面的分析图，更加利与理解）：</p>
+<pre><code class="language-java">private void insertFixUp(RBNode&lt;T&gt; node){
+    RBNode&lt;T&gt; parent,gparent;//定义父节点和祖父节点
+     
+    //需要修正的条件：父节点存在，且父节点的颜色是红色
+    while(((parent = parentOf(node)) != null) &amp;&amp; isRed(parent)){
+        gparent = parentOf(parent);//获得祖父节点
+         
+        //若父节点是祖父节点的左子节点，下面的else相反
+        if(parent == gparent.left){
+            RBNode&lt;T&gt; uncle = gparent.right;//获得叔叔节点
+             
+            //case1:叔叔节点也是红色
+            if(uncle != null &amp;&amp; isRed(uncle)){
+                setBlack(parent);//把父节点和叔叔节点涂黑
+                setBlack(gparent);
+                setRed(gparent);//把祖父节点涂红
+                node = gparent;//把位置放到祖父节点处
+                continue;//继续while循环，重新判断
+            }
+             
+            //case2:叔叔节点是黑色，且当前节点是右子节点
+            if(node == parent.right){
+                leftRotate(parent);//从父节点出左旋
+                RBNode&lt;T&gt; tmp = parent;//然后将父节点和自己调换一下，为下面右旋做准备
+                parent = node;
+                node = tmp;
+            }
+             
+            //case3:叔叔节点是黑色，且当前节点是左子节点
+            setBlack(parent);
+            setRed(gparent);
+            rightRotate(gparent);
+        }else{//若父节点是祖父节点的右子节点，与上面的情况完全相反，本质是一样的
+            RBNode&lt;T&gt; uncle = gparent.left;
+             
+            //case1:叔叔节点也是红色的
+            if(uncle != null &amp;&amp; isRed(uncle)){
+                setBlack(parent);
+                setBlack(uncle);
+                setRed(gparent);
+                node = gparent;
+                continue;
+            }
+             
+            //case2:叔叔节点是黑色的，且当前节点是左子节点
+            if(node == parent.left){
+                rightRotate(parent);
+                RBNode&lt;T&gt; tmp = parent;
+                parent = node;
+                node = tmp;
+            }
+             
+            //case3:叔叔节点是黑色的，且当前节点是右子节点
+            setBlack(parent);
+            setRed(gparent);
+            leftRotate(gparent);
+        }
+    }
+    setBlack(root);//将根节点设置为黑色
+}
+
+</code></pre>
+<h4 id="删除操作">删除操作</h4>
+<p>上面探讨完了红-黑树的插入操作，接下来讨论删除，红-黑树的删除和二叉查找树的删除是一样的，只不过删除后多了个平衡的修复而已。我们先来回忆一下二叉搜索树的删除：</p>
+<p>①、如果待删除的节点没有子节点，那么直接删除即可。</p>
+<p>②、如果待删除的节点只有一个子节点，那么直接删掉，并用其子节点去顶替它。</p>
+<p>③、如果待删除的节点有两个子节点，这种情况比较复杂：首先找出它的后继节点，然后处理“后继节点”和“被删除节点的父节点”之间的关系，最后处理“后继节点的子节点”和“被删除节点的子节点”之间的关系。每一步中也会有不同的情况。</p>
+<p>实际上，删除过程太复杂了，很多情况下会采用在节点类中添加一个删除标记，并不是真正的删除节点。详细的删除我们这里不做讨论。</p>
+<h4 id="红黑树的效率">红黑树的效率</h4>
+<p>红黑树的查找、插入和删除时间复杂度都为O(log2N)，额外的开销是每个节点的存储空间都稍微增加了一点，因为一个存储红黑树节点的颜色变量。插入和删除的时间要增加一个常数因子，因为要进行旋转，平均一次插入大约需要一次旋转，因此插入的时间复杂度还是O(log2N),(时间复杂度的计算要省略常数)，但实际上比普通的二叉树是要慢的。</p>
+<p>大多数应用中，查找的次数比插入和删除的次数多，所以应用红黑树取代普通的二叉搜索树总体上不会有太多的时间开销。而且红黑树的优点是对于有序数据的操作不会慢到O(N)的时间复杂度。</p>
+<p>参考文档：http://blog.csdn.net/eson_15/article/details/51144079</p>
+<hr>
+<p>是一种平衡二叉树，TreeSet、TreeMap底层都是红黑树来实现的。<br>
+二叉查找树也有个例(最坏)的情况(线性)：</p>
+<p>上面符合二叉树的特性，但是它是线性的，完全没树的用处，树是要“均衡”才能将它的优点展示出来，比如下面这种:</p>
+<p>因此，就有了平衡树这么一个概念~红黑树就是一种平衡树，它可以保证二叉树基本符合均衡的金字塔结构。都是在进行插入和删除操作时通过特定操作保持二叉查找树的平衡，从而获得较高的查找性能。</p>
+<p>它的统计性能要好于平衡二叉树</p>
+<p>上图就是一个红黑树，红黑树就字面上的意思，有红色的节点，有黑色的节点。</p>
+<ul>
+<li>
+<p>性质1. 节点是红色或黑色。</p>
+</li>
+<li>
+<p>性质2. 根节点是黑色。</p>
+</li>
+<li>
+<p>性质3. 每个叶节点（NIL节点，空节点）是黑色的。</p>
+</li>
+<li>
+<p>性质4. 每个红色节点的两个子节点都是黑色。(从每个叶子到根的所有路径上不能有两个连续的红色节点)</p>
+</li>
+<li>
+<p>性质5. 从任一节点到其每个叶子的所有路径都包含相同数目的黑色节点。</p>
+</li>
+</ul>
+<h3 id="b树">b树</h3>
+<p>平衡二叉树的查找效率为O（log2N）与树的深度相关，通过降低树的深度，可以提高查找效率，但是还有一个瓶颈就是，每次查找一次就只能得到一个节点元素，如果查找一次能得到多个节点元素，那么在同样的高度就能够查找更多的元素，从而提高查找效率，因此提出多路查找树。</p>
+<p>多路查找树（muitl-way search tree），其每一个结点的孩子数可以多于两个，且每个结点出可以存储多个元素。由于它是查找树，所有元素之间存在某种特定的排序关系。</p>
+<p>B树就是一种平衡的多路查找树。</p>
+<h3 id="b树-2">B树</h3>
+<p>中所有结点中孩子结点个数的最大值成为B-树的阶，通常用m表示，从查找效率考虑，一般要求m&gt;=3。一棵m阶B-树或者是一棵空树，或者是满足以下条件的m叉树。</p>
+<p>1）每个结点最多有m个分支（子树）；而最少分支数要看是否为根结点，如果是根结点且不是叶子结点，则至少要有两个分支，非根非叶结点至少有ceil(m/2)个分支，这里ceil代表向上取整。</p>
+<p>2）如果一个结点有n-1个关键字，那么该结点有n个分支。这n-1个关键字按照递增顺序排列。</p>
+<p>3）每个节点的结构为</p>
+<p>节点个数：n；</p>
+<p>关键字数组： k[n]，这n个关键字按照递增顺序排列</p>
+<p>孩子指针数组：p[n + 1], p0&lt;=k1, 之后所有 ki &lt; pi &lt;= ki+1;</p>
+<h3 id="b树-3">B+树</h3>
+<ol>
+<li>在B+树中，具有n个关键字的结点有n个分支，而在B-树中，具有n个关键字的结点含有n+1个关键字。</li>
+<li>在B+树中，每个结点（除根结点外）中的关键字个数n的取值为ceil(m/2) &lt;= n &lt;=m,根结点的取值范围为1&lt;=n&lt;=m，b树他们的取值范围分别是ceil(m/2) -1&lt;= n &lt;=m-1和1&lt;=n&lt;=m-1。</li>
+<li>在B+树中叶子结点包含信息，并且包含了全部关键字，叶子结点引出的指针指向记录。</li>
+<li>在B+树中的所有非叶子结点仅起到一个索引的作用，即结点中的每个索引项只含有对应子树的最大关键字和指向该子树的指针。</li>
+</ol>
+<h3 id="b树-4">B*树</h3>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/data-structure5/" title="树 Tree">
+                                        https://lemonsoldout.github.io/post/data-structure5/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/data-structure5/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/data-structure5/&sharesource=qzone&title=树 Tree&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607156317848&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/data-structure5/&sharesource=weibo&title=树 Tree + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'zaDt0aU7QfRC4iGDnDk6uttY-gzGzoHsz',
+        appKey: '2nXmDEe4mGwQaLV2EK9M1XBR',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '欢迎大家来纠正错误~',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷C',
+                                        url: 'https://lemonsoldout.github.io/tag/0QKDhUzRj/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Python',
+                                        url: 'https://lemonsoldout.github.io/tag/sC5Og5cJQ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Java',
+                                        url: 'https://lemonsoldout.github.io/tag/bSXVQHU1H/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏',
+                                        url: 'https://lemonsoldout.github.io/tag/QuFhk-jwq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷LeetCode',
+                                        url: 'https://lemonsoldout.github.io/tag/VO2SeQpv5/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷ProjectEuler',
+                                        url: 'https://lemonsoldout.github.io/tag/DIbmxs8nz/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷English',
+                                        url: 'https://lemonsoldout.github.io/tag/cMEtKNpcp/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '',
+                                        url: '',
+                                        artist: '',
+                                        cover: '',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    <script>
+                                        App.weather();
+                                    </script>
+                                    <li class="lite-item">
+                                        <header class="lite-item-header">
+                                            <h3 class="lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
+                                        </header>
+                                        <div class="textwidget">
+                                            <div id="tp-weather-widget"></div>
+                                        </div>
+                                    </li>
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                        
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                        
+                                                                            <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                            
+                                                                                
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2020-12-5'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="https://gridea.dev/" target="_blank">
+                                Gridea
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

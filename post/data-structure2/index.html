@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607156317848">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                链表 LinkedList
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/bSXVQHU1H/'">Java</span>
+                                                
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/data-structure2/" class="leancloud_visitors" data-flag-title="链表 LinkedList">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            15.9分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-05</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="2-链表-linked-list">2. 链表 Linked List</h2>
+<p>n个节点离散分配，彼此通过指针相连，每个节点只有一个前驱节点，每个节点只有一个后续节点，首节点没有前驱节点，尾节点没有后续节点。<br>
+确定一个链表我们只需要头指针，通过头指针就可以把整个链表都能推出来。</p>
+<pre><code>链表通常由一连串节点组成，每个节点包含任意的实例数据（data fields）和一或两个用来指向上一个/或下一个节点的位置的链接（&quot;links&quot;）
+</code></pre>
+<p><strong>链表</strong>（Linked list）是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的指针(Pointer)。</p>
+<p>使用链表结构可以克服数组链表需要预先知道数据大小的缺点，链表结构可以充分利用计算机内存空间，实现灵活的内存动态管理。但是链表失去了数组随机读取的优点，同时链表由于增加了结点的指针域，空间开销比较大。</p>
+<p>优点：</p>
+<ul>
+<li>空间没有限制</li>
+<li>插入删除元素很快</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>存取速度很慢</li>
+</ul>
+<h3 id="21-单向链表single-linked-list">2.1 单向链表(Single-Linked List)</h3>
+<ul>
+<li>
+<p>单链表是链表中结构最简单的。一个单链表的节点(Node)分为两个部分，第一个部分(data)保存或者显示关于节点的信息，另一个部分存储下一个节点的地址。最后一个节点存储地址的部分指向空值。</p>
+<p>单向链表只可向一个方向遍历，一般查找一个节点的时候需要从第一个节点开始每次访问下一个节点，一直访问到需要的位置。而插入一个节点，对于单向链表，我们只提供在链表头插入，只需要将当前插入的节点设置为头节点，next指向原头节点即可。删除一个节点，我们将该节点的上一个节点的next指向该节点的下一个节点。</p>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.png" alt="alt" loading="lazy"></figure>
+<p>在表头增加节点：</p>
+<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A81.png" alt="alt" loading="lazy"></figure>
+<p>删除节点：</p>
+<figure data-type="image" tabindex="3"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A83.png" alt="alt" loading="lazy"></figure>
+<h4 id="实现">实现</h4>
+<pre><code class="language-java">package com.ys.datastructure;
+
+public class SingleLinkedList {
+    private int size;//链表节点的个数
+    private Node head;//头节点
+
+    public SingleLinkedList(){
+        size = 0;
+        head = null;
+    }
+
+    //链表的每个节点类
+    private class Node{
+        private Object data;//每个节点的数据
+        private Node next;//每个节点指向下一个节点的连接
+
+        public Node(Object data){
+            this.data = data;
+        }
+    }
+
+    //在链表头添加元素
+    public Object addHead(Object obj){
+        Node newHead = new Node(obj);
+        if(size == 0){
+            head = newHead;
+        }else{
+            newHead.next = head;
+            head = newHead;
+        }
+        size++;
+        return obj;
+    }
+
+    //在链表头删除元素
+    public Object deleteHead(){
+        Object obj = head.data;
+        head = head.next;
+        size--;
+        return obj;
+    }
+
+    //查找指定元素，找到了返回节点Node，找不到返回null
+    public Node find(Object obj){
+        Node current = head;
+        int tempSize = size;
+        while(tempSize &gt; 0){
+            if(obj.equals(current.data)){
+                return current;
+            }else{
+                current = current.next;
+            }
+            tempSize--;
+        }
+        return null;
+    }
+
+    //删除指定的元素，删除成功返回true
+    public boolean delete(Object value){
+        if(size == 0){
+            return false;
+        }
+        Node current = head;
+        Node previous = head;
+        while(current.data != value){
+            if(current.next == null){
+                return false;
+            }else{
+                previous = current;
+                current = current.next;
+            }
+        }
+        //如果删除的节点是第一个节点
+        if(current == head){
+            head = current.next;
+            size--;
+        }else{//删除的节点不是第一个节点
+            previous.next = current.next;
+            size--;
+        }
+        return true;
+    }
+
+    //判断链表是否为空
+    public boolean isEmpty(){
+        return (size == 0);
+    }
+
+    //显示节点信息
+    public void display(){
+        if(size &gt;0){
+            Node node = head;
+            int tempSize = size;
+            if(tempSize == 1){//当前链表只有一个节点
+                System.out.println(&quot;[&quot;+node.data+&quot;]&quot;);
+                return;
+            }
+            while(tempSize&gt;0){
+                if(node.equals(head)){
+                    System.out.print(&quot;[&quot;+node.data+&quot;-&gt;&quot;);
+                }else if(node.next == null){
+                    System.out.print(node.data+&quot;]&quot;);
+                }else{
+                    System.out.print(node.data+&quot;-&gt;&quot;);
+                }
+                node = node.next;
+                tempSize--;
+            }
+            System.out.println();
+        }else{//如果链表一个节点都没有，直接打印[]
+            System.out.println(&quot;[]&quot;);
+        }
+
+    }
+
+}
+</code></pre>
+<pre><code class="language-java">//测试
+@Test
+public void testSingleLinkedList(){
+    SingleLinkedList singleList = new SingleLinkedList();
+    singleList.addHead(&quot;A&quot;);
+    singleList.addHead(&quot;B&quot;);
+    singleList.addHead(&quot;C&quot;);
+    singleList.addHead(&quot;D&quot;);
+    //打印当前链表信息
+    singleList.display();
+    //删除C
+    singleList.delete(&quot;C&quot;);
+    singleList.display();
+    //查找B
+    System.out.println(singleList.find(&quot;B&quot;));
+}
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E7%BB%93%E6%9E%9C.png" alt="alt" loading="lazy"></figure>
+</li>
+</ul>
+<h3 id="用单向链表实现栈">用单向链表实现栈</h3>
+<ul>
+<li>栈的pop()方法和push()方法，对应于链表的在头部删除元素deleteHead()以及在头部增加元素addHead()。</li>
+</ul>
+<pre><code class="language-java">  package com.ys.datastructure;
+  
+  public class StackSingleLink {
+      private SingleLinkedList link;
+  
+      public StackSingleLink(){
+          link = new SingleLinkedList();
+      }
+  
+      //添加元素
+      public void push(Object obj){
+          link.addHead(obj);
+      }
+  
+      //移除栈顶元素
+      public Object pop(){
+          Object obj = link.deleteHead();
+          return obj;
+      }
+  
+      //判断是否为空
+      public boolean isEmpty(){
+          return link.isEmpty();
+      }
+  
+      //打印栈内元素信息
+      public void display(){
+          link.display();
+      }
+  
+  }
+</code></pre>
+<hr>
+<h3 id="22-双端链表">2.2 双端链表</h3>
+<ul>
+<li>
+<p>对于单项链表，我们如果想在尾部添加一个节点，那么必须从头部一直遍历到尾部，找到尾节点，然后在尾节点后面插入一个节点。这样操作很麻烦，如果我们在设计链表的时候多个对尾节点的引用，那么会简单很多。</p>
+<figure data-type="image" tabindex="5"><img src="C:%5CUsers%5Cyk%5CDesktop/Java%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%8F%8C%E7%AB%AF%E9%93%BE%E8%A1%A81.png" alt="alt" loading="lazy"></figure>
+</li>
+</ul>
+<ol>
+<li>
+<p>双端链表的实现</p>
+<pre><code class="language-java">package com.ys.link;
+
+public class DoublePointLinkedList {
+    private Node head;//头节点
+    private Node tail;//尾节点
+    private int size;//节点的个数
+
+    private class Node{
+        private Object data;
+        private Node next;
+
+        public Node(Object data){
+            this.data = data;
+        }
+    }
+
+    public DoublePointLinkedList(){
+        size = 0;
+        head = null;
+        tail = null;
+    }
+
+    //链表头新增节点
+    public void addHead(Object data){
+        Node node = new Node(data);
+        if(size == 0){//如果链表为空，那么头节点和尾节点都是该新增节点
+            head = node;
+            tail = node;
+            size++;
+        }else{
+            node.next = head;
+            head = node;
+            size++;
+        }
+    }
+
+    //链表尾新增节点
+    public void addTail(Object data){
+        Node node = new Node(data);
+        if(size == 0){//如果链表为空，那么头节点和尾节点都是该新增节点
+            head = node;
+            tail = node;
+            size++;
+        }else{
+            tail.next = node;
+            tail = node;
+            size++;
+        }
+    }
+
+    //删除头部节点，成功返回true，失败返回false
+    public boolean deleteHead(){
+        if(size == 0){//当前链表节点数为0
+            return false;
+        }
+        if(head.next == null){//当前链表节点数为1
+            head = null;
+            tail = null;
+        }else{
+            head = head.next;
+        }
+        size--;
+        return true;
+    }
+    //判断是否为空
+    public boolean isEmpty(){
+        return (size ==0);
+    }
+    //获得链表的节点个数
+    public int getSize(){
+        return size;
+    }
+
+    //显示节点信息
+    public void display(){
+        if(size &gt;0){
+            Node node = head;
+            int tempSize = size;
+            if(tempSize == 1){//当前链表只有一个节点
+                System.out.println(&quot;[&quot;+node.data+&quot;]&quot;);
+                return;
+            }
+            while(tempSize&gt;0){
+                if(node.equals(head)){
+                    System.out.print(&quot;[&quot;+node.data+&quot;-&gt;&quot;);
+                }else if(node.next == null){
+                    System.out.print(node.data+&quot;]&quot;);
+                }else{
+                    System.out.print(node.data+&quot;-&gt;&quot;);
+                }
+                node = node.next;
+                tempSize--;
+            }
+            System.out.println();
+        }else{//如果链表一个节点都没有，直接打印[]
+            System.out.println(&quot;[]&quot;);
+        }
+    }
+
+}
+</code></pre>
+</li>
+<li>
+<p>双端链表实现队列</p>
+<pre><code class="language-java">package com.ys.link;
+
+public class QueueLinkedList {
+
+    private DoublePointLinkedList dp;
+
+    public QueueLinkedList(){
+        dp = new DoublePointLinkedList();
+    }
+    public void insert(Object data){
+        dp.addTail(data);
+    }
+
+    public void delete(){
+        dp.deleteHead();
+    }
+
+    public boolean isEmpty(){
+        return dp.isEmpty();
+    }
+
+    public int getSize(){
+        return dp.getSize();
+    }
+
+    public void display(){
+        dp.display();
+    }
+
+}
+</code></pre>
+</li>
+</ol>
+<h3 id="23-双向链表">2.3 双向链表</h3>
+<ul>
+<li>一个节点有两个指针域。</li>
+<li>我们知道单向链表只能从一个方向遍历，那么双向链表它可以从两个方向遍历。</li>
+</ul>
+<figure data-type="image" tabindex="6"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.png" alt="alt" loading="lazy"></figure>
+<pre><code class="language-java">package com.ys.datastructure;
+
+public class TwoWayLinkedList {
+    private Node head;//表示链表头
+    private Node tail;//表示链表尾
+    private int size;//表示链表的节点个数
+
+    private class Node{
+        private Object data;
+        private Node next;
+        private Node prev;
+
+        public Node(Object data){
+            this.data = data;
+        }
+    }
+
+    public TwoWayLinkedList(){
+        size = 0;
+        head = null;
+        tail = null;
+    }
+
+    //在链表头增加节点
+    public void addHead(Object value){
+        Node newNode = new Node(value);
+        if(size == 0){
+            head = newNode;
+            tail = newNode;
+            size++;
+        }else{
+            head.prev = newNode;
+            newNode.next = head;
+            head = newNode;
+            size++;
+        }
+    }
+
+    //在链表尾增加节点
+    public void addTail(Object value){
+        Node newNode = new Node(value);
+        if(size == 0){
+            head = newNode;
+            tail = newNode;
+            size++;
+        }else{
+            newNode.prev = tail;
+            tail.next = newNode;
+            tail = newNode;
+            size++;
+        }
+    }
+
+    //删除链表头
+    public Node deleteHead(){
+        Node temp = head;
+        if(size != 0){
+            head = head.next;
+            head.prev = null;
+            size--;
+        }
+        return temp;
+    }
+
+    //删除链表尾
+    public Node deleteTail(){
+        Node temp = tail;
+        if(size != 0){
+            tail = tail.prev;
+            tail.next = null;
+            size--;
+        }
+        return temp;
+    }
+
+    //获得链表的节点个数
+    public int getSize(){
+        return size;
+    }
+    //判断链表是否为空
+    public boolean isEmpty(){
+        return (size == 0);
+    }
+
+    //显示节点信息
+    public void display(){
+        if(size &gt;0){
+            Node node = head;
+            int tempSize = size;
+            if(tempSize == 1){//当前链表只有一个节点
+                System.out.println(&quot;[&quot;+node.data+&quot;]&quot;);
+                return;
+            }
+            while(tempSize&gt;0){
+                if(node.equals(head)){
+                    System.out.print(&quot;[&quot;+node.data+&quot;-&gt;&quot;);
+                }else if(node.next == null){
+                    System.out.print(node.data+&quot;]&quot;);
+                }else{
+                    System.out.print(node.data+&quot;-&gt;&quot;);
+                }
+                node = node.next;
+                tempSize--;
+            }
+            System.out.println();
+        }else{//如果链表一个节点都没有，直接打印[]
+            System.out.println(&quot;[]&quot;);
+        }
+
+    }
+}
+</code></pre>
+<p>需要例子: 双向链表来实现双端队列</p>
+<h3 id="24-抽象数据类型adt">2.4 抽象数据类型（ADT）</h3>
+<p>在介绍抽象数据类型的时候，我们先看看什么是数据类型，听到这个词，在Java中我们可能首先会想到像 int,double这样的词，这是Java中的基本数据类型，一个数据类型会涉及到两件事：</p>
+<p>①、拥有特定特征的数据项</p>
+<p>②、在数据上允许的操作</p>
+<p>比如Java中的int数据类型，它表示整数，取值范围为：-2147483648~2147483647，还能使用各种操作符，+、-、*、/ 等对其操作。数据类型允许的操作是它本身不可分离的部分，理解类型包括理解什么样的操作可以应用在该类型上。</p>
+<p>那么当年设计计算机语言的人，为什么会考虑到数据类型？</p>
+<p>我们先看这样一个例子，比如，大家都需要住房子，也都希望房子越大越好。但显然，没有钱，考虑房子没有意义。于是就出现了各种各样的商品房，有别墅的、复式的、错层的、单间的……甚至只有两平米的胶囊房间。这样做的意义是满足不同人的需要。</p>
+<p>同样，在计算机中，也存在相同的问题。计算1+1这样的表达式不需要开辟很大的存储空间，不需要适合小数甚至字符运算的内存空间。于是计算机的研究者们就考虑，要对数据进行分类，分出来多种数据类型。比如int，比如float。</p>
+<p>虽然不同的计算机有不同的硬件系统，但实际上高级语言编写者才不管程序运行在什么计算机上，他们的目的就是为了实现整形数字的运算，比如a+b等。他们才不关心整数在计算机内部是如何表示的，也不管CPU是如何计算的。于是我们就考虑，无论什么计算机、什么语言都会面临类似的整数运算，我们可以考虑将其抽象出来。抽象是抽取出事物具有的普遍性本质，是对事物的一个概括，是一种思考问题的方式。</p>
+<p>**抽象数据类型（ADT）是指一个数学模型及定义在该模型上的一组操作。**它仅取决于其逻辑特征，而与计算机内部如何表示和实现无关。比如刚才说得整型，各个计算机，不管大型机、小型机、PC、平板电脑甚至智能手机，都有“整型”类型，也需要整形运算，那么整型其实就是一个抽象数据类型。</p>
+<p>更广泛一点的，比如我们刚讲解的栈和队列这两种数据结构，我们分别使用了数组和链表来实现，比如栈，对于使用者只需要知道pop()和push()方法或其它方法的存在以及如何使用即可，使用者不需要知道我们是使用的数组或是链表来实现的。</p>
+<p>ADT的思想可以作为我们设计工具的理念，比如我们需要存储数据，那么就从考虑需要在数据上实现的操作开始，需要存取最后一个数据项吗？还是第一个？还是特定值的项？还是特定位置的项？回答这些问题会引出ADT的定义，只有完整的定义了ADT后，才应该考虑实现的细节。</p>
+<p>这在我们Java语言中的接口设计理念是想通的。</p>
+<h3 id="25-有序链表">2.5 有序链表</h3>
+<p>前面的链表实现插入数据都是无序的，在有些应用中需要链表中的数据有序，这称为有序链表。</p>
+<p>在有序链表中，数据是按照关键值有序排列的。一般在大多数需要使用有序数组的场合也可以使用有序链表。有序链表优于有序数组的地方是插入的速度（因为元素不需要移动），另外链表可以扩展到全部有效的使用内存，而数组只能局限于一个固定的大小中。</p>
+<pre><code class="language-java">package com.ys.datastructure;
+
+public class OrderLinkedList {
+    private Node head;
+
+    private class Node{
+        private int data;
+        private Node next;
+
+        public Node(int data){
+            this.data = data;
+        }
+    }
+
+    public OrderLinkedList(){
+        head = null;
+    }
+
+    //插入节点，并按照从小打到的顺序排列
+    public void insert(int value){
+        Node node = new Node(value);
+        Node pre = null;
+        Node current = head;
+        while(current != null &amp;&amp; value &gt; current.data){
+            pre = current;
+            current = current.next;
+        }
+        if(pre == null){
+            head = node;
+            head.next = current;
+        }else{
+            pre.next = node;
+            node.next = current;
+        }
+    }
+
+    //删除头节点
+    public void deleteHead(){
+        head = head.next;
+    }
+
+    public void display(){
+        Node current = head;
+        while(current != null){
+            System.out.print(current.data+&quot; &quot;);
+            current = current.next;
+        }
+        System.out.println(&quot;&quot;);
+    }
+
+}
+</code></pre>
+<p>在有序链表中插入和删除某一项最多需要O(N)次比较，平均需要O(N/2)次，因为必须沿着链表上一步一步走才能找到正确的插入位置，然而可以最快速度删除最值，因为只需要删除表头即可，如果一个应用需要频繁的存取最小值，且不需要快速的插入，那么有序链表是一个比较好的选择方案。比如优先级队列可以使用有序链表来实现。</p>
+<h3 id="26-有序链表和无序数组组合排序">2.6 有序链表和无序数组组合排序</h3>
+<p>比如有一个无序数组需要排序，前面我们在讲解冒泡排序、选择排序、插入排序这三种简单的排序时，需要的时间级别都是O(N2)。</p>
+<p>现在我们讲解了有序链表之后，对于一个无序数组，我们先将数组元素取出，一个一个的插入到有序链表中，然后将他们从有序链表中一个一个删除，重新放入数组，那么数组就会排好序了。和插入排序一样，如果插入了N个新数据，那么进行大概N2/4次比较。但是相对于插入排序，每个元素只进行了两次排序，一次从数组到链表，一次从链表到数组，大概需要2*N次移动，而插入排序则需要N2次移动，</p>
+<p>效率肯定是比前面讲的简单排序要高，但是缺点就是需要开辟差不多两倍的空间，而且数组和链表必须在内存中同时存在，如果有现成的链表可以用，那么这种方法还是挺好的。</p>
+<h3 id="27-循环链表">2.7 循环链表</h3>
+<ul>
+<li>能通过任何一个节点找到其他所有的节点，将两种(双向/单向)链表的最后一个结点指向第一个结点从而实现循环。<br>
+操作链表要时刻记住的是：节点中指针域指向的就是另一个节点！</li>
+</ul>
+<hr>
+<p>上面我们讲了各种链表，每个链表都包括一个LinikedList对象和许多Node对象，LinkedList对象通常包含头和尾节点的引用，分别指向链表的第一个节点和最后一个节点。而每个节点对象通常包含数据部分data，以及对上一个节点的引用prev和下一个节点的引用next，只有下一个节点的引用称为单向链表，两个都有的称为双向链表。next值为null则说明是链表的结尾，如果想找到某个节点，我们必须从第一个节点开始遍历，不断通过next找到下一个节点，直到找到所需要的。栈和队列都是ADT，可以用数组来实现，也可以用链表实现。</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/data-structure2/" title="链表 LinkedList">
+                                        https://lemonsoldout.github.io/post/data-structure2/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/data-structure2/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/data-structure2/&sharesource=qzone&title=链表 LinkedList&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607156317848&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/data-structure2/&sharesource=weibo&title=链表 LinkedList + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'zaDt0aU7QfRC4iGDnDk6uttY-gzGzoHsz',
+        appKey: '2nXmDEe4mGwQaLV2EK9M1XBR',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '欢迎大家来纠正错误~',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷C',
+                                        url: 'https://lemonsoldout.github.io/tag/0QKDhUzRj/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Python',
+                                        url: 'https://lemonsoldout.github.io/tag/sC5Og5cJQ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Java',
+                                        url: 'https://lemonsoldout.github.io/tag/bSXVQHU1H/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏',
+                                        url: 'https://lemonsoldout.github.io/tag/QuFhk-jwq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷LeetCode',
+                                        url: 'https://lemonsoldout.github.io/tag/VO2SeQpv5/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷ProjectEuler',
+                                        url: 'https://lemonsoldout.github.io/tag/DIbmxs8nz/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷English',
+                                        url: 'https://lemonsoldout.github.io/tag/cMEtKNpcp/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '',
+                                        url: '',
+                                        artist: '',
+                                        cover: '',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    <script>
+                                        App.weather();
+                                    </script>
+                                    <li class="lite-item">
+                                        <header class="lite-item-header">
+                                            <h3 class="lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
+                                        </header>
+                                        <div class="textwidget">
+                                            <div id="tp-weather-widget"></div>
+                                        </div>
+                                    </li>
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                        
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                        
+                                                                            <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                            
+                                                                                
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2020-12-5'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="https://gridea.dev/" target="_blank">
+                                Gridea
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

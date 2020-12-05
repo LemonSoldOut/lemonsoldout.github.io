@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607156317848">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                栈 Stack
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/data-structure4/" class="leancloud_visitors" data-flag-title="栈 Stack">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            8.4分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-05</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="4-栈-stack">4. 栈 Stack</h2>
+<p>数组和链表都是线性存储结构的基础，栈和队列都是线性存储结构的应用。</p>
+<h3 id="1-栈基本概念">1. 栈基本概念</h3>
+<p>栈作为一种数据结构，是一种只能在一端进行插入和删除操作的特殊线性表。它按照先进后出的原则存储数据，先进入的数据被压入栈底，最后的数据在栈顶，需要读数据的时候从栈顶开始弹出数据（最后一个数据被第一个读出来）。栈具有记忆作用，对栈的插入与删除操作中，不需要改变栈底指针。</p>
+<p>栈是允许在同一端进行插入和删除操作的特殊线性表。允许进行插入和删除操作的一端称为栈顶(top)，另一端为栈底(bottom)；栈底固定，而栈顶浮动；栈中元素个数为零时称为空栈。插入一般称为进栈（PUSH），删除则称为退栈（POP）。</p>
+<p>由于堆叠数据结构只允许在一端进行操作，因而按照后进先出（LIFO, Last In First Out）的原理运作。栈也称为后进先出表。</p>
+<p>这里以羽毛球筒为例，羽毛球筒就是一个栈。</p>
+<ol>
+<li>
+<p>刚开始羽毛球筒是空的，也就是空栈</p>
+</li>
+<li>
+<p>然后我们一个一个放入羽毛球，也就是一个一个push进栈，</p>
+</li>
+<li>
+<p>当我们需要使用羽毛球的时候，从筒里面拿，也就是pop出栈，</p>
+</li>
+<li>
+<p>但是第一个拿到的羽毛球是我们最后放进去的。(后进先出)</p>
+</li>
+</ol>
+<p>优点：</p>
+<ul>
+<li>存取速度比堆要快，仅次于直接位于CPU中的寄存器。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>存在栈中的数据大小与生存期必须是确定的，缺乏灵活性。另外，栈数据可以共享。</li>
+</ul>
+<h3 id="2-顺序栈实现">2. 顺序栈实现</h3>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%88.jpg" alt="alt" loading="lazy"></figure>
+<pre><code class="language-java">package com.ys.datastructure;
+ 
+public class MyStack {
+    private int[] array;
+    private int maxSize;
+    private int top;
+     
+    public MyStack(int size){
+        this.maxSize = size;
+        array = new int[size];
+        top = -1;
+    }
+     
+    //压入数据
+    public void push(int value){
+        if(top &lt; maxSize-1){
+            array[++top] = value;
+        }
+    }
+     
+    //弹出栈顶数据
+    public int pop(){
+        return array[top--];
+    }
+     
+    //访问栈顶数据
+    public int peek(){
+        return array[top];
+    }
+     
+    //判断栈是否为空
+    public boolean isEmpty(){
+        return (top == -1);
+    }
+     
+    //判断栈是否满了
+    public boolean isFull(){
+        return (top == maxSize-1);
+    }
+     
+ 
+}
+</code></pre>
+<pre><code class="language-java">//测试
+package com.ys.test;
+ 
+import com.ys.datastructure.MyStack;
+ 
+public class MyStackTest {
+    public static void main(String[] args) {
+        MyStack stack = new MyStack(3);
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        System.out.println(stack.peek());
+        while(!stack.isEmpty()){
+            System.out.println(stack.pop());
+        }
+         
+    }
+ 
+}
+</code></pre>
+<p>结果:</p>
+<pre><code>3
+3
+2
+1
+</code></pre>
+<p>这个栈是用数组实现的，内部定义了一个数组，一个表示最大容量的值以及一个指向栈顶元素的top变量。构造方法根据参数规定的容量创建一个新栈，push()方法是向栈中压入元素，指向栈顶的变量top加一，使它指向原顶端数据项上面的一个位置，并在这个位置上存储一个数据。pop()方法返回top变量指向的元素，然后将top变量减一，便移除了数据项。要知道 top 变量指向的始终是栈顶的元素。</p>
+<p><strong>产生的问题：</strong></p>
+<p><strong>①、上面栈的实现初始化容量之后，后面是不能进行扩容的（虽然栈不是用来存储大量数据的），如果说后期数据量超过初始容量之后怎么办？（*<em>自动扩容*</em>）</strong></p>
+<p><strong>②、我们是用数组实现栈，在定义数组类型的时候，也就规定了存储在栈中的数据类型，那么同一个栈能不能存储不同类型的数据呢？（声明为Object）</strong></p>
+<p><strong>③、栈需要初始化容量，而且数组实现的栈元素都是连续存储的，那么能不能不初始化容量呢？（改为由链表实现）</strong></p>
+<h3 id="3-增强功能版栈">3. 增强功能版栈</h3>
+<p><strong>对于上面出现的问题，第一个能自动扩容，第二个能存储各种不同类型的数据，解决办法如下：（第三个在讲链表的时候在介绍）</strong></p>
+<p><strong>这个模拟的栈在JDK源码中，大家可以参考 Stack 类的实现。</strong></p>
+<pre><code class="language-java">public class Stack&lt;E&gt; extends Vector&lt;E&gt;{}
+</code></pre>
+<pre><code class="language-java">package com.ys.datastructure;
+ 
+import java.util.Arrays;
+import java.util.EmptyStackException;
+ 
+public class ArrayStack {
+    //存储元素的数组,声明为Object类型能存储任意类型的数据
+    private Object[] elementData;
+    //指向栈顶的指针
+    private int top;
+    //栈的总容量
+    private int size;
+     
+     
+    //默认构造一个容量为10的栈
+    public ArrayStack(){
+        this.elementData = new Object[10];
+        this.top = -1;
+        this.size = 10;
+    }
+     
+    public ArrayStack(int initialCapacity){
+        if(initialCapacity &lt; 0){
+            throw new IllegalArgumentException(&quot;栈初始容量不能小于0: &quot;+initialCapacity);
+        }
+        this.elementData = new Object[initialCapacity];
+        this.top = -1;
+        this.size = initialCapacity;
+    }
+     
+     
+    //压入元素
+    public Object push(Object item){
+        //是否需要扩容
+        isGrow(top+1);
+        elementData[++top] = item;
+        return item;
+    }
+     
+    //弹出栈顶元素
+    public Object pop(){
+        Object obj = peek();
+        remove(top);
+        return obj;
+    }
+     
+    //获取栈顶元素
+    public Object peek(){
+        if(top == -1){
+            throw new EmptyStackException();
+        }
+        return elementData[top];
+    }
+    //判断栈是否为空
+    public boolean isEmpty(){
+        return (top == -1);
+    }
+     
+    //删除栈顶元素
+    public void remove(int top){
+        //栈顶元素置为null
+        elementData[top] = null;
+        this.top--;
+    }
+     
+    /**
+     * 是否需要扩容，如果需要，则扩大一倍并返回true，不需要则返回false
+     * @param minCapacity
+     * @return
+     */
+    public boolean isGrow(int minCapacity){
+        int oldCapacity = size;
+        //如果当前元素压入栈之后总容量大于前面定义的容量，则需要扩容
+        if(minCapacity &gt;= oldCapacity){
+            //定义扩大之后栈的总容量
+            int newCapacity = 0;
+            //栈容量扩大两倍(左移一位)看是否超过int类型所表示的最大范围
+            if((oldCapacity&lt;&lt;1) - Integer.MAX_VALUE &gt;0){
+                newCapacity = Integer.MAX_VALUE;
+            }else{
+                newCapacity = (oldCapacity&lt;&lt;1);//左移一位，相当于*2
+            }
+            this.size = newCapacity;
+            int[] newArray = new int[size];
+            elementData = Arrays.copyOf(elementData, size);
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
+</code></pre>
+<pre><code class="language-java">//测试
+//测试自定义栈类 ArrayStack
+//创建容量为3的栈，然后添加4个元素，3个int，1个String.
+@Test
+public void testArrayStack(){
+    ArrayStack stack = new ArrayStack(3);
+    stack.push(1);
+    //System.out.println(stack.peek());
+    stack.push(2);
+    stack.push(3);
+    stack.push(&quot;abc&quot;);
+    System.out.println(stack.peek());
+    stack.pop();
+    stack.pop();
+    stack.pop();
+    System.out.println(stack.peek());
+</code></pre>
+<p>结果:</p>
+<pre><code>abc
+1
+</code></pre>
+<h3 id="3-利用栈实现字符串逆序">3. 利用栈实现字符串逆序</h3>
+<p>我们知道栈是后进先出，我们可以将一个字符串分隔为单个的字符，然后将字符一个一个push()进栈，在一个一个pop()出栈就是逆序显示了。如下：</p>
+<p>将 字符串“how are you” 反转！！！</p>
+<p>ps：这里我们是用上面自定的栈来实现的，大家可以将ArrayStack替换为JDK自带的栈类Stack试试</p>
+<pre><code class="language-java">//进行字符串反转
+@Test
+public void testStringReversal(){
+    ArrayStack stack = new ArrayStack();
+    String str = &quot;how are you&quot;;
+    char[] cha = str.toCharArray();
+    for(char c : cha){
+        stack.push(c);
+    }
+    while(!stack.isEmpty()){
+        System.out.print(stack.pop());
+    }
+}
+</code></pre>
+<p>结果:</p>
+<pre><code>uoy ear woh
+</code></pre>
+<h3 id="5-利用栈判断分隔符是否匹配">5. 利用栈判断分隔符是否匹配</h3>
+<p>写过xml标签或者html标签的，我们都知道&lt;必须和最近的&gt;进行匹配，[ 也必须和最近的 ] 进行匹配。</p>
+<p>比如：&lt;abc[123]abc&gt;这是符号相匹配的，如果是 &lt;abc[123&gt;abc] 那就是不匹配的。</p>
+<p>对于 12&lt;a[b{c}]&gt;，我们分析在栈中的数据：遇到匹配正确的就消除</p>
+<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E6%A0%881.png" alt="alt" loading="lazy"></figure>
+<p>最后栈中的内容为空则匹配成功，否则匹配失败！！！</p>
+<pre><code class="language-java">//分隔符匹配
+//遇到左边分隔符了就push进栈，遇到右边分隔符了就pop出栈，看出栈的分隔符是否和这个有分隔符匹配
+@Test
+public void testMatch(){
+    ArrayStack stack = new ArrayStack(3);
+    String str = &quot;12&lt;a[b{c}]&gt;&quot;;
+    char[] cha = str.toCharArray();
+    for(char c : cha){
+        switch (c) {
+        case '{':
+        case '[':
+        case '&lt;':
+            stack.push(c);
+            break;
+        case '}':
+        case ']':
+        case '&gt;':
+            if(!stack.isEmpty()){
+                char ch = stack.pop().toString().toCharArray()[0];
+                if(c=='}' &amp;&amp; ch != '{'
+                    || c==']' &amp;&amp; ch != '['
+                    || c==')' &amp;&amp; ch != '('){
+                    System.out.println(&quot;Error:&quot;+ch+&quot;-&quot;+c);
+                }
+            }
+            break;
+        default:
+            break;
+        }
+    }
+}
+</code></pre>
+<p>根据栈后进先出的特性，我们实现了单词逆序以及分隔符匹配。所以其实栈是一个概念上的工具，具体能实现什么功能可以由我们去想象。栈通过提供限制性的访问方法push()和pop()，使得程序不容易出错。</p>
+<p>对于栈的实现，我们稍微分析就知道，数据入栈和出栈的时间复杂度都为O(1)，也就是说栈操作所耗的时间不依赖栈中数据项的个数，因此操作时间很短。而且需要注意的是栈不需要比较和移动操作，我们不要画蛇添足。</p>
+<h3 id="静态栈数组">静态栈：数组</h3>
+<h3 id="动态栈链表">动态栈：链表</h3>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/data-structure4/" title="栈 Stack">
+                                        https://lemonsoldout.github.io/post/data-structure4/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/data-structure4/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/data-structure4/&sharesource=qzone&title=栈 Stack&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607156317848&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/data-structure4/&sharesource=weibo&title=栈 Stack + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'zaDt0aU7QfRC4iGDnDk6uttY-gzGzoHsz',
+        appKey: '2nXmDEe4mGwQaLV2EK9M1XBR',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '欢迎大家来纠正错误~',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷C',
+                                        url: 'https://lemonsoldout.github.io/tag/0QKDhUzRj/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Python',
+                                        url: 'https://lemonsoldout.github.io/tag/sC5Og5cJQ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Java',
+                                        url: 'https://lemonsoldout.github.io/tag/bSXVQHU1H/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏',
+                                        url: 'https://lemonsoldout.github.io/tag/QuFhk-jwq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷LeetCode',
+                                        url: 'https://lemonsoldout.github.io/tag/VO2SeQpv5/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷ProjectEuler',
+                                        url: 'https://lemonsoldout.github.io/tag/DIbmxs8nz/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷English',
+                                        url: 'https://lemonsoldout.github.io/tag/cMEtKNpcp/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '',
+                                        url: '',
+                                        artist: '',
+                                        cover: '',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    <script>
+                                        App.weather();
+                                    </script>
+                                    <li class="lite-item">
+                                        <header class="lite-item-header">
+                                            <h3 class="lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
+                                        </header>
+                                        <div class="textwidget">
+                                            <div id="tp-weather-widget"></div>
+                                        </div>
+                                    </li>
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                        
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                        
+                                                                            <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                            
+                                                                                
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2020-12-5'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="https://gridea.dev/" target="_blank">
+                                Gridea
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>

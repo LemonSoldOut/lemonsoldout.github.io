@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html id="bg">
+
+<head>
+    <meta charset="utf-8" />
+<!--
+    * @Theme Card
+    * @Author admin@itjoker.cn
+    * @Link https://blog.itjoker.cn
+-->
+
+<title>
+    Gridea
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="Gridea">
+<meta name="description" content="一支穿云箭">
+<meta name="keywords" content="">
+<meta name="gridea-theme" content="Card">
+<meta name="spider" content="https://nmsl.sbjxw.网址">
+<meta name="UpdateTime" content="1607156317848">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/Card/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/prism.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css">
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/Card/script.min.js"></script>-->
+<!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/main.min.css" />-->
+<script src="https://lemonsoldout.github.io/media/js/script.min.js"></script>
+<link rel="stylesheet" href="https://lemonsoldout.github.io/media/css/main.min.css" />
+<link rel="stylesheet" href="https://lemonsoldout.github.io/styles/main.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/css/Card/iconfont.css" />
+<!--link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_410989_wuhl0k5ojvf.css" /-->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@1.0.36/CDN/js/love.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+<script>
+    $().ready(
+        function() {
+            var themeIcon = document.getElementById("themeIcon");
+            var currentTheme = window.localStorage.getItem('theme');
+            if (currentTheme == 'dark') {
+                document.getElementsByTagName('html')[0].classList.add('theme-dark');
+                document.getElementsByTagName('html')[0].removeAttribute('id');
+                themeIcon.classList.remove('Card-moon');
+                themeIcon.classList.add('Card-sun');
+            } else {
+                document.getElementsByTagName('html')[0].classList.remove('theme-dark');
+                document.getElementsByTagName('html')[0].setAttribute('id', 'bg');
+                themeIcon.classList.remove('Card-sun');
+                themeIcon.classList.add('Card-moon');
+            }
+        }
+    )
+</script>
+
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
+        
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
+                    <style>
+                        .Card-certify {
+                            color: #0091e4 !important;
+                        }
+                        
+                        #foot {
+                            color: #666666;
+                        }
+                        
+                        #menu-item:hover {
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+                            border-bottom-color: rgba(0, 0, 0, .6);
+                        }
+                        
+                        .gray {
+                            -webkit-filter: grayscale(100%);
+                            /* webkit */
+                            -moz-filter: grayscale(100%);
+                            /*firefox*/
+                            -ms-filter: grayscale(100%);
+                            /*ie9*/
+                            -o-filter: grayscale(100%);
+                            /*opera*/
+                            filter: grayscale(100%);
+                            filter: progid: DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                            filter: gray;
+                            /*ie9- */
+                        }
+                        
+                        .lite-item,
+                        #header {
+                            opacity: 1;
+                        }
+                        
+                        .lite-item {
+                            background-color: #fafafa;
+                        }
+                        
+                        #spnBtn:hover {
+                            transition: all .3s ease;
+                            color: #fff;
+                            background-color: #6b6b6b;
+                            /*#0092ee*/
+                            /*linear-gradient( rgb(138, 160, 255) 30%, rgb(90, 140, 250) 70%);*/
+                        }
+                        
+                        #spnBtn {
+                            background-color: #efefef;
+                            font-size: 14px;
+                            transition: all .3s ease;
+                        }
+                        
+                        .link_a:hover {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                            color: #fff;
+                            border-left: 8px solid #6b6b6b;
+                            padding: 5px;
+                            transition: all .3s ease;
+                        }
+                        
+                        html {
+                            width: 100%;
+                            height: 100%;
+                            background-attachment: fixed;
+                            background-repeat: no-repeat;
+                        }
+                    </style>
+</head>
+
+<body>
+    <header id="header">
+
+    <div id="pc-menu">
+        <a id="menu-bar" class="Card Card-menu"></a>
+        <a id="menu-title" href="https://lemonsoldout.github.io">
+            Gridea
+        </a>
+        <nav id="menu-main" class="menu-main">
+            <ul>
+                
+                    <li id="menu-item" class="menu-item">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li id="menu-item" class="menu-item">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+        <form id="gridea-search-form" class="searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+    </div>
+    <div id="mobile-menu">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607156317848" action="/search/index.html">
+            <i class="Card Card-search"></i>
+            <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+        </form>
+        <nav class="menu">
+            <ul style="list-style: none;">
+                
+                    <li class="page_item page-item-2">
+                        <a href="/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/English">
+                            英语笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/coding">
+                            敲代码
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/notes">
+                            编程笔记
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="https://lemonsoldout.github.io/post/code-principle">
+                            编程规范
+                        </a>
+                    </li>
+                    
+                    <li class="page_item page-item-2">
+                        <a href="/post/about">
+                            关于
+                        </a>
+                    </li>
+                    
+            </ul>
+        </nav>
+    </div>
+    <a id="theme-btn" class="theme-btn" onclick="App.changeTheme()"><i id="themeIcon" class="Card Card-moon"></i></a>
+</header>
+        <div id="main">
+            <div id="main-part">
+                <div class="lite-item">
+                    <article class="post post-type real-post">
+                        <header class="post-type-header">
+                            
+                                    <div class="thumbnail-link" style="background-color: transparent;"></div>
+                                    
+                                        <div class="thumbnail-shadow">
+                                            <h1 class="post-title">
+                                                图 Graph
+                                            </h1>
+                                            <div class="post-info">
+                                                <span class="post-category"><i class="Card Card-novel"></i>
+                                        
+                                                    </span>
+                                                    <span class="post-view">
+                                                    
+                                                        &nbsp;•&nbsp;
+                                                    <span id="/post/data-structure6/" class="leancloud_visitors" data-flag-title="图 Graph">
+                                                <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
+                                                <i class="leancloud-visitors-count">0</i>
+                                            </span>
+
+                                                    
+                                                            </span>&nbsp;•&nbsp;
+
+                                                            <span class="post-readtime">阅读时间:
+                                            15.2分</span>
+                                                            <span class="post-edit"></span></div>
+                                        </div>
+                                        <div class="post-relative">
+                                            <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848" class="avatar avatar-100 photo" width="100" height="100">
+                                            <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-05</span>
+                                        </div>
+                        </header>
+                        <div class="post-main post-type-main">
+                            <div class="post-content">
+                                <div class="post-content-real">
+                                    <h2 id="6-图-graph">6. 图 Graph</h2>
+<p>前面我们介绍了树这种数据结构，树是由n（n&gt;0）个有限<strong>节点</strong>通过连接它们的<strong>边</strong>组成一个具有层次关系的集合，把它叫做“树”是因为它看起来像一棵倒挂的树，包括二叉树、红黑树、2-3-4树、堆等各种不同的树，有对这几种树不了解的可以参考我前面几篇博客。而本篇博客我们将介绍另外一种数据结构——图，图也是计算机程序设计中最常用的数据结构之一，从数学意义上讲，树是图的一种，大家可以对比着学习。</p>
+<h3 id="61-定义">6.1 定义</h3>
+<h4 id="a-邻接">A. 邻接</h4>
+<p>如果两个顶点被同一条边连接，就称这两个顶点是邻接的，如上图 I 和 G 就是邻接的，而 I 和 F 就不是。有时候也将和某个指定顶点邻接的顶点叫做它的邻居，比如顶点 G 的邻居是 I、H、F。</p>
+<h4 id="b-路径">B. 路径</h4>
+<p>路径是边的序列，比如从顶点B到顶点J的路径为 BAEJ，当然还有别的路径 BCDJ，BACDJ等等。</p>
+<h4 id="c-连通图和非连通图">C. 连通图和非连通图</h4>
+<p>如果至少有一条路径可以连接起所有的顶点，那么这个图称作连通的；如果假如存在从某个顶点不能到达另外一个顶点，则称为非联通的。</p>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%9B%BE1.png" alt="alt" loading="lazy"></figure>
+<h4 id="d-有向图和无向图">D. 有向图和无向图</h4>
+<p>如果图中的边没有方向，可以从任意一边到达另一边，则称为无向图；比如双向高速公路，A城市到B城市可以开车从A驶向B，也可以开车从B城市驶向A城市。但是如果只能从A城市驶向B城市的图，那么则称为有向图</p>
+<h4 id="e-有权图和无权图">E. 有权图和无权图</h4>
+<p>图中的边被赋予一个权值，权值是一个数字，它能代表两个顶点间的物理距离，或者从一个顶点到另一个顶点的时间，这种图被称为有权图；反之边没有赋值的则称为无权图。</p>
+<p>本篇博客我们讨论的是无权无向图。</p>
+<h3 id="62-在程序中表示图">6.2 在程序中表示图</h3>
+<p>我们知道图是由顶点和边组成，那么在计算机中，怎么来模拟顶点和边？</p>
+<h4 id="a-顶点">A. 顶点</h4>
+<p>在大多数情况下，顶点表示某个真实世界的对象，这个对象必须用数据项来描述。比如在一个飞机航线模拟程序中，顶点表示城市，那么它需要存储城市的名字、海拔高度、地理位置和其它相关信息，因此通常用一个顶点类的对象来表示一个顶点，这里我们仅仅在顶点中存储了一个字母来标识顶点，同时还有一个标志位，用来判断该顶点有没有被访问过（用于后面的搜索）。</p>
+<pre><code class="language-java">/**
+ * 顶点类
+ * @author vae
+ */
+public class Vertex {
+    public char label;
+    public boolean wasVisited;
+     
+    public Vertex(char label){
+        this.label = label;
+        wasVisited = false;
+    }
+}
+</code></pre>
+<p>顶点对象能放在数组中，然后用下标指示，也可以放在链表或其它数据结构中，不论使用什么结构，存储只是为了使用方便，这与边如何连接点是没有关系的。</p>
+<h4 id="b-边">B. 边</h4>
+<p>在前面讲解各种树的数据结构时，大多数树都是每个节点包含它的子节点的引用，比如红黑树、二叉树。也有用数组表示树，树组中节点的位置决定了它和其它节点的关系，比如堆就是用数组表示。</p>
+<p>然而图并不像树，图没有固定的结构，图的每个顶点可以与任意多个顶点相连，为了模拟这种自由形式的组织结构，用如下两种方式表示图：邻接矩阵和邻接表（如果一条边连接两个顶点，那么这两个顶点就是邻接的）</p>
+<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%9B%BE2.png" alt="alt" loading="lazy"></figure>
+<p><strong>邻接矩阵：</strong></p>
+<p>邻接矩阵是一个二维数组，数据项表示两点间是否存在边，如果图中有 N 个顶点，邻接矩阵就是 N*N 的数组。上图用邻接矩阵表示如下：</p>
+<figure data-type="image" tabindex="3"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%9B%BE3.png" alt="alt" loading="lazy"></figure>
+<p>1表示有边，0表示没有边，也可以用布尔变量true和false来表示。顶点与自身相连用 0 表示，所以这个矩阵从左上角到右上角的对角线全是 0 。</p>
+<p>注意：这个矩阵的上三角是下三角的镜像，两个三角包含了相同的信息，这个冗余信息看似低效，但是在大多数计算机中，创造一个三角形数组比较困难，所以只好接受这个冗余，这也要求在程序处理中，当我们增加一条边时，比如更新邻接矩阵的两部分，而不是一部分。</p>
+<p><strong>邻接表：</strong></p>
+<p>邻接表是一个链表数组（或者是链表的链表），每个单独的链表表示了有哪些顶点与当前顶点邻接。</p>
+<figure data-type="image" tabindex="4"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%9B%BE4.png" alt="alt" loading="lazy"></figure>
+<h3 id="63-搜索">6.3 搜索</h3>
+<p>在图中实现最基本的操作之一就是搜索从一个指定顶点可以到达哪些顶点，比如从武汉出发的高铁可以到达哪些城市，一些城市可以直达，一些城市不能直达。现在有一份全国高铁模拟图，要从某个城市（顶点）开始，沿着铁轨（边）移动到其他城市（顶点），有两种方法可以用来搜索图：深度优先搜索（DFS）和广度优先搜索（BFS）。它们最终都会到达所有连通的顶点，深度优先搜索通过栈来实现，而广度优先搜索通过队列来实现，不同的实现机制导致不同的搜索方式。</p>
+<h4 id="631-优先深度搜索dfs">6.3.1 优先深度搜索（DFS）</h4>
+<p>深度优先搜索算法有如下规则：</p>
+<p>规则1：如果可能，访问一个邻接的未访问顶点，标记它，并将它放入栈中。</p>
+<p>规则2：当不能执行规则 1 时，如果栈不为空，就从栈中弹出一个顶点。</p>
+<p>规则3：如果不能执行规则 1 和规则 2 时，就完成了整个搜索过程。</p>
+<figure data-type="image" tabindex="5"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%9B%BE5.png" alt="alt" loading="lazy"></figure>
+<p>对于上图，应用深度优先搜索如下：假设选取 A 顶点为起始点，并且按照字母优先顺序进行访问，那么应用规则 1 ，接下来访问顶点 B，然后标记它，并将它放入栈中；再次应用规则 1，接下来访问顶点 F，再次应用规则 1，访问顶点 H。我们这时候发现，没有 H 顶点的邻接点了，这时候应用规则 2，从栈中弹出 H，这时候回到了顶点 F，但是我们发现 F 也除了 H 也没有与之邻接且未访问的顶点了，那么再弹出 F，这时候回到顶点 B，同理规则 1 应用不了，应用规则 2，弹出 B，这时候栈中只有顶点 A了，然后 A 还有未访问的邻接点，所有接下来访问顶点 C，但是 C又是这条线的终点，所以从栈中弹出它，再次回到 A，接着访问 D,G,I，最后也回到了 A，然后访问 E，但是最后又回到了顶点 A，这时候我们发现 A没有未访问的邻接点了，所以也把它弹出栈。现在栈中已无顶点，于是应用规则 3，完成了整个搜索过程。</p>
+<p>深度优先搜索在于能够找到与某一顶点邻接且没有访问过的顶点。这里以邻接矩阵为例，找到顶点所在的行，从第一列开始向后寻找值为1的列；列号是邻接顶点的号码，检查这个顶点是否未访问过，如果是这样，那么这就是要访问的下一个顶点，如果该行没有顶点既等于1（邻接）且又是未访问的，那么与指定点相邻接的顶点就全部访问过了（后面会用算法实现）。</p>
+<h4 id="632-广度优先搜索bfs">6.3.2 广度优先搜索（BFS）</h4>
+<p>深度优先搜索要尽可能的远离起始点，而广度优先搜索则要尽可能的靠近起始点，它首先访问起始顶点的所有邻接点，然后再访问较远的区域，这种搜索不能用栈实现，而是用队列实现。</p>
+<p>规则1：访问下一个未访问的邻接点（如果存在），这个顶点必须是当前顶点的邻接点，标记它，并把它插入到队列中。</p>
+<p>规则2：如果已经没有未访问的邻接点而不能执行规则 1 时，那么从队列列头取出一个顶点（如果存在），并使其成为当前顶点。</p>
+<p>规则3：如果因为队列为空而不能执行规则 2，则搜索结束。</p>
+<p>对于上面的图，应用广度优先搜索：以A为起始点，首先访问所有与 A 相邻的顶点，并在访问的同时将其插入队列中，现在已经访问了 A,B,C,D和E。这时队列（从头到尾）包含 BCDE，已经没有未访问的且与顶点 A 邻接的顶点了，所以从队列中取出B，寻找与B邻接的顶点，这时找到F，所以把F插入到队列中。已经没有未访问且与B邻接的顶点了，所以从队列列头取出C，它没有未访问的邻接点。因此取出 D 并访问 G，D也没有未访问的邻接点了，所以取出E，现在队列中有 FG，在取出 F，访问 H，然后取出 G，访问 I，现在队列中有 HI，当取出他们时，发现没有其它为访问的顶点了，这时队列为空，搜索结束。</p>
+<h4 id="633-程序实现">6.3.3 程序实现</h4>
+<p>实现深度优先搜索的栈 StackX.class</p>
+<pre><code class="language-java">package com.ys.graph;
+ 
+public class StackX {
+    private final int SIZE = 20;
+    private int[] st;
+    private int top;
+     
+    public StackX(){
+        st = new int[SIZE];
+        top = -1;
+    }
+     
+    public void push(int j){
+        st[++top] = j;
+    }
+     
+    public int pop(){
+        return st[top--];
+    }
+     
+    public int peek(){
+        return st[top];
+    }
+     
+    public boolean isEmpty(){
+        return (top == -1);
+    }
+ 
+}
+</code></pre>
+<p>实现广度优先搜索的队列Queue.class</p>
+<pre><code class="language-java">package com.ys.graph;
+ 
+public class Queue {
+    private final int SIZE = 20;
+    private int[] queArray;
+    private int front;
+    private int rear;
+     
+    public Queue(){
+        queArray = new int[SIZE];
+        front = 0;
+        rear = -1;
+    }
+     
+    public void insert(int j) {
+        if(rear == SIZE-1) {
+            rear = -1;
+        }
+        queArray[++rear] = j;
+    }
+     
+    public int remove() {
+        int temp = queArray[front++];
+        if(front == SIZE) {
+            front = 0;
+        }
+        return temp;
+    }
+     
+    public boolean isEmpty() {
+        return (rear+1 == front || front+SIZE-1 == rear);
+    }
+}
+</code></pre>
+<p>图代码 Graph.class</p>
+<pre><code class="language-java">package com.ys.graph;
+ 
+public class Graph {
+    private final int MAX_VERTS = 20;//表示顶点的个数
+    private Vertex vertexList[];//用来存储顶点的数组
+    private int adjMat[][];//用邻接矩阵来存储 边,数组元素0表示没有边界，1表示有边界
+    private int nVerts;//顶点个数
+    private StackX theStack;//用栈实现深度优先搜索
+    private Queue queue;//用队列实现广度优先搜索
+    /**
+     * 顶点类
+     * @author vae
+     */
+    class Vertex {
+        public char label;
+        public boolean wasVisited;
+         
+        public Vertex(char label){
+            this.label = label;
+            wasVisited = false;
+        }
+    }
+     
+    public Graph(){
+        vertexList = new Vertex[MAX_VERTS];
+        adjMat = new int[MAX_VERTS][MAX_VERTS];
+        nVerts = 0;//初始化顶点个数为0
+        //初始化邻接矩阵所有元素都为0，即所有顶点都没有边
+        for(int i = 0; i &lt; MAX_VERTS; i++) {
+            for(int j = 0; j &lt; MAX_VERTS; j++) {
+                adjMat[i][j] = 0;
+            }
+        }
+        theStack = new StackX();
+        queue = new Queue();
+    }
+     
+    //将顶点添加到数组中，是否访问标志置为wasVisited=false(未访问)
+    public void addVertex(char lab) {
+        vertexList[nVerts++] = new Vertex(lab);
+    }
+     
+    //注意用邻接矩阵表示边，是对称的，两部分都要赋值
+    public void addEdge(int start, int end) {
+        adjMat[start][end] = 1;
+        adjMat[end][start] = 1;
+    }
+     
+    //打印某个顶点表示的值
+    public void displayVertex(int v) {
+        System.out.print(vertexList[v].label);
+    }
+    /**深度优先搜索算法:
+     * 1、用peek()方法检查栈顶的顶点
+     * 2、用getAdjUnvisitedVertex()方法找到当前栈顶点邻接且未被访问的顶点
+     * 3、第二步方法返回值不等于-1则找到下一个未访问的邻接顶点，访问这个顶点，并入栈
+     *    如果第二步方法返回值等于 -1，则没有找到，出栈
+     */
+    public void depthFirstSearch() {
+        //从第一个顶点开始访问
+        vertexList[0].wasVisited = true; //访问之后标记为true
+        displayVertex(0);//打印访问的第一个顶点
+        theStack.push(0);//将第一个顶点放入栈中
+         
+        while(!theStack.isEmpty()) {
+            //找到栈当前顶点邻接且未被访问的顶点
+            int v = getAdjUnvisitedVertex(theStack.peek());
+            if(v == -1) {   //如果当前顶点值为-1，则表示没有邻接且未被访问顶点，那么出栈顶点
+                theStack.pop();
+            }else { //否则访问下一个邻接顶点
+                vertexList[v].wasVisited = true;
+                displayVertex(v);
+                theStack.push(v);
+            }
+        }
+         
+        //栈访问完毕，重置所有标记位wasVisited=false
+        for(int i = 0; i &lt; nVerts; i++) {
+            vertexList[i].wasVisited = false;
+        }
+    }
+     
+    //找到与某一顶点邻接且未被访问的顶点
+    public int getAdjUnvisitedVertex(int v) {
+        for(int i = 0; i &lt; nVerts; i++) {
+            //v顶点与i顶点相邻（邻接矩阵值为1）且未被访问 wasVisited==false
+            if(adjMat[v][i] == 1 &amp;&amp; vertexList[i].wasVisited == false) {
+                return i;
+            }
+        }
+        return -1;
+    }
+     
+    /**
+     * 广度优先搜索算法：
+     * 1、用remove()方法检查栈顶的顶点
+     * 2、试图找到这个顶点还未访问的邻节点
+     * 3、 如果没有找到，该顶点出列
+     * 4、 如果找到这样的顶点，访问这个顶点，并把它放入队列中
+     */
+    public void breadthFirstSearch(){
+        vertexList[0].wasVisited = true;
+        displayVertex(0);
+        queue.insert(0);
+        int v2;
+         
+        while(!queue.isEmpty()) {
+            int v1 = queue.remove();
+            while((v2 = getAdjUnvisitedVertex(v1)) != -1) {
+                vertexList[v2].wasVisited = true;
+                displayVertex(v2);
+                queue.insert(v2);
+            }
+        }
+         
+        //搜索完毕，初始化，以便于下次搜索
+        for(int i = 0; i &lt; nVerts; i++) {
+            vertexList[i].wasVisited = false;
+        }
+    }
+     
+    public static void main(String[] args) {
+        Graph graph = new Graph();
+        graph.addVertex('A');
+        graph.addVertex('B');
+        graph.addVertex('C');
+        graph.addVertex('D');
+        graph.addVertex('E');
+         
+        graph.addEdge(0, 1);//AB
+        graph.addEdge(1, 2);//BC
+        graph.addEdge(0, 3);//AD
+        graph.addEdge(3, 4);//DE
+         
+        System.out.println(&quot;深度优先搜索算法 :&quot;);
+        graph.depthFirstSearch();//ABCDE
+         
+        System.out.println();
+        System.out.println(&quot;----------------------&quot;);
+         
+        System.out.println(&quot;广度优先搜索算法 :&quot;);
+        graph.breadthFirstSearch();//ABDCE
+    }
+}
+</code></pre>
+<p>结果：</p>
+<figure data-type="image" tabindex="6"><img src="C:%5CUsers%5Cyk%5CDesktop%5CJava%5C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%5Cpictures%5C%E5%9B%BE6.png" alt="alt" loading="lazy"></figure>
+<h3 id="64-最小生成树">6.4 最小生成树</h3>
+<p>对于图的操作，还有一个最常用的就是找到最小生成树，最小生成树就是用最少的边连接所有顶点。对于给定的一组顶点，可能有很多种最小生成树，但是最小生成树的边的数量 E 总是比顶点 V 的数量小1，即：</p>
+<p>V = E + 1</p>
+<p>这里不用关心边的长度，不是找最短的路径（会在带权图中讲解），而是找最少数量的边，可以基于深度优先搜索和广度优先搜索来实现。</p>
+<p>比如基于深度优先搜索，我们记录走过的边，就可以创建一个最小生成树。因为DFS 访问所有顶点，但只访问一次，它绝对不会两次访问同一个顶点，但她看到某条边将到达一个已访问的顶点，它就不会走这条边，它从来不遍历那些不可能的边，因此，DFS 算法走过整个图的路径必定是最小生成树。</p>
+<pre><code class="language-java">//基于深度优先搜索找到最小生成树
+public void mst(){
+    vertexList[0].wasVisited = true;
+    theStack.push(0);
+     
+    while(!theStack.isEmpty()){
+        int currentVertex = theStack.peek();
+        int v = getAdjUnvisitedVertex(currentVertex);
+        if(v == -1){
+            theStack.pop();
+        }else{
+            vertexList[v].wasVisited = true;
+            theStack.push(v);
+             
+            displayVertex(currentVertex);
+            displayVertex(v);
+            System.out.print(&quot; &quot;);
+        }
+    }
+     
+    //搜索完毕，初始化，以便于下次搜索
+    for(int i = 0; i &lt; nVerts; i++) {
+        vertexList[i].wasVisited = false;
+    }
+}
+</code></pre>
+<h3 id="65-总结">6.5 总结</h3>
+<p>图是由边连接的顶点组成，图可以表示许多真实的世界情况，包括飞机航线、电子线路等等。搜索算法以一种系统的方式访问图中的每个顶点，主要通过深度优先搜索（DFS）和广度优先搜索（BFS），深度优先搜索通过栈来实现，广度优先搜索通过队列来实现。最后需要知道最小生成树是包含连接图中所有顶点所需要的最少数量的边。</p>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="post-footer">
+                            <div class="post-copyright">
+                                作者:
+                                Gridea<br>永久链接:
+                                    <a href="https://lemonsoldout.github.io/post/data-structure6/" title="图 Graph">
+                                        https://lemonsoldout.github.io/post/data-structure6/
+                                    </a><br> 协议: MIT License
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <style>
+                    .prev:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                    
+                    .next:hover {
+                        color: #2d96bd;
+                        text-decoration: none;
+                        text-align: center;
+                        transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+                    }
+                </style>
+                <div class="lite-item nearby-article">
+                    
+                            
+                </div>
+                <!--Share-->
+                <span style="margin-right:15px">
+    <i class="post-share"></i>
+    <span>&#x5206;&#x4EAB;:</span>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/data-structure6/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/data-structure6/&sharesource=qzone&title=图 Graph&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607156317848&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/data-structure6/&sharesource=weibo&title=图 Graph + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607156317848"><i class="fa fa-weibo "></i></a>
+                </span>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: 'zaDt0aU7QfRC4iGDnDk6uttY-gzGzoHsz',
+        appKey: '2nXmDEe4mGwQaLV2EK9M1XBR',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '欢迎大家来纠正错误~',
+        visitor: true,
+        highlight: true,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+            <div id="sidebar">
+    <ul>
+        
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
+                <!--
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        
+                            <a href="" class="tag-cloud-link " style="font-size: 12px;margin: 5px; padding: 2px;">
+                                <i class="fa fa-tags" aria-hidden="true"></i>
+                            </a>
+                            
+                    </div>
+                </li>-->
+                <li class="lite-item">
+                    <header class="lite-item-header">
+                        <h3 class="lite-item-title"><i class="Card Card-tags">&#x6807;&#x7B7E;</i></h3>
+                    </header>
+                    <div class="textwidget">
+                        <div id='tags' style="height: auto;width: 360;"></div>
+                        <script src="https://lemonsoldout.github.io/media/js/svg3dtagcloud.min.js"></script>
+                        <script>
+                            $(document).ready(function() {
+                                var entries = ([
+                                    
+                                     {
+                                        label: '🏷C',
+                                        url: 'https://lemonsoldout.github.io/tag/0QKDhUzRj/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Python',
+                                        url: 'https://lemonsoldout.github.io/tag/sC5Og5cJQ/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷Java',
+                                        url: 'https://lemonsoldout.github.io/tag/bSXVQHU1H/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷游戏',
+                                        url: 'https://lemonsoldout.github.io/tag/QuFhk-jwq/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷LeetCode',
+                                        url: 'https://lemonsoldout.github.io/tag/VO2SeQpv5/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷ProjectEuler',
+                                        url: 'https://lemonsoldout.github.io/tag/DIbmxs8nz/',
+                                        target: '_button'
+                                    },
+                                    
+                                    
+                                     {
+                                        label: '🏷English',
+                                        url: 'https://lemonsoldout.github.io/tag/cMEtKNpcp/',
+                                        target: '_button'
+                                    }
+                                    
+                                    
+                                ]);
+                                var settings = {
+                                    entries: entries, //数据
+                                    width: 300, //宽度
+                                    height: 300, //高度
+                                    radius: '50%',
+                                    radiusMin: 50,
+                                    bgDraw: false, //是否显示背景
+                                    bgColor: '#fff', //背景颜色
+                                    opacityOver: 1.00,
+                                    opacityOut: 0.05,
+                                    opacitySpeed: 6,
+                                    fov: 360,
+                                    speed: 0.3, //旋转的速度
+                                    fontFamily: 'Oswald, Arial, sans-serif',
+                                    fontSize: '18', //默认字体大小
+                                    fontColor: '#666', //默认字体颜色
+                                    fontWeight: 'normal', //bold
+                                    fontStyle: 'normal', //italic 
+                                    fontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    fontToUpperCase: true,
+                                    tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                                    tooltipFontSize: '16',
+                                    tooltipFontColor: 'red',
+                                    tooltipFontWeight: 'normal', //bold
+                                    tooltipFontStyle: 'normal', //italic 
+                                    tooltipFontStretch: 'normal', //wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                                    tooltipFontToUpperCase: false,
+                                    tooltipTextAnchor: 'left',
+                                    tooltipDiffX: 0,
+                                    tooltipDiffY: 5
+
+                                };
+
+                                //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+                                $('#tags').svg3DTagCloud(settings);
+                            });
+                        </script>
+                    </div>
+                </li>
+                
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '',
+                                        url: '',
+                                        artist: '',
+                                        cover: '',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
+                                
+                                    <script>
+                                        App.weather();
+                                    </script>
+                                    <li class="lite-item">
+                                        <header class="lite-item-header">
+                                            <h3 class="lite-item-title">&#x26C5;&#x5929;&#x6C14;</h3>
+                                        </header>
+                                        <div class="textwidget">
+                                            <div id="tp-weather-widget"></div>
+                                        </div>
+                                    </li>
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                        
+                                                            <li class="lite-item">
+                                                                <header class="lite-item-header">
+                                                                    <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
+                                                                </header>
+                                                                <div class="textwidget">
+                                                                    
+                                                                        
+                                                                            <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                            
+                                                                                
+                                                                </div>
+                                                            </li>
+    </ul>
+</div>
+        </div>
+
+</body>
+<footer id="foot">
+    <a class="back-to-top" href="#"><i class="Card Card-top" ></i><span class="back-to-top-text">0%</span></a>
+    <div class="copyright">
+        
+            
+                    
+
+                        <div style="font-size:12px">
+                            
+                                        已经建站 <b id='build_time'></b>
+                        </div>
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
+                        <script>
+                            buildTime = '2020-12-5'
+                            setInterval(show_date_time, 1000, buildTime);
+                        </script>
+                        
+                            &#x7248;&#x6743;&#x6240;&#x6709; &copy;
+                            <script>
+                                var date = new Date();
+                                data2 = new Date(buildTime.replace(/-/g, "/"));
+                                nowYear = date.getFullYear().toString()
+                                buildYear = data2.getFullYear().toString();
+                                if (buildYear == nowYear) {
+                                    document.write('<span class="my-face">' + nowYear + '</span>');
+                                } else {
+                                    document.write(buildYear + '-<span class="my-face">' + nowYear + '</span>');
+                                }
+                            </script>
+
+                            <a href="https://lemonsoldout.github.io">
+                                Gridea
+                            </a>&nbsp;|&nbsp;Powered by
+                            <a href="https://gridea.dev/" target="_blank">
+                                Gridea
+                            </a>
+    </div>
+    <script>
+        let back2TopText = document.querySelector('.back-to-top-text')
+        window.addEventListener('scroll', function(e) {
+            let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+            if (back2TopText) {
+                back2TopText.textContent = Math.floor(percent).toString() + '%';
+            }
+        });
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
+                document.title = OriginTitile
+            }, 2E3))
+        });
+        var OriginTitile = document.title;
+        
+        App.hitokoto();
+        
+        App.clearLog();
+        App.outputlog();
+        var logo = '%cGridea\'%cBlog';
+        console.info(
+            logo,
+            'color: #ffffff; background: #000000; padding:5px 10px 5px 10px;font-size:40px;border-radius:12px 0 0 12px;', 'color: #000000; background: #FE9A00; padding:5px 10px;font-size:40px;border-radius:0 12px 12px 0;'
+        );
+        $('img').attr('data-fancybox', 'images');
+    </script>
+</footer>
+    <script>
+        renderMathInElement(document.body, {
+            delimiters: [{
+                left: "$$",
+                right: "$$",
+                display: true
+            }, {
+                left: "$",
+                right: "$",
+                display: false
+            }]
+        });
+    </script>
+
+</html>
