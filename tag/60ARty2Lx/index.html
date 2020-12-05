@@ -21,7 +21,7 @@
 <meta name="keywords" content="">
 <meta name="gridea-theme" content="Card">
 <meta name="spider" content="https://nmsl.sbjxw.网址">
-<meta name="UpdateTime" content="1607096289586">
+<meta name="UpdateTime" content="1607146639612">
 <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/jquery@3.4.1.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -61,7 +61,23 @@
     )
 </script>
 
+    <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+    
         
+            <script>
+                (function() {
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    } else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                })();
+            </script>
+            
                     <style>
                         .Card-certify {
                             color: #0091e4 !important;
@@ -187,13 +203,13 @@
                     
             </ul>
         </nav>
-        <form id="gridea-search-form" class="searchform" data-update="1607096289586" action="/search/index.html">
+        <form id="gridea-search-form" class="searchform" data-update="1607146639612" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
     </div>
     <div id="mobile-menu">
-        <form id="gridea-search-form" class="mobile-searchform" data-update="1607096289586" action="/search/index.html">
+        <form id="gridea-search-form" class="mobile-searchform" data-update="1607146639612" action="/search/index.html">
             <i class="Card Card-search"></i>
             <input id="s" class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
         </form>
@@ -292,6 +308,17 @@
             <div id="sidebar">
     <ul>
         
+            <li class="lite-item">
+                <header class="lite-item-header">
+                    <h3 class="lite-item-title"><i class="Card Card-hitokoto"></i>&nbsp;&#x4E00;&#x8A00;</h3>
+                </header>
+                <div class="textwidget">
+                    <p>
+                        <b id="hitokoto"></b>
+                    </p>
+                </div>
+            </li>
+            
                 <!--
                 <li class="lite-item">
                     <header class="lite-item-header">
@@ -357,15 +384,73 @@
                     </div>
                 </li>
                 
+                    <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/APlayer.min.js"></script>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+                    <div id="player"></div>
+                    
+                        <li class="lite-item">
+                            <header class="lite-item-header">
+                                <h3 class="lite-item-title">
+                                    &#x1F3B5;&#x97F3;&#x4E50;
+                                </h3>
+                            </header>
+                            <div class="textwidget">
+                                <p>
+                                    <div id="playerbox"></div>
+                                </p>
+                            </div>
+                        </li>
+                        
+                            <script>
+                                function LoadPlayer() {
+                                    var music_array = [];
+                                    
+                                    music_array.push({
+                                        name: '',
+                                        url: '',
+                                        artist: '',
+                                        cover: '',
+                                    });
+                                    
+                                    
+                                    const ap = new APlayer({
+                                        container: document.getElementById('playerbox'),
+                                        audio: music_array
+                                    });
+                                    
+                                }
+                                LoadPlayer();
+                            </script>
+                            
                                 
                                         
                                             
+                                                
+                                                    <li class="lite-item">
+                                                        <header class="lite-item-header">
+                                                            <h3 class="lite-item-title">
+                                                                
+                                                            </h3>
+                                                        </header>
+                                                        <div class="textwidget">
+                                                            <div id="textwidget-box" style="width:100%; height:auto;">
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    
+                                                        
                                                             <li class="lite-item">
                                                                 <header class="lite-item-header">
                                                                     <h3 class="lite-item-title">&#x1F468;&#x200D;&#x1F4BB;&#x53CB;&#x94FE;</h3>
                                                                 </header>
                                                                 <div class="textwidget">
                                                                     
+                                                                        
+                                                                            <p onclick="javascript:top.location='https://blog.itjoker.cn'"><span class="link_a"><a href="https://blog.itjoker.cn" alt="ITJoker ">ITJoker -ITJoker&#39;s Blog</a></span></p>
+
+                                                                            
+                                                                                
                                                                 </div>
                                                             </li>
     </ul>
@@ -377,27 +462,7 @@
     <div class="copyright">
         
             
-                <div style="width:300px;margin:0 auto; padding:0px 0;">
-                    <a target="_blank" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
-                        <img src="https://yanxuan.nosdn.127.net/b610ced5ac6a0e25cf6edf5606c69775.png" style="float:left;">
-                        <p id="icpinfo" style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px;">
-                            
-                        </p>
-                    </a>
-                </div>
-                
                     
-
-                        <div style="font-size:12px">
-                            
-                                        已经建站 <b id='build_time'></b>
-                        </div>
-                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io/CDN/js/time.min.js"></script>
-                        <script>
-                            buildTime = ''
-                            setInterval(show_date_time, 1000, buildTime);
-                        </script>
-                        
                             &#x7248;&#x6743;&#x6240;&#x6709; &copy;
                             <script>
                                 var date = new Date();
@@ -414,8 +479,8 @@
                             <a href="https://lemonsoldout.github.io">
                                 Gridea
                             </a>&nbsp;|&nbsp;Powered by
-                            <a href="" target="_blank">
-                                
+                            <a href="https://coding.net" target="_blank">
+                                Coding.net
                             </a>
     </div>
     <script>
@@ -433,6 +498,8 @@
             }, 2E3))
         });
         var OriginTitile = document.title;
+        
+        App.hitokoto();
         
         App.clearLog();
         App.outputlog();
