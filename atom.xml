@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lemonsoldout.github.io</id>
     <title>Gridea</title>
-    <updated>2020-12-05T16:10:30.407Z</updated>
+    <updated>2020-12-05T16:18:17.586Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lemonsoldout.github.io"/>
     <link rel="self" href="https://lemonsoldout.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://lemonsoldout.github.io/images/avatar.png</logo>
     <icon>https://lemonsoldout.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[学习引导]]></title>
+        <id>https://lemonsoldout.github.io/post/guide/</id>
+        <link href="https://lemonsoldout.github.io/post/guide/">
+        </link>
+        <updated>2020-12-05T16:10:57.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>我不喜欢将所有内容集中在一块儿，所以我将汇总成一个文档的内容全部拆分了出来。（暂时还没加上所有文章内容的描述 仅仅是有关的大标题的名字）</p>
+</blockquote>
+<p>📌    博客最上方的引导栏是最清晰易懂的。不过你也可以点击我即将全部置顶的4个引导文档。<br>
+📌    将所有错从复杂的文章全部隐藏。如果你要进行学习，可以点击相关引导文档/引导栏进行搜索。里面我都已经列出来了我现有整理好的知识点和代码。<br>
+📌    若有问题，请来<code>Github</code>♂来向我提交<code>Issue</code><br>
+📌    To be continue...</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[编程笔记]]></title>
         <id>https://lemonsoldout.github.io/post/notes/</id>

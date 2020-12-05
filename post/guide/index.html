@@ -261,18 +261,16 @@
                                     
                                         <div class="thumbnail-shadow">
                                             <h1 class="post-title">
-                                                Java 算法（4）
+                                                学习引导
                                             </h1>
                                             <div class="post-info">
                                                 <span class="post-category"><i class="Card Card-novel"></i>
                                         
-                                            <span onclick="javascript:top.location='https://lemonsoldout.github.io/tag/7WO4JDMOL/'">算法</span>
-                                                
                                                     </span>
                                                     <span class="post-view">
                                                     
                                                         &nbsp;•&nbsp;
-                                                    <span id="/post/algorithm4/" class="leancloud_visitors" data-flag-title="Java 算法（4）">
+                                                    <span id="/post/guide/" class="leancloud_visitors" data-flag-title="学习引导">
                                                 <i class="Card Card-view"></i>&nbsp;阅读量&nbsp;
                                                 <i class="leancloud-visitors-count">0</i>
                                             </span>
@@ -281,61 +279,25 @@
                                                             </span>&nbsp;•&nbsp;
 
                                                             <span class="post-readtime">阅读时间:
-                                            2.3分</span>
+                                            0.6分</span>
                                                             <span class="post-edit"></span></div>
                                         </div>
                                         <div class="post-relative">
                                             <img alt="Gridea" src="https://lemonsoldout.github.io/images/avatar.png?v=1607185082420" srcset="https://lemonsoldout.github.io/images/avatar.png?v=1607185082420" class="avatar avatar-100 photo" width="100" height="100">
                                             <span class="post-type-author"><a href="https://lemonsoldout.github.io" title="由Gridea发布" rel="author">Gridea<i class="Card Card-certify"></i></a></span>
-                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-05</span>
+                                            <span class="post-publish"><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;2020-12-06</span>
                                         </div>
                         </header>
                         <div class="post-main post-type-main">
                             <div class="post-content">
                                 <div class="post-content-real">
-                                    <h3 id="32-希尔排序shell-sort">3.2 希尔排序（Shell Sort）</h3>
-<p>希尔排序是希尔（Donald Shell）于1959年提出的一种排序算法。</p>
-<p>希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序，同时该算法是冲破O(n2）的第一批算法之一。</p>
-<p>它与插入排序的不同之处在于，它会优先比较距离较远的元素。</p>
-<p>希尔排序又叫缩小增量排序。</p>
-<p><strong>希尔排序是把记录按下表的一定增量分组，对每组使用直接插入排序算法排序；</strong><br>
-<strong>随着增量逐渐减少，每组包含的关键词越来越多，当增量减至1时，整个文件恰被分成一组，算法便终止。</strong></p>
-<h4 id="算法描述">算法描述</h4>
-<p>​	我们来看下希尔排序的基本步骤，在此我们选择增量gap=length/2，缩小增量继续以gap = gap/2的方式，这种增量选择我们可以用一个序列来表示，{n/2,(n/2)/2...1}，称为增量序列。<br>
-​	希尔排序的增量序列的选择与证明是个数学难题，我们选择的这个增量序列是比较常用的，也是希尔建议的增量，称为希尔增量，但其实这个增量序列不是最优的。</p>
-<p>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，具体算法描述：</p>
-<ol>
-<li>选择一个增量序列t1，t2，…，tk，其中ti&gt;tj，tk=1；</li>
-<li>按增量序列个数k，对序列进行k 趟排序；</li>
-<li>每趟排序，根据对应的增量ti，将待排序列分割成若干长度为m 的子序列，分别对各子表进行直接插入排序。<br>
-仅增量因子为1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。</li>
-</ol>
-<img src="./pictures/希尔排序.png" style="zoom: 100%" />
-<p><strong>最佳情况：T(n) = O(nlog2 n)  最坏情况：T(n) = O(nlog2 n)  平均情况：T(n) =O(nlog2n)</strong></p>
-<pre><code class="language-java">/**
-     * 希尔排序
-     *
-     * @param array
-     * @return
-     */
-    public static int[] ShellSort(int[] array) {
-        int len = array.length;
-        int temp, gap = len / 2;
-        while (gap &gt; 0) {
-            for (int i = gap; i &lt; len; i++) {
-                temp = array[i];
-                int preIndex = i - gap;
-                while (preIndex &gt;= 0 &amp;&amp; array[preIndex] &gt; temp) {
-                    array[preIndex + gap] = array[preIndex];
-                    preIndex -= gap;
-                }
-                array[preIndex + gap] = temp;
-            }
-            gap /= 2;
-        }
-        return array;
-    }
-</code></pre>
+                                    <blockquote>
+<p>我不喜欢将所有内容集中在一块儿，所以我将汇总成一个文档的内容全部拆分了出来。（暂时还没加上所有文章内容的描述 仅仅是有关的大标题的名字）</p>
+</blockquote>
+<p>📌    博客最上方的引导栏是最清晰易懂的。不过你也可以点击我即将全部置顶的4个引导文档。<br>
+📌    将所有错从复杂的文章全部隐藏。如果你要进行学习，可以点击相关引导文档/引导栏进行搜索。里面我都已经列出来了我现有整理好的知识点和代码。<br>
+📌    若有问题，请来<code>Github</code>♂来向我提交<code>Issue</code><br>
+📌    To be continue...</p>
 
                                 </div>
                             </div>
@@ -345,8 +307,8 @@
                             <div class="post-copyright">
                                 作者:
                                 Gridea<br>永久链接:
-                                    <a href="https://lemonsoldout.github.io/post/algorithm4/" title="Java 算法（4）">
-                                        https://lemonsoldout.github.io/post/algorithm4/
+                                    <a href="https://lemonsoldout.github.io/post/guide/" title="学习引导">
+                                        https://lemonsoldout.github.io/post/guide/
                                     </a><br> 协议: MIT License
                             </div>
                         </div>
@@ -370,14 +332,20 @@
                 <div class="lite-item nearby-article">
                     
                             
+                                <div class="nearby-article-right" style="padding: 10px;">
+                                    <a class="next" rel="next" href="https://lemonsoldout.github.io/post/notes/">
+                                        编程笔记<i class="fa fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                
                 </div>
                 <!--Share-->
                 <span style="margin-right:15px">
     <i class="post-share"></i>
     <span>&#x5206;&#x4EAB;:</span>
-                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/algorithm4/"><i class="fa fa-qrcode"></i></a>
-                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/algorithm4/&sharesource=qzone&title=Java 算法（4）&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607185082420&summary="><i class="fa fa-qq"></i></a>
-                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/algorithm4/&sharesource=weibo&title=Java 算法（4） + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607185082420"><i class="fa fa-weibo "></i></a>
+                <a title="QR 码" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://lemonsoldout.github.io/post/guide/"><i class="fa fa-qrcode"></i></a>
+                <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://lemonsoldout.github.io/post/guide/&sharesource=qzone&title=学习引导&pics=https://lemonsoldout.github.io/images/avatar.png?v=1607185082420&summary="><i class="fa fa-qq"></i></a>
+                <a title="新浪微博" target="_blank" href="https://service.weibo.com/share/share.php?url=https://lemonsoldout.github.io/post/guide/&sharesource=weibo&title=学习引导 + " - " + &pic="https://lemonsoldout.github.io/images/avatar.png?v=1607185082420"><i class="fa fa-weibo "></i></a>
                 </span>
                 
                                             
